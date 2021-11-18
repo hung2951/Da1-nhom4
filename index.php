@@ -8,6 +8,13 @@ switch ($url) {
     case '/':
         require_once './views/client/layouts/index.php';
         break;
+    case 'client/chi-tiet-san-pham':
+        require_once './business/client/product-detail.php';
+        product_detail();
+        break;
+
+
+
     case 'cp-admin/dashboard':
         require_once './business/admin/dashboard.php';
         dashboard_info();

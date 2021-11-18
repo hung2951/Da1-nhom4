@@ -20,6 +20,7 @@
 		href="https://fonts.googleapis.com/css?family=Archivo+Narrow:300,400,700%7CMontserrat:300,400,500,600,700,800,900"
 		rel="stylesheet" />
 	<link href="<?= CLIENT_ASSETS ?>plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link href="<?= CLIENT_ASSETS ?>plugins/ps-icon/style.css" rel="stylesheet" /><!-- CSS Library-->
 	<link href="<?= CLIENT_ASSETS ?>plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="<?= CLIENT_ASSETS ?>plugins/owl-carousel/assets/owl.carousel.css" rel="stylesheet" />
@@ -391,6 +392,8 @@
 <!-- JS Library-->
 
 <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 <script type="text/javascript" src="<?= CLIENT_ASSETS ?>plugins/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="<?= CLIENT_ASSETS ?>plugins/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?= CLIENT_ASSETS ?>plugins/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
