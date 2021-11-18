@@ -1,14 +1,4 @@
 <?php
-
-function account_index()
-{
-    $sql = "select * from user";
-    $users = executeQuery($sql);
-
-    admin_render('orders/index.php', [
-        'dsTaiKhoan' => $users,
-    ]);
-}
 function order_details()
 {
     $id = $_GET['id'];
@@ -20,3 +10,4 @@ function order_details()
         'dsCTHoaDon' => $orders,
     ]);
 }
+

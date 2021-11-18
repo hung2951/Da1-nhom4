@@ -36,10 +36,6 @@ switch ($url) {
         require_once "./business/admin/account.php";
         account_remove();
         break;
-    case 'cp-admin/hoa-don/':
-        require_once "./business/admin/orders.php";
-        account_index();
-        break;
     case 'cp-admin/hoa-don/chi-tiet':
         require_once "./business/admin/orders.php";
         order_details();
