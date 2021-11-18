@@ -12,7 +12,7 @@
                 <td><?=$o['name']?></td>
                 <td><?=$o['Tong']?></td>
                 <td><?=$o['tongtien']?></td>
-                <td><a href="<?= ADMIN_URL . 'hoa-don/chi-tiet?id='. $o['id_user'] ?>">Chi tiết</a></td>
+                <td><a class="btn btn-sm btn-danger" href="<?= ADMIN_URL . 'hoa-don/chi-tiet?id='. $o['id_user'] ?>">Chi tiết</a></td>
             </tr>
         <?php endforeach?>
     </tbody>
