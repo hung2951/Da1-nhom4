@@ -6,8 +6,7 @@ require_once './dao/system_dao.php';
 $url = isset($_GET['url']) ? $_GET['url'] : "/";
 switch ($url) {
     case '/':
-        require_once './business/homepage.php';
-        index();
+        require_once './views/client/layouts/index.php';
         break;
     case 'cp-admin/dashboard':
         require_once './business/admin/dashboard.php';
