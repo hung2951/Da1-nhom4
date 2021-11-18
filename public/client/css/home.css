@@ -1,0 +1,198 @@
+    #app {
+        background: #f8f8f8;
+        margin: 0;
+        font-size: 15px;
+    }
+    
+    a {
+        list-style-type: none;
+        text-decoration: none;
+    }
+    
+    li {
+        list-style-type: none;
+        text-decoration: none;
+    }
+    /*-------------header-----------------*/
+    .img.header_logo{
+        
+    }
+    .header-top {
+        padding: 20px 0px 0px 0px;
+    }
+    
+    .nav-link.active {
+        font-size: 18px;
+        margin-right: 20px;
+    }
+    
+    .nav-link.active:hover {
+        background-color: red;
+        -webkit-transform: scale(.9);
+        -webkit-transition-timing-function: ease-out;
+        -webkit-transition-duration: 500ms;
+    }
+    
+
+    /*----------content-------------*/
+    
+    #content {
+        display: flex;
+        background: #ffffff;
+        padding: 20px 0px 0px 0px;
+    }
+    /*---------------log_in----------*/
+    
+    .title_login {
+        text-align: center;
+        font-size: 18px;
+        height: 30px;
+        margin-top: 15px
+    }
+    
+    .aside {
+        padding: 0px 10px 0px 10px;
+    }
+    
+    .log_inf {
+        border: 2px double #d1d1d1;
+        height: 410px
+    }
+    
+    .mb-3 {
+        padding: 0px 10px 0px 10px;
+    }
+    
+    .mft {
+        padding: 10px 10px 0px 10px;
+    }
+    
+    .log_inf button:hover {
+        color: #fff;
+        background-color: black;
+        -webkit-transform: scale(.9);
+        -webkit-transition-timing-function: ease-out;
+        -webkit-transition-duration: 500ms;
+    }
+    /*---------------category----------------*/
+    h2{
+        text-align: center;
+    }
+   
+    .list-group {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .input.mb-1\.5 {
+        border: 2px solid #ededed;
+    }
+    
+    .menu-row {
+        padding: 20px 20px 20px 20px;
+    }
+    .image-dt:hover{
+        opacity: 0.7;
+    }
+
+    .image_cart:hover{
+        opacity: 0.7;
+        -webkit-transform: scale(.9);
+        -webkit-transition-timing-function: ease-out;
+        -webkit-transition-duration: 500ms;
+        
+    }
+    
+    @media (min-width: 576px) {
+        .menu-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-bottom: 15px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .menu-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 15px;
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .menu-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 15px;
+        }
+        .card {
+            width: 18rem;
+            margin-bottom: 15px;
+        }
+        .image_cart {
+            margin-left: 3px;
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        .menu-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-bottom: 15px;
+        }
+        .card {
+            width: 18rem;
+            margin-bottom: 15px;
+        }
+        .image_cart {
+            height: 290px;
+            width: 280px;
+            margin-left: 3px;
+        }
+    }
+    
+    @media (min-width: 1400px) {
+        .menu-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-bottom: 15px;
+        }
+        .card {
+            width: 18rem;
+            margin-bottom: 15px;
+        }
+        .image_cart {
+            height: 290px;
+            width: 280px;
+            margin-left: 3px;
+        }
+        
+    }
+    /*---------------------------------footer--------------*/
+    
+    .tile-footer {
+        color: #f8f8f8;
+        margin-top: 20px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .address-1 {
+        color: #f8f8f8;
+        margin-bottom: 5px;
+    }
+    
+    .address-1:hover {
+        background: #c01212;
+        font-size: 12px;
+    }
+    
+    .ATM:hover {
+        transform: scale(1.1);
+        border: 5px double #b00303;
+    }
+    
+    .fb:hover {
+        transform: scale(1.1);
+        border: 5px double #b00303;
+    }

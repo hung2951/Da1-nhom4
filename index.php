@@ -3,11 +3,19 @@
 require_once './commons/app_config.php';
 require_once './commons/helpers.php';
 require_once './dao/system_dao.php';
+require_once './business/admin/product.php';
+
+$allproduct = product_select_all();
+
+// dd($allproduct);
+
+
 $url = isset($_GET['url']) ? $_GET['url'] : "/";
 switch ($url) {
     case '/':
         require_once './views/client/layouts/index.php';
         break;
+<<<<<<< Updated upstream
     case 'client/chi-tiet-san-pham':
         require_once './business/client/product-detail.php';
         product_detail();
@@ -15,6 +23,20 @@ switch ($url) {
 
 
 
+=======
+    case 'chitietsp':
+        if(isset($_GET['id_product'])&&($_GET['id_product']>0)){
+            $id_product = $_GET['id_product'];
+            $onesp = product_select_by_id($id_product);
+            extract($onesp);
+            $sp_cung_loai= product_cung_loai($id_product,$id_brand);
+            // dd($sp_cung_loai);
+            require_once './views/client/product_details.php'; 
+        }
+        require_once './views/client/product_details.php'; 
+    break;    
+   
+>>>>>>> Stashed changes
     case 'cp-admin/dashboard':
         require_once './business/admin/dashboard.php';
         dashboard_info();
