@@ -9,9 +9,9 @@
     <tbody>
         <?php foreach($dsHoadon as $o):?>
             <tr>
-                <td><?=$o['name']?></td>
+                <td><?=$o['full_name']?></td>
                 <td><?=$o['Tong']?></td>
-                <td><?=$o['tongtien']?></td>
+                <td><?=number_format($o['tongtien'])?></td>
                 <td><a class="btn btn-sm btn-danger" href="<?= ADMIN_URL . 'hoa-don/chi-tiet?id='. $o['id_user'] ?>">Chi tiết</a></td>
             </tr>
         <?php endforeach?>

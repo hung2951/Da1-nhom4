@@ -1,6 +1,6 @@
 <?php
 
-require_once 'header.php';
+require_once 'main.php';
 
 if((isset($_GET['act'])) && ($_GET['act'] !="" )){
     $act= $_GET['act'];
