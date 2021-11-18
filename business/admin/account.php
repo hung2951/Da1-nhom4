@@ -10,7 +10,7 @@ function account_index(){
 
 function account_remove(){
     // lấy id từ đường dẫn
-    $id = $_GET['id_user'];
+    $id = $_GET['id'];
     // thực thi câu lệnh xóa dựa vào id
     $sql = "delete from user where id_user = $id";
     executeQuery($sql);
@@ -50,7 +50,7 @@ function account_save_add(){
 }
 
 function account_edit_form(){
-    $id = $_GET['id_user'];
+    $id = $_GET['id'];
     $sql = "select * from user where id_user = $id";
     $user = executeQuery($sql, false);
     admin_render('account/edit-form.php', [
@@ -60,7 +60,7 @@ function account_edit_form(){
 
 function account_save_edit(){
     // lấy ra thông tin cũ của dữ liệu vừa submit lên
-    $id = $_GET['id_user'];
+    $id = $_GET['id'];
     $sql = "select * from user where id_user = $id";
     $oldData = executeQuery($sql, false);
     // nhận dữ liệu từ form gửi lên
