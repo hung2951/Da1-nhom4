@@ -1,0 +1,46 @@
+h2{
+    text-align: center;
+    margin: 10px 0;
+}
+.info-user h3{
+    padding-left: 10px;
+}
+
+.orders-title{
+    font-size: 30px;
+    padding-left: 20px;
+    border-top: 1px solid rgb(0, 0, 0);
+    padding-top: 20px;
+}
+.orders{
+    padding-left: 20px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    /* background-color: rgb(252, 252, 252); */
+    margin: 10px 0px;
+}
+.orders:hover{
+    background-color: rgba(151, 255, 255, 0.199);
+}
+.orders-info{
+    display: grid;
+    grid-template-columns: 140px 1fr;
+}
+#size{
+    color: rgb(107, 107, 107);
+}
+#info-title{
+    font-size: 20px;
+}
+#money{
+    color: red;
+    font-size: 23px;
+}
+#price,u{
+    font-size: 15px;
+    color: red;
+}
+.tong-tien{
+    margin-left:30px;
+}

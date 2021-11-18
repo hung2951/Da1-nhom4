@@ -18,3 +18,4 @@
 <link rel="stylesheet" href="<?= ADMIN_ASSETS ?>plugins/daterangepicker/daterangepicker.css">
 <!-- summernote -->
 <link rel="stylesheet" href="<?= ADMIN_ASSETS ?>plugins/summernote/summernote-bs4.min.css">
+<link rel="stylesheet" href="<?= ADMIN_ASSETS ?>dist/css/orders.css">
