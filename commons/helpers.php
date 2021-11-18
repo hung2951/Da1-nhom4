@@ -6,6 +6,12 @@ function admin_render($viewpath, $data = []){
     $businessView = "./views/admin/" . $viewpath;
     include_once './views/admin/layouts/main.php';
 }
+function client_render($viewpath, $data = []){
+
+    extract($data);
+    $businessClientView = "./views/client/" . $viewpath;
+    include_once './views/client/layouts/main.php';
+}
 
 function dd(){
     echo "<pre>";

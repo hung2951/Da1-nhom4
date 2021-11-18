@@ -3,7 +3,7 @@
         <div class="col-6 offset-3">
             <div class="form-group">
                 <label for="">Họ và tên</label>
-                <input type="text" name="name" value="<?= $user['name'] ?>" class="form-control" placeholder="">
+                <input type="text" name="name" value="<?= $user['full_name'] ?>" class="form-control" placeholder="">
             </div>
             <div class="form-group">
                 <label for="">Email</label>

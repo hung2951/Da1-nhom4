@@ -1,4 +1,4 @@
-<!-- <main class="ps-main">
+<main class="ps-main">
 	<div class="ps-banner">
 		<div class="rev_slider fullscreenbanner" id="home-banner">
 			<ul>
@@ -87,7 +87,7 @@
 	<div class="ps-section--features-product ps-section masonry-root pt-100 pb-100">
 		<div class="ps-container">
 			<div class="ps-section__header mb-50">
-				<h3 class="ps-section__title" data-mask="features">- Features Products</h3>
+				<h3 class="ps-section__title" data-mask="features">10 New Products</h3>
 
 				<ul class="ps-masonry__filter">
 					<li class="current"><a data-filter="*" href="#">All <sup>8</sup></a></li>
@@ -443,186 +443,186 @@
 								<img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/1.jpg" />
 							</div>
 
-							<div class="ps-shoe__content">
-								<div class="ps-shoe__variants">
-									<div class="ps-shoe__variant normal"><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/2.jpg" /><img
-											alt="" src="<?= CLIENT_ASSETS ?>images/shoe/3.jpg" /><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/4.jpg" /><img
-											alt="" src="<?= CLIENT_ASSETS ?>images/shoe/5.jpg" /></div>
-									<select class="ps-rating ps-shoe__rating">
-										<option value="1">1</option>
-										<option value="1">2</option>
-										<option value="1">3</option>
-										<option value="1">4</option>
-										<option value="2">5</option>
-									</select>
-								</div>
+						<div class="ps-shoe__content">
+									<div class="ps-shoe__variants">
+										<div class="ps-shoe__variant normal"><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/2.jpg" /><img
+												alt="" src="<?= CLIENT_ASSETS ?>images/shoe/3.jpg" /><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/4.jpg" /><img
+												alt="" src="<?= CLIENT_ASSETS ?>images/shoe/5.jpg" /></div>
+										<select class="ps-rating ps-shoe__rating">
+											<option value="1">1</option>
+											<option value="1">2</option>
+											<option value="1">3</option>
+											<option value="1">4</option>
+											<option value="2">5</option>
+										</select>
+									</div>
 
-								<div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air
-										Jordan 7 Retro</a>
+									<div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air
+											Jordan 7 Retro</a>
 
-									<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
-											href="#"> Jordan</a></p>
-									<span class="ps-shoe__price"> &pound; 120</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="ps-shoes--carousel">
-						<div class="ps-shoe">
-							<div class="ps-shoe__thumbnail">
-								<div class="ps-badge"><span>New</span></div>
-
-								<div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div>
-								<img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/2.jpg" />
-							</div>
-
-							<div class="ps-shoe__content">
-								<div class="ps-shoe__variants">
-									<div class="ps-shoe__variant normal"><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/2.jpg" /><img
-											alt="" src="<?= CLIENT_ASSETS ?>images/shoe/3.jpg" /><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/4.jpg" /><img
-											alt="" src="<?= CLIENT_ASSETS ?>images/shoe/5.jpg" /></div>
-									<select class="ps-rating ps-shoe__rating">
-										<option value="1">1</option>
-										<option value="1">2</option>
-										<option value="1">3</option>
-										<option value="1">4</option>
-										<option value="2">5</option>
-									</select>
-								</div>
-
-								<div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air
-										Jordan 7 Retro</a>
-
-									<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
-											href="#"> Jordan</a></p>
-									<span class="ps-shoe__price"> <del>&pound;220</del> &pound; 120</span>
+										<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
+												href="#"> Jordan</a></p>
+										<span class="ps-shoe__price"> &pound; 120</span>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="ps-shoes--carousel">
-						<div class="ps-shoe">
-							<div class="ps-shoe__thumbnail">
-								<div class="ps-badge"><span>New</span></div>
-								<img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/3.jpg" />
-							</div>
+						<div class="ps-shoes--carousel">
+							<div class="ps-shoe">
+								<div class="ps-shoe__thumbnail">
+									<div class="ps-badge"><span>New</span></div>
 
-							<div class="ps-shoe__content">
-								<div class="ps-shoe__variants">
-									<div class="ps-shoe__variant normal"><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/2.jpg" /><img
-											alt="" src="<?= CLIENT_ASSETS ?>images/shoe/3.jpg" /><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/4.jpg" /><img
-											alt="" src="<?= CLIENT_ASSETS ?>images/shoe/5.jpg" /></div>
-									<select class="ps-rating ps-shoe__rating">
-										<option value="1">1</option>
-										<option value="1">2</option>
-										<option value="1">3</option>
-										<option value="1">4</option>
-										<option value="2">5</option>
-									</select>
+									<div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div>
+									<img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/2.jpg" />
 								</div>
 
-								<div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air
-										Jordan 7 Retro</a>
+								<div class="ps-shoe__content">
+									<div class="ps-shoe__variants">
+										<div class="ps-shoe__variant normal"><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/2.jpg" /><img
+												alt="" src="<?= CLIENT_ASSETS ?>images/shoe/3.jpg" /><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/4.jpg" /><img
+												alt="" src="<?= CLIENT_ASSETS ?>images/shoe/5.jpg" /></div>
+										<select class="ps-rating ps-shoe__rating">
+											<option value="1">1</option>
+											<option value="1">2</option>
+											<option value="1">3</option>
+											<option value="1">4</option>
+											<option value="2">5</option>
+										</select>
+									</div>
 
-									<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
-											href="#"> Jordan</a></p>
-									<span class="ps-shoe__price"> &pound; 120</span>
-								</div>
-							</div>
-						</div>
-					</div>
+									<div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air
+											Jordan 7 Retro</a>
 
-					<div class="ps-shoes--carousel">
-						<div class="ps-shoe">
-							<div class="ps-shoe__thumbnail"><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/4.jpg" /></div>
-
-							<div class="ps-shoe__content">
-								<div class="ps-shoe__variants">
-									<div class="ps-shoe__variant normal"><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/2.jpg" /><img
-											alt="" src="<?= CLIENT_ASSETS ?>images/shoe/3.jpg" /><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/4.jpg" /><img
-											alt="" src="<?= CLIENT_ASSETS ?>images/shoe/5.jpg" /></div>
-									<select class="ps-rating ps-shoe__rating">
-										<option value="1">1</option>
-										<option value="1">2</option>
-										<option value="1">3</option>
-										<option value="1">4</option>
-										<option value="2">5</option>
-									</select>
-								</div>
-
-								<div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air
-										Jordan 7 Retro</a>
-
-									<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
-											href="#"> Jordan</a></p>
-									<span class="ps-shoe__price"> &pound; 120</span>
+										<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
+												href="#"> Jordan</a></p>
+										<span class="ps-shoe__price"> <del>&pound;220</del> &pound; 120</span>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="ps-shoes--carousel">
-						<div class="ps-shoe">
-							<div class="ps-shoe__thumbnail">
-								<div class="ps-badge"><span>New</span></div>
-								<img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/5.jpg" />
-							</div>
-
-							<div class="ps-shoe__content">
-								<div class="ps-shoe__variants">
-									<div class="ps-shoe__variant normal"><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/2.jpg" /><img
-											alt="" src="<?= CLIENT_ASSETS ?>images/shoe/3.jpg" /><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/4.jpg" /><img
-											alt="" src="<?= CLIENT_ASSETS ?>images/shoe/5.jpg" /></div>
-									<select class="ps-rating ps-shoe__rating">
-										<option value="1">1</option>
-										<option value="1">2</option>
-										<option value="1">3</option>
-										<option value="1">4</option>
-										<option value="2">5</option>
-									</select>
+						<div class="ps-shoes--carousel">
+							<div class="ps-shoe">
+								<div class="ps-shoe__thumbnail">
+									<div class="ps-badge"><span>New</span></div>
+									<img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/3.jpg" />
 								</div>
 
-								<div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air
-										Jordan 7 Retro</a>
+								<div class="ps-shoe__content">
+									<div class="ps-shoe__variants">
+										<div class="ps-shoe__variant normal"><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/2.jpg" /><img
+												alt="" src="<?= CLIENT_ASSETS ?>images/shoe/3.jpg" /><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/4.jpg" /><img
+												alt="" src="<?= CLIENT_ASSETS ?>images/shoe/5.jpg" /></div>
+										<select class="ps-rating ps-shoe__rating">
+											<option value="1">1</option>
+											<option value="1">2</option>
+											<option value="1">3</option>
+											<option value="1">4</option>
+											<option value="2">5</option>
+										</select>
+									</div>
 
-									<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
-											href="#"> Jordan</a></p>
-									<span class="ps-shoe__price"> &pound; 120</span>
-								</div>
-							</div>
-						</div>
-					</div>
+									<div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air
+											Jordan 7 Retro</a>
 
-					<div class="ps-shoes--carousel">
-						<div class="ps-shoe">
-							<div class="ps-shoe__thumbnail"><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/6.jpg" /></div>
-
-							<div class="ps-shoe__content">
-								<div class="ps-shoe__variants">
-									<div class="ps-shoe__variant normal"><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/2.jpg" /><img
-											alt="" src="<?= CLIENT_ASSETS ?>images/shoe/3.jpg" /><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/4.jpg" /><img
-											alt="" src="<?= CLIENT_ASSETS ?>images/shoe/5.jpg" /></div>
-									<select class="ps-rating ps-shoe__rating">
-										<option value="1">1</option>
-										<option value="1">2</option>
-										<option value="1">3</option>
-										<option value="1">4</option>
-										<option value="2">5</option>
-									</select>
-								</div>
-
-								<div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air
-										Jordan 7 Retro</a>
-
-									<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
-											href="#"> Jordan</a></p>
-									<span class="ps-shoe__price"> &pound; 120</span>
+										<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
+												href="#"> Jordan</a></p>
+										<span class="ps-shoe__price"> &pound; 120</span>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+
+						<div class="ps-shoes--carousel">
+							<div class="ps-shoe">
+								<div class="ps-shoe__thumbnail"><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/4.jpg" /></div>
+
+								<div class="ps-shoe__content">
+									<div class="ps-shoe__variants">
+										<div class="ps-shoe__variant normal"><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/2.jpg" /><img
+												alt="" src="<?= CLIENT_ASSETS ?>images/shoe/3.jpg" /><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/4.jpg" /><img
+												alt="" src="<?= CLIENT_ASSETS ?>images/shoe/5.jpg" /></div>
+										<select class="ps-rating ps-shoe__rating">
+											<option value="1">1</option>
+											<option value="1">2</option>
+											<option value="1">3</option>
+											<option value="1">4</option>
+											<option value="2">5</option>
+										</select>
+									</div>
+
+									<div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air
+											Jordan 7 Retro</a>
+
+										<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
+												href="#"> Jordan</a></p>
+										<span class="ps-shoe__price"> &pound; 120</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="ps-shoes--carousel">
+							<div class="ps-shoe">
+								<div class="ps-shoe__thumbnail">
+									<div class="ps-badge"><span>New</span></div>
+									<img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/5.jpg" />
+								</div>
+
+								<div class="ps-shoe__content">
+									<div class="ps-shoe__variants">
+										<div class="ps-shoe__variant normal"><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/2.jpg" /><img
+												alt="" src="<?= CLIENT_ASSETS ?>images/shoe/3.jpg" /><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/4.jpg" /><img
+												alt="" src="<?= CLIENT_ASSETS ?>images/shoe/5.jpg" /></div>
+										<select class="ps-rating ps-shoe__rating">
+											<option value="1">1</option>
+											<option value="1">2</option>
+											<option value="1">3</option>
+											<option value="1">4</option>
+											<option value="2">5</option>
+										</select>
+									</div>
+
+									<div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air
+											Jordan 7 Retro</a>
+
+										<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
+												href="#"> Jordan</a></p>
+										<span class="ps-shoe__price"> &pound; 120</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="ps-shoes--carousel">
+							<div class="ps-shoe">
+								<div class="ps-shoe__thumbnail"><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/6.jpg" /></div>
+
+								<div class="ps-shoe__content">
+									<div class="ps-shoe__variants">
+										<div class="ps-shoe__variant normal"><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/2.jpg" /><img
+												alt="" src="<?= CLIENT_ASSETS ?>images/shoe/3.jpg" /><img alt="" src="<?= CLIENT_ASSETS ?>images/shoe/4.jpg" /><img
+												alt="" src="<?= CLIENT_ASSETS ?>images/shoe/5.jpg" /></div>
+										<select class="ps-rating ps-shoe__rating">
+											<option value="1">1</option>
+											<option value="1">2</option>
+											<option value="1">3</option>
+											<option value="1">4</option>
+											<option value="2">5</option>
+										</select>
+									</div>
+
+									<div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air
+											Jordan 7 Retro</a>
+
+										<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
+												href="#"> Jordan</a></p>
+										<span class="ps-shoe__price"> &pound; 120</span>
+									</div>
+								</div>
+							</div>
+						</div>
 
 
 					
@@ -786,6 +786,4 @@
 	</div>
 
 	
-	 -->
-	 <br>
-	 <h1 style="text-align: center;">Content</h1><br>
+	

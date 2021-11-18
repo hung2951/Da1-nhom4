@@ -14,7 +14,7 @@
         <?php foreach($dsTaiKhoan as $u): ?>
             <tr>
                 <td><?= $u['id_user'] ?></td>
-                <td><?= $u['name'] ?></td>
+                <td><?= $u['full_name'] ?></td>
                 <td><?= $u['email'] ?></td>
                 <td>
                     <img src="<?= PUBLIC_ASSETS . $u['image'] ?>" width="100">
