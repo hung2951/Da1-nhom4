@@ -41,7 +41,7 @@ function account_save_add(){
 
     // tạo ra câu sql insert tài khoản mới
     $sql = "insert into user
-                (name, email,phone, password, image) 
+                (full_name, email,phone, password, image) 
             values 
                 ('$name', '$email', '$phone','$passwordHash', '$avatar')";
     // Thực thi câu sql với db
@@ -80,7 +80,7 @@ function account_save_edit(){
     // tạo ra câu sql insert tài khoản mới
     $sql = "update user 
             set
-                name = '$name', 
+                full_name = '$name', 
                 email = '$email', 
                 phone = '$phone',
                 image = '$avatar' 
