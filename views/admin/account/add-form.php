@@ -10,8 +10,12 @@
                 <input type="text" name="email" id="" class="form-control" placeholder="">
             </div>
             <div class="form-group">
+                <label for="">Số điện thoại</label>
+                <input type="number" name="phone" id="" class="form-control" placeholder="">
+            </div>
+            <div class="form-group">
                 <label for="">Ảnh đại diện</label>
-                <input type="file" name="avatar" id="" class="form-control" placeholder="">
+                <input type="file" name="image" id="" class="form-control" placeholder="">
             </div>
             <div class="form-group">
                 <label for="">Mật khẩu</label>
