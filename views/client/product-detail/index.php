@@ -7,19 +7,13 @@
                     <hr>
 
                     <div class="row" style="margin-top: 15px; margin-bottom: 30px;">
-                        <?php
-                                product_detail();
-                            ?>
+                        <?php product_detail();?>
 
                         <div class="col-sm-6 col-md-4" style="border: 1px double #adaaaa; padding:10px">
                             <a href=""><img style="width:410px"
                                     src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['image'] ?>" /></a>
                         </div>
-
-
-
-                        <?php 
-                            ?>
+                        <?php ?>
 
                         <div class="col-sm-6 col-md-4" style="border: 1px double #adaaaa;">
                             <h4 style="margin-top: 30px; margin-bottom: 20px; text-align: center;">Bảng Size Thời Trang
@@ -58,26 +52,21 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-4" style="border: 1px double #adaaaa;">
-
                             <?php
                                     product_detail();
                                 ?>
-                            <h4 style="text-transform: uppercase; margin-top: 20px; margin-bottom: 20px;"><a
-                                    style="text-decoration: none; color:black" href="">
+                            <h4 style="text-transform: uppercase; margin-top: 20px; margin-bottom: 20px;">
+                            <a style="text-decoration: none; color:black" href="">
                                     <?php echo $product_detail['product_name'] ?>
                                 </a></h4>
-
                             <span style="font-size:20px;"> Giá:
                                 <a style="text-decoration: none; color:red; font-size:20px; font-weight: bold;" href="">
                                     <?php echo number_format($product_detail['price']) ?> <u>đ</u>
                                 </a></span>
                             <?php 
                             ?>
-
-
-
-
                             <br>
+
 
                             <form id="cart-form" action="<?= CLIENT_URL . 'gio-hang?id='.$_GET['id'] ?>" method="POST"
                                 style="padding: 10px;">
@@ -142,8 +131,6 @@
                 <div class="container">
                     <div class="mb-3">
                         <h4>Đánh Giá</h4>
-
-
                         <form id="cart-form" action="" method="POST" style="padding: 10px;">
                             <input type="hidden" name="ma_hh" value="<?=$ma_hh?>">
 
@@ -155,14 +142,10 @@
 
 
                         <div class="evaluate">
-
                             <?php 
                             $comment = comment();
                             if ($comment) : ?>
-                            <?php foreach($comment as $comment): 
-                                
-                            ?>
-
+                            <?php foreach($comment as $comment):?>
                             <div class="kh" style="display:flex; padding: 5px 15px">
                                 <img src=" " alt="" width="40px"
                                     style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;">
@@ -170,7 +153,6 @@
                                     <?= $comment['full_name'] ?>
                                 </strong>
                             </div>
-
                             <div class="danh_gia" style="padding: 0px 50px;">
                                 <div class="nd_bl">
                                     <?= $comment['content'] ?>
@@ -179,46 +161,29 @@
                                     <?= $comment['date'] ?>
                                 </div>
                             </div>
-
                             <?php endforeach; ?>
                             <?php endif; ?>
-
                         </div>
-
-
                     </div>
-
-
-
-                    <div class="relate_to" style="padding: 20px 0px;">
+                    <div class="relate_to" style="padding: 10px 0px;">
                         <hr>
                         <div class="top_one">
                             <div class="list-group">
-                                <a href="#" class="list-group-item list-group-item-action" aria-current="true"
-                                    style="background:#dfdddd">
+                                <a href="#"  aria-current="true">
                                     <h3>Sản Phẩm Cùng Loại</h3>
-                                    <br>
                                 </a>
                                 <br>
                                 <div class="row">
-
-
                                     <div class="col-4" style="padding: 2px;">
                                         <a href=" " class="list-group-item list-group-item-action">
                                             <img src="<?= CLIENT_ASSETS ?>images/size4.jpg" alt="" width="55px">
                                             <span style="text-transform: capitalize;">Tên sản phẩm</span>
                                         </a>
                                     </div>
-
-
-
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
-
                 </div>
 
 
