@@ -67,11 +67,10 @@
                                     <?php echo $product_detail['product_name'] ?>
                                 </a></h4>
 
-                            <span> <a style="text-decoration: none; color:red; font-size:20px; font-weight: bold;"
-                                    href="">Giá:
-                                    <?php echo $product_detail['price'] ?>
+                            <span style="font-size:20px;"> Giá:
+                                <a style="text-decoration: none; color:red; font-size:20px; font-weight: bold;" href="">
+                                    <?php echo number_format($product_detail['price']) ?> <u>đ</u>
                                 </a></span>
-
                             <?php 
                             ?>
 
@@ -80,7 +79,8 @@
 
                             <br>
 
-                            <form id="cart-form" action="<?= CLIENT_URL . 'gio-hang?id='.$_GET['id'] ?>" method="POST" style="padding: 10px;">
+                            <form id="cart-form" action="<?= CLIENT_URL . 'gio-hang?id='.$_GET['id'] ?>" method="POST"
+                                style="padding: 10px;">
                                 <strong>SIZE:</strong>
                                 <table style="margin-left: 50px;">
                                     <tr>
@@ -156,22 +156,28 @@
 
                         <div class="evaluate">
 
-                        <?php 
+                            <?php 
                             $comment = comment();
                             if ($comment) : ?>
-                                <?php foreach($comment as $comment): 
+                            <?php foreach($comment as $comment): 
                                 
                             ?>
 
                             <div class="kh" style="display:flex; padding: 5px 15px">
                                 <img src=" " alt="" width="40px"
                                     style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;">
-                                <strong class="name" style="padding:10px"><?= $comment['full_name'] ?></strong>
+                                <strong class="name" style="padding:10px">
+                                    <?= $comment['full_name'] ?>
+                                </strong>
                             </div>
 
                             <div class="danh_gia" style="padding: 0px 50px;">
-                                <div class="nd_bl"><?= $comment['content'] ?></div>
-                                <div class="date" style="font-size: 13px;"><?= $comment['date'] ?></div>
+                                <div class="nd_bl">
+                                    <?= $comment['content'] ?>
+                                </div>
+                                <div class="date" style="font-size: 13px;">
+                                    <?= $comment['date'] ?>
+                                </div>
                             </div>
 
                             <?php endforeach; ?>
@@ -196,36 +202,15 @@
                                 <br>
                                 <div class="row">
 
+
                                     <div class="col-4" style="padding: 2px;">
                                         <a href=" " class="list-group-item list-group-item-action">
                                             <img src="<?= CLIENT_ASSETS ?>images/size4.jpg" alt="" width="55px">
                                             <span style="text-transform: capitalize;">Tên sản phẩm</span>
                                         </a>
                                     </div>
-                                    <div class="col-4" style="padding: 2px;">
-                                        <a href=" " class="list-group-item list-group-item-action">
-                                            <img src="<?= CLIENT_ASSETS ?>images/size4.jpg" alt="" width="55px">
-                                            <span style="text-transform: capitalize;">Tên sản phẩm</span>
-                                        </a>
-                                    </div>
-                                    <div class="col-4" style="padding: 2px;">
-                                        <a href=" " class="list-group-item list-group-item-action">
-                                            <img src="<?= CLIENT_ASSETS ?>images/size4.jpg" alt="" width="55px">
-                                            <span style="text-transform: capitalize;">Tên sản phẩm</span>
-                                        </a>
-                                    </div>
-                                    <div class="col-4" style="padding: 2px;">
-                                        <a href=" " class="list-group-item list-group-item-action">
-                                            <img src="<?= CLIENT_ASSETS ?>images/size4.jpg" alt="" width="55px">
-                                            <span style="text-transform: capitalize;">Tên sản phẩm</span>
-                                        </a>
-                                    </div>
-                                    <div class="col-4" style="padding: 2px;">
-                                        <a href=" " class="list-group-item list-group-item-action">
-                                            <img src="<?= CLIENT_ASSETS ?>images/size4.jpg" alt="" width="55px">
-                                            <span style="text-transform: capitalize;">Tên sản phẩm</span>
-                                        </a>
-                                    </div>
+
+
 
                                 </div>
 

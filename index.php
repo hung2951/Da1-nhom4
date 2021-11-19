@@ -12,11 +12,7 @@ switch ($url) {
         require_once './business/client/product-detail.php';
         product_detail();
         
-        // product_same_kind();
-        break;
-    case 'client/gio-hang':
-        require_once './business/client/product-cart.php';
-       
+ 
         break;
 
 
