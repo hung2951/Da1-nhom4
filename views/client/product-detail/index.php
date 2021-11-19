@@ -47,9 +47,9 @@
                                 </a>
                             </h4>
                             <span style="font-size:20px;"> Giá:
-                                <a style="text-decoration: none; color:red; font-size:20px; font-weight: bold;" href="">
+                                <span style="text-decoration: none; color:red; font-size:20px; font-weight: bold;" href="">
                                     <?php echo number_format($product_detail['price']) ?> <u>đ</u>
-                                </a></span>
+                                </span></span>
                             <?php
                             ?>
                             <br>
@@ -122,7 +122,7 @@
                             <button type="submit" name="btn_binhluan" style="margin-top:10px">GỬi</button>
                         </form>
                         <br><br>
-                        
+
                         <!-- <div class="evaluate">
                             
                                     <div class="kh" style="display:flex; padding: 5px 15px">
