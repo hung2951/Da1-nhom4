@@ -14,10 +14,10 @@
             <div class="order-title">
                 <span>ID ĐƠN HÀNG: <?= $o['id_orders'] ?> | <?= $o['status'] == 0 ? "ĐƠN HÀNG ĐANG GIAO ĐẾN BÊN BẠN" : "ĐƠN HÀNG ĐÃ GIAO" ?></span>
             </div>
-            <a href="">
+            <a href="<?= CLIENT_URL.'hoa-don/chi-tiet?id='.$o['id_orders']?>">
                 <div class="order">
                     <div class="order-image">
-                        <p><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $o['product_image'] ?>" width="130px"></p>
+                        <p><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/'. $o['product_image'] ?>" width="130px"></p>
                     </div>
                     <div class="order-info">
                         <p id="order-info-name"><?= $o['product_name'] ?></p>
