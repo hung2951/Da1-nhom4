@@ -45,6 +45,23 @@ switch ($url) {
         // select_user_by_id();
         order_details();
         break;
+    case 'cp-admin/hoa-don/list-sua-tt':
+        require_once "./business/admin/orders.php";
+        show_user_order();
+        break;
+    case 'cp-admin/hoa-don/list-sua-tt/trang-thai':
+        require_once "./business/admin/orders.php";
+        list_update_status();
+        break;
+    case 'cp-admin/hoa-don/list-sua-tt/trang-thai/sua':
+        require_once "./business/admin/orders.php";
+        select_orders();
+        break;
+    case 'cp-admin/hoa-don/list-sua-tt/list-sua/trang-thai/luu-sua':
+        require_once "./business/admin/orders.php";
+        save_update_status();
+        break;
+    
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
