@@ -5,13 +5,12 @@
                 <div class="container">
                     <h2 style="margin-top: 20px;">Chi Tiết Sản Phẩm</h2>
                     <hr>
-
                     <div class="row" style="margin-top: 15px; margin-bottom: 30px;">
                         <?php product_detail();?>
 
                         <div class="col-sm-6 col-md-4" style="border: 1px double #adaaaa; padding:10px">
                             <a href=""><img style="width:410px"
-                                    src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['image'] ?>" /></a>
+                                    src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" /></a>
                         </div>
                         <?php ?>
 
