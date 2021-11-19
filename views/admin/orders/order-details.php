@@ -2,39 +2,42 @@
 <div class="info-user">
     <h3>Thông tin khách đặt hàng</h3>
     <table class="table table-stripped">
-    <?php foreach ($dsCTHoaDon as $o) : ?>
+<?php foreach ($dsCTHoaDon as $u) : ?>
+    
         <tr>
             <td>Họ tên:</td>
-            <td><?= $o['full_name']?></td>
+            <td><?= $u['full_name']?></td>
         </tr>
         <tr>
             <td>Địa chỉ:</td>
-            <td><?= $o['address']?></td>
+            <td><?= $u['address']?></td>
         </tr>
         <tr>
             <td>Số điện thoại:</td>
-            <td><?= $o['phone']?></td>
+            <td><?= $u['phone']?></td>
         </tr>
         <tr>
             <td>Email:</td>
-            <td><?= $o['email']?></td>
+            <td><?= $u['email']?></td>
         </tr>
+<?php endforeach; ?>
+        
     </table>
 </div>
 
 <div class="orders-title">
     <p>Đơn hàng đã đặt</p>
 </div>
-
+<?php foreach ($dsCTHoaDon as $o) : ?>
     <div class="orders">
         <div class="orders-info">
             <div class="img">
-                <p> <img src="<?= PUBLIC_ASSETS . $o['image'] ?>" width="100"></p>
+                <p> <img src="<?= PUBLIC_ASSETS .'/uploads/avatars/'. $o['image'] ?>" width="100"></p>
             </div>
             <div class="info">
-                <p id="info-title"><?= $o['name'] ?></p>
+                <p id="info-title"><?= $o['product_name'] ?></p>
                 <p id="size">Phân loại hàng: <?= $o['size'] ?></p>
-                <span>x<?= $o['quantity'] ?></span>
+                <span>x<?= $o['orders_quantity'] ?></span>
                 <p>Đơn giá: <span id="price"><?= number_format($o['price']) ?></span><u>đ</u></p>
             </div>
         </div>

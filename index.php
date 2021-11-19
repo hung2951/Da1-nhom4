@@ -8,6 +8,10 @@ switch ($url) {
     case '/':
         require_once './views/client/layouts/index.php';
         break;
+    case 'client/hoa-don/chi-tiet':
+        require_once "./business/client/orders.php";
+        order();
+        break;
     case 'cp-admin/dashboard':
         require_once './business/admin/dashboard.php';
         dashboard_info();
@@ -38,6 +42,7 @@ switch ($url) {
         break;
     case 'cp-admin/hoa-don/chi-tiet':
         require_once "./business/admin/orders.php";
+        // select_user_by_id();
         order_details();
         break;
     default:
