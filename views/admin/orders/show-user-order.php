@@ -19,6 +19,3 @@
         <?php endforeach ?>
     </tbody>
 </table>
-<form action="" method="post">
-    
-</form>
