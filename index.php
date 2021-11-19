@@ -20,10 +20,6 @@ switch ($url) {
          require_once './business/client/bill.php';
          bill();
         break;
-    case 'client/thanh-toan':
-        require_once './business/client/bill.php';
-        bill();
-        break;
     case 'cp-admin/dashboard':
         require_once './business/admin/dashboard.php';
         dashboard_info();
