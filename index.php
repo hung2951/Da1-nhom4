@@ -11,6 +11,9 @@ switch ($url) {
     case 'client/hoa-don/chi-tiet':
         require_once "./business/client/orders.php";
         order();
+    case 'client/hoa-don':
+        require_once './business/client/orders.php';
+        list_orders();
         break;
     case 'cp-admin/dashboard':
         require_once './business/admin/dashboard.php';
