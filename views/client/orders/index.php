@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="<?= CLIENT_ASSETS ?>css/orders.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
 <div class="container">
     <?php foreach ($dsHoadon as $o) : ?>
         <div class="orders">
@@ -22,8 +32,10 @@
                 </div>
             </a>
             <div class="buy">
-                <a href="" id="buys"> <p>Mua lại</p> </a>
+                <p><a href="">Mua lại</a></p>
             </div>
         </div>
     <?php endforeach ?>
 </div>
+</body>
+</html>

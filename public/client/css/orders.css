@@ -54,30 +54,24 @@
     color: red;
 }
 .buy{
-    padding-bottom: 50px;
-    padding-top: 20px;
+    padding-bottom: 70px;
 }
-.buy a{
-    border: 1px solid black;
-    width: 100px;
-    height: 30px;
-    border-radius: 3px;
-    float: right;
+.buy p a{
+    display: block;
+    color: black;
     padding-left: 20px;
 }
-
 .buy p{
-    margin-top: 4px;
-    color: white;
+    float: right;
+    border: 1px solid #ccc;
+    width: 100px;
+    padding: 10px 0;
+    margin: 10px 0;
+    margin-right: 20px;
+    border-radius: 5px;
+    font-weight: bold;
 }
-.buy:hover{
-    background-color: rgb(255, 251, 245);
-}
-#buys{
-    background-color: red;
-    color: white;
-    margin-right: 30px;
-}
-#buys:hover{
-    background-color: rgb(241, 127, 127);
+.buy p:hover{
+    background-color: rgb(253, 135, 135);
+    border-radius: 5px;
 }
