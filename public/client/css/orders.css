@@ -1,4 +1,83 @@
-*{
-    margin: 0;
-    padding: 0;
+.container{
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.orders{
+    background-color: rgb(255, 251, 245);
+    margin-bottom: 20px;
+}
+.orders:hover{
+    background-color: rgb(255, 247, 235);
+}
+.order-title{
+    height: 60px;
+    display: flex;
+    justify-content: right;
+    border-bottom: 1px solid #ccc;
+}
+.order-title span{
+    line-height: 60px;
+    padding-right: 20px;
+}
+.order{
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.money{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+    text-align: right;
+    height: 60px;
+}
+.money p{
+    color: black;
+    font-size: 16px;
+    line-height: 60px;
+}
+.money p span{
+    font-size: 23px;
+    color: red;
+}
+#order-info-name{
+    color: black;
+    font-size: 20px;
+}
+#order-info-price{
+    color: black;
+}
+#order-info-price span,u{
+    color: red;
+}
+.buy{
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+.buy a{
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+    float: right;
+    padding-left: 20px;
+}
+
+.buy p{
+    margin-top: 4px;
+    color: white;
+}
+.buy:hover{
+    background-color: rgb(255, 251, 245);
+}
+#buys{
+    background-color: red;
+    color: white;
+    margin-right: 30px;
+}
+#buys:hover{
+    background-color: rgb(241, 127, 127);
 }
