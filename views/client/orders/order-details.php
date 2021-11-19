@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div class="status">
-            <p><a href="">Quay lại</a></p>
+            <p><a href="<?= CLIENT_URL.'hoa-don?id='.$o['id_user']?>">Quay lại</a></p>
             <p>ID ĐƠN HÀNG- <?= $o['id_orders'] ?> | <?= $o['status'] == 0 ? "ĐƠN HÀNG ĐANG GIAO ĐẾN BÊN BẠN" : "ĐƠN HÀNG ĐÃ GIAO" ?></p>
         </div>
         <div class="info-user">
