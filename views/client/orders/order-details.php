@@ -27,7 +27,7 @@
             <p id="date">Ngày đặt hàng: <?= $o['order_date'] ?></p>
             <div class="orders-info">
                 <div class="img">
-                    <p> <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $o['image'] ?>" width="120"></p>
+                    <p> <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $o['product_image'] ?>" width="120"></p>
                 </div>
                 <div class="info">
                     <p id="info-title"><?= $o['product_name'] ?></p>

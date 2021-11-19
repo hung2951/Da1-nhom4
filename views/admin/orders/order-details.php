@@ -42,12 +42,12 @@
         <div class="orders">
             <div class="orders-info">
                 <div class="img">
-                    <p> <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $o['image'] ?>" width="100"></p>
+                    <p> <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $o['product_image'] ?>" width="100"></p>
                 </div>
                 <div class="info">
                     <p id="info-title"><?= $o['product_name'] ?></p>
                     <p id="size">Phân loại hàng: <?= $o['size'] ?></p>
-                    <span>x<?= $o['orders_quantity'] ?></span>
+                    <span>x<?= $o['quantity_orders'] ?></span>
                     <p>Đơn giá: <span id="price"><?= number_format($o['price']) ?></span><u>đ</u></p>
                 </div>
             </div>
