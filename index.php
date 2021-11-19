@@ -17,6 +17,10 @@ switch ($url) {
         mytocart();
         break;
     case 'client/thanh-toan':
+         require_once './business/client/bill.php';
+         bill();
+        break;
+    case 'client/thanh-toan':
         require_once './business/client/bill.php';
         bill();
         break;

@@ -80,7 +80,7 @@
 
                             <br>
 
-                            <form id="cart-form" action="" method="POST" style="padding: 10px;">
+                            <form id="cart-form" action="<?= CLIENT_URL . 'gio-hang?id='.$_GET['id'] ?>" method="POST" style="padding: 10px;">
                                 <strong>SIZE:</strong>
                                 <table style="margin-left: 50px;">
                                     <tr>

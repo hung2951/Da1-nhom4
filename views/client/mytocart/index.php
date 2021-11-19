@@ -5,36 +5,44 @@
                 <div class="container">
                     <h2 style="margin-top: 20px;">Giỏ Hàng</h2>
                     <hr>
-                    <table>
+                    <table class="table table-stripped">
                         <thead>
                             <tr>
-                                <th>STT</th>
-                                <th>Giầy</th>
+                                <th>Tên Sản Phẩm</th>
                                 <th>Hình Ảnh</th>
-                                <th>Màu Sắc</th>
-                                <th>Size</th>
-                                <th>Số Lượng</th>
                                 <th>Giá</th>
+                                <th>Số Lượng</th>
+                                <th>Size</th>
+                                <th>màu</th>
+                                <th>Tổng Tiền</th>
+                                <th>Xóa</th>
 
                             </tr>
                         </thead>
-                        <?php
-                                mytocart();
-                        ?>
-
+                     
                         <tbody>
+                        <?php foreach ($mytocart as $cart): ?>
+                                <?php 
+                                    $tong= $cart['price'] * $cart['quantity'];
+                                ?>
                             <tr>
-                                <th><?= $mytocart['id_product'] ?></th>
-                                <th><?= $mytocart['id_user'] ?></th>
-                                <th><?= $mytocart['order_date'] ?></th>
-                                <th><?= $mytocart['order_quantity'] ?></th>
-                                <th><?= $mytocart['status'] ?></th>
-                                <th><?= $mytocart['money'] ?></th>
+                                <th><?= $cart['name'] ?></th>
+                                <th><?= $cart['image'] ?></th>
+                                <th><?= $cart['price'] ?></th>
+                                <th><?= $cart['quantity'] ?></th>
+                                <th><?= $cart['size'] ?></th>
+                                <th><?= $cart['color'] ?></th>
+                                <th><?= $tong?></th>
                                 <th></th>
                             </tr>
+                        <?php endforeach ?>  
                         </tbody>
-                        <?php ?>
+
                     </table>
+                    <button type="submit" class="btn btn-sm btn-danger">Lưu</button>
+                &nbsp;  
+                <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                   
                     <hr>
                 </div>
         </section>

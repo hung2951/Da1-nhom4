@@ -1,10 +1,10 @@
-<?php
+    <?php
 
-function mytocart(){
-    $id = $_GET['id'];
-    $sql = "select * from orders where id_orders  = $id";
-    $mytocart = executeQuery($sql, false);
-    client_render('mytocart/index.php', [
-        'mytocart' => $mytocart
-    ]);
-}
+    function mytocart(){
+        $id = $_GET['id'];
+        $sql = "select * from cart where id_product = $id";
+        $mytocart = executeQuery($sql);
+        client_render('mytocart/index.php', [
+            'mytocart' => $mytocart
+        ]);
+    }
