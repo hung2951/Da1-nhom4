@@ -202,11 +202,9 @@
                                             " data-gtm-yt-inspected-11288696_41="true "></iframe></td>
                         </tr>
                         <tr style="height: 18px; ">
-                            <td style="width: 50%; text-align: center; height: 18px; "><em>Youtuber Nguyễn Hữu
-                                    Trí</em>
+                            <td style="width: 50%; text-align: center; height: 18px; "><em>Youtuber Nguyễn Hữu Trí</em>
                             </td>
-                            <td style="width: 50%; text-align: center; height: 18px; "><em>Youtuber Vũ Lê Trang
-                                    Anh</em>
+                            <td style="width: 50%; text-align: center; height: 18px; "><em>Youtuber Vũ Lê Trang Anh</em>
                             </td>
                         </tr>
                     </tbody>
