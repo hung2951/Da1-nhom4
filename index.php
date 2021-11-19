@@ -11,6 +11,8 @@ switch ($url) {
     case 'client/chi-tiet-san-pham':
         require_once './business/client/product-detail.php';
         product_detail();
+        
+        // product_same_kind();
         break;
 
 

@@ -139,55 +139,130 @@
                 </div>
 
 
-                <div class="mb-3">
-                    <h4>Đánh Giá</h4>
+                <div class="container">
+                    <div class="mb-3">
+                        <h4>Đánh Giá</h4>
 
 
-                    <form id="cart-form" action="" method="POST" style="padding: 10px;">
-                        <input type="hidden" name="ma_hh" value="<?=$ma_hh?>">
+                        <form id="cart-form" action="" method="POST" style="padding: 10px;">
+                            <input type="hidden" name="ma_hh" value="<?=$ma_hh?>">
 
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                            name="noi_dung"></textarea>
-                        <button type="submit" name="btn_binhluan" style="margin-top:10px">GỬi</button>
-                    </form>
-                    <br><br>
-                    <div class="evaluate">
-                        <div class="kh" style="display:flex; padding: 5px 15px">
-                            <img src=" " alt="" width="40px"
-                                style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;">
-                            <strong class="name" style="padding:10px">Nguyễn Văn Trăm</strong>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                name="noi_dung"></textarea>
+                            <button type="submit" name="btn_binhluan" style="margin-top:10px">GỬi</button>
+                        </form>
+                        <br><br>
+
+
+                        <div class="evaluate">
+
+                        <?php 
+                            $comment = comment();
+                            if ($comment) : ?>
+                                <?php foreach($comment as $comment): 
+                                
+                            ?>
+
+                            <div class="kh" style="display:flex; padding: 5px 15px">
+                                <img src=" " alt="" width="40px"
+                                    style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;">
+                                <strong class="name" style="padding:10px"><?= $comment['full_name'] ?></strong>
+                            </div>
+
+                            <div class="danh_gia" style="padding: 0px 50px;">
+                                <div class="nd_bl"><?= $comment['content'] ?></div>
+                                <div class="date" style="font-size: 13px;"><?= $comment['date'] ?></div>
+                            </div>
+
+                            <?php endforeach; ?>
+                            <?php endif; ?>
+
                         </div>
 
-                        <div class="danh_gia" style="padding: 0px 50px;">
-                            <div class="nd_bl">Sản phẩm đẹp chất lượng</div>
-                            <div class="date" style="font-size: 13px;">23/12/2022</div>
+
+                    </div>
+
+
+
+                    <div class="relate_to" style="padding: 20px 0px;">
+                        <hr>
+                        <div class="top_one">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action" aria-current="true"
+                                    style="background:#dfdddd">
+                                    <h3>Sản Phẩm Cùng Loại</h3>
+                                    <br>
+                                </a>
+                                <br>
+                                <div class="row">
+
+                                    <div class="col-4" style="padding: 2px;">
+                                        <a href=" " class="list-group-item list-group-item-action">
+                                            <img src="<?= CLIENT_ASSETS ?>images/size4.jpg" alt="" width="55px">
+                                            <span style="text-transform: capitalize;">Tên sản phẩm</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-4" style="padding: 2px;">
+                                        <a href=" " class="list-group-item list-group-item-action">
+                                            <img src="<?= CLIENT_ASSETS ?>images/size4.jpg" alt="" width="55px">
+                                            <span style="text-transform: capitalize;">Tên sản phẩm</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-4" style="padding: 2px;">
+                                        <a href=" " class="list-group-item list-group-item-action">
+                                            <img src="<?= CLIENT_ASSETS ?>images/size4.jpg" alt="" width="55px">
+                                            <span style="text-transform: capitalize;">Tên sản phẩm</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-4" style="padding: 2px;">
+                                        <a href=" " class="list-group-item list-group-item-action">
+                                            <img src="<?= CLIENT_ASSETS ?>images/size4.jpg" alt="" width="55px">
+                                            <span style="text-transform: capitalize;">Tên sản phẩm</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-4" style="padding: 2px;">
+                                        <a href=" " class="list-group-item list-group-item-action">
+                                            <img src="<?= CLIENT_ASSETS ?>images/size4.jpg" alt="" width="55px">
+                                            <span style="text-transform: capitalize;">Tên sản phẩm</span>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
                         </div>
                     </div>
 
-                    <br><br><br>
-                    <table style="border-collapse: collapse; width: 100%; height: 340px;" border="1">
-                        <tbody>
-                            <tr style="height: 319px; ">
-                                <td style="width: 50%; text-align: center; height: 319px; "><iframe
-                                        src="//www.youtube.com/embed/Ltq0dkiG0QE?t=1684 " width="100% " height="314 "
-                                        allowfullscreen="allowfullscreen
+                </div>
+
+
+
+                <br><br><br>
+                <table style="border-collapse: collapse; width: 100%; height: 340px;" border="1">
+                    <tbody>
+                        <tr style="height: 319px; ">
+                            <td style="width: 50%; text-align: center; height: 319px; "><iframe
+                                    src="//www.youtube.com/embed/Ltq0dkiG0QE?t=1684 " width="100% " height="314 "
+                                    allowfullscreen="allowfullscreen
                                             " data-gtm-yt-inspected-11288696_41="true "></iframe></td>
-                                <td style="width: 50%; text-align: center; height: 319px; "><iframe
-                                        src="//www.youtube.com/embed/rZSTBOBL3Dk " width="100% " height="314 "
-                                        allowfullscreen="allowfullscreen
+                            <td style="width: 50%; text-align: center; height: 319px; "><iframe
+                                    src="//www.youtube.com/embed/rZSTBOBL3Dk " width="100% " height="314 "
+                                    allowfullscreen="allowfullscreen
                                             " data-gtm-yt-inspected-11288696_41="true "></iframe></td>
-                            </tr>
-                            <tr style="height: 18px; ">
-                                <td style="width: 50%; text-align: center; height: 18px; "><em>Youtuber Nguyễn Hữu
-                                        Trí</em>
-                                </td>
-                                <td style="width: 50%; text-align: center; height: 18px; "><em>Youtuber Vũ Lê Trang
-                                        Anh</em>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <hr>
+                        </tr>
+                        <tr style="height: 18px; ">
+                            <td style="width: 50%; text-align: center; height: 18px; "><em>Youtuber Nguyễn Hữu
+                                    Trí</em>
+                            </td>
+                            <td style="width: 50%; text-align: center; height: 18px; "><em>Youtuber Vũ Lê Trang
+                                    Anh</em>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+
         </section>
     </div>
 
