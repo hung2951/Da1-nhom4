@@ -13,7 +13,7 @@
 
                         <div class="col-sm-6 col-md-4" style="border: 1px double #adaaaa; padding:10px">
                             <a href=""><img style="width:410px"
-                                    src="<?= PUBLIC_ASSETS . $product_detail['image'] ?>" /></a>
+                                    src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['image'] ?>" /></a>
                         </div>
 
 
