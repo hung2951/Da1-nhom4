@@ -16,18 +16,8 @@
                         <?php ?>
 
                         <div class="col-sm-6 col-md-4" style="border: 1px double #adaaaa;">
-                            <h4 style="margin-top: 30px; margin-bottom: 20px; text-align: center;">Bảng Size Thời Trang
-                            </h4>
+                            <h3 style="margin-top: 30px; margin-bottom: 20px; text-align: center;">Bảng Size </h3>
                             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="0" class="active" aria-current="true"
-                                        aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <img src="<?= CLIENT_ASSETS ?>images/size4.jpg" class="d-block w-100" alt="...">
