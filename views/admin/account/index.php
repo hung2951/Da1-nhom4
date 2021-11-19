@@ -19,7 +19,7 @@
                 <td>
                     <img src="<?= PUBLIC_ASSETS . $u['image'] ?>" width="100">
                 </td>
-                <td><?=number_format($u['phone']) ?></td>
+                <td><?=$u['phone']?></td>
                 <td>
                     <a href="<?= ADMIN_URL . 'tai-khoan/sua?id=' . $u['id_user'] ?>" class="btn btn-sm btn-info">Sửa</a>
                     <a href="<?= ADMIN_URL . 'tai-khoan/xoa?id=' . $u['id_user'] ?>" class="btn btn-sm btn-danger">Xóa</a>
