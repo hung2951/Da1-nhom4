@@ -130,7 +130,7 @@
 
                 <div class="container">
                     <div class="mb-3">
-                        <h4>Đánh Giá</h4>
+                        <h3>Đánh Giá</h3>
                         <form id="cart-form" action="" method="POST" style="padding: 10px;">
                             <input type="hidden" name="ma_hh" value="<?=$ma_hh?>">
 
