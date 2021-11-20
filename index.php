@@ -46,10 +46,13 @@ switch ($url) {
         require_once "./business/admin/account.php";
         account_remove();
         break;
-    case 'cp-admin/hoa-don/chi-tiet':
+    case 'cp-admin/hoa-don/ds-hoa-don/chi-tiet':
         require_once "./business/admin/orders.php";
-        // select_user_by_id();
         order_details();
+        break;
+    case 'cp-admin/hoa-don/ds-hoa-don':
+        require_once "./business/admin/orders.php";
+        list_order();
         break;
     case 'cp-admin/hoa-don/list-sua-tt':
         require_once "./business/admin/orders.php";
@@ -67,7 +70,6 @@ switch ($url) {
         require_once "./business/admin/orders.php";
         save_update_status();
         break;
-    
     case 'cp-admin/hoa-don':
         require_once "./business/admin/orders.php";
         orders_manage();
