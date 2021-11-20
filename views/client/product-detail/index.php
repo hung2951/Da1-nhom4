@@ -52,7 +52,7 @@
   <section class="content">
 
     <!-- Default box -->
-    <div class="card card-solid">
+    <div class="card card-solid" style="padding: 20px 0px">
       <div class="card-body">
         <div class="row">
         <?php product_detail(); ?>
