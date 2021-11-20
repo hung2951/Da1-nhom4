@@ -53,15 +53,14 @@
 #order-info-price span,u{
     color: red;
 }
-.buy{
+.buy ,.wait{
     padding-bottom: 70px;
 }
 .buy p a{
-    display: block;
     color: black;
     padding-left: 20px;
 }
-.buy p{
+.buy p,.wait p{
     float: right;
     border: 1px solid #ccc;
     width: 100px;
@@ -74,4 +73,9 @@
 .buy p:hover{
     background-color: rgb(253, 135, 135);
     border-radius: 5px;
+}
+.wait p{
+    width: 160px;
+    padding-left: 20px;
+    background-color: rgb(240, 240, 240);
 }

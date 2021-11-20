@@ -8,6 +8,7 @@ function order_details()
     $orders = executeQuery($sql);
     admin_render('orders/order-details.php', [
         'dsCTHoaDon' => $orders,
+
     ]);
 }
 function select_user_by_id()
