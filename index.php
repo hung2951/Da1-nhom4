@@ -18,10 +18,6 @@ switch ($url) {
         require_once './business/client/product-detail.php';
         product_detail();
         break;
-    case 'client/cart':
-        require_once './business/client/cart.php';
-        cart();
-        break;
     case 'cp-admin/dashboard':
         require_once './business/admin/dashboard.php';
         dashboard_info();
