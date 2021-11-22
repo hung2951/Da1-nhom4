@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?= CLIENT_ASSETS ?>css/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
@@ -65,20 +66,35 @@
       <div class="card-body">
         <div class="row">
           <div class="col-12 col-sm-6" style="text-align:center">
-            <h2 class="d-inline-block d-sm-none"><?= $product_detail['product_name'] ?></h2>
+            <h2 class="d-inline-block d-sm-none">
+              <?= $product_detail['product_name'] ?>
+            </h2>
             <div class="col-12">
-              <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" class="product-image" alt="Product Image" style="width:500px;">
+              <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>"
+                class="product-image" alt="Product Image" style="width:500px;">
             </div>
             <div class="col-12 product-image-thumbs">
-              <div class="product-image-thumb active"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
-              <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
-              <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
-              <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
-              <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
+              <div class="product-image-thumb active"><img
+                  src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>"
+                  alt="Product Image"></div>
+              <div class="product-image-thumb"><img
+                  src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>"
+                  alt="Product Image"></div>
+              <div class="product-image-thumb"><img
+                  src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>"
+                  alt="Product Image"></div>
+              <div class="product-image-thumb"><img
+                  src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>"
+                  alt="Product Image"></div>
+              <div class="product-image-thumb"><img
+                  src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>"
+                  alt="Product Image"></div>
             </div>
           </div>
           <div class="col-12 col-sm-6">
-            <h2 style="font-size:30px" class="my-3"><?= $product_detail['product_name'] ?></h2>
+            <h2 style="font-size:30px" class="my-3">
+              <?= $product_detail['product_name'] ?>
+            </h2>
             <hr>
             <h3>Available Colors</h3>
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -186,12 +202,16 @@
         <div class="row mt-4">
           <nav class="w-100">
             <div class="nav nav-tabs" id="product-tab" role="tablist">
-              <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab" href="#product-desc" role="tab" aria-controls="product-desc" aria-selected="true">Description</a>
-              <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab" href="#product-comments" role="tab" aria-controls="product-comments" aria-selected="false">Comments</a>
+              <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab" href="#product-desc"
+                role="tab" aria-controls="product-desc" aria-selected="true">Description</a>
+              <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab" href="#product-comments"
+                role="tab" aria-controls="product-comments" aria-selected="false">Comments</a>
             </div>
           </nav>
           <div class="tab-content p-3" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab"><?= $product_detail['details'] ?></div>
+            <div class="tab-pane fade show active" id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab">
+              <?= $product_detail['details'] ?>
+            </div>
             <div class="tab-pane fade" id="product-comments" role="tabpanel" aria-labelledby="product-comments-tab">
               <form id="cart-form" action="" method="POST" style="padding: 10px;">
                 <input type="hidden" name="ma_hh" value="<?= $ma_hh ?>">
@@ -201,7 +221,8 @@
               <div class="evaluate">
 
                 <div class="kh" style="display:flex; padding: 5px 15px">
-                  <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="" width="40px" style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;">
+                  <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""
+                    width="40px" style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;">
                   <strong class="name" style="padding:10px">
                     Nguyễn Văn Trăm
                   </strong>
@@ -228,40 +249,60 @@
         </div>
 
         <div class="ps-section ps-section--top-sales ps-owl-root pt-40 pb-80">
-        <div class="ps-container">
-          <div class="ps-section__header mb-50">
-            <div class="row">
-                  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 ">
-                    <h3 class="ps-section__title" data-mask="Related item">- YOU MIGHT ALSO LIKE</h3>
-                  </div>
-                  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
-                    <div class="ps-owl-actions"><a class="ps-prev" href="#"><i class="ps-icon-arrow-right"></i>Prev</a><a class="ps-next" href="#">Next<i class="ps-icon-arrow-left"></i></a></div>
-                  </div>
+          <div class="ps-container">
+            <div class="ps-section__header mb-50">
+              <div class="row">
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 ">
+                  <h3 class="ps-section__title" data-mask="Related item">- YOU MIGHT ALSO LIKE</h3>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
+                  <div class="ps-owl-actions"><a class="ps-prev" href="#"><i class="ps-icon-arrow-right"></i>Prev</a><a
+                      class="ps-next" href="#">Next<i class="ps-icon-arrow-left"></i></a></div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="ps-section__content">
-            <div class="ps-owl--colection owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="5000" data-owl-gap="30" data-owl-nav="false" data-owl-dots="false" data-owl-item="4" data-owl-item-xs="1" data-owl-item-sm="2" data-owl-item-md="3" data-owl-item-lg="4" data-owl-duration="1000" data-owl-mousedrag="on">
-              <div class="ps-shoes--carousel">
+            <div class="ps-section__content">
+              <div class="ps-owl--colection owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="5000"
+                data-owl-gap="30" data-owl-nav="false" data-owl-dots="false" data-owl-item="4" data-owl-item-xs="1"
+                data-owl-item-sm="2" data-owl-item-md="3" data-owl-item-lg="4" data-owl-duration="1000"
+                data-owl-mousedrag="on">
                 <?php
-                  foreach($product_same_kind as $product_same_kind ) :
-                ?>
-                <div class="ps-shoe">
-                  <div class="ps-shoe__thumbnail">
-                    <div class="ps-badge"><span>New</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-                  </div>
-                  <div class="ps-shoe__content">
-                    <div class="ps-shoe__variants">
-                      <div class="ps-shoe__variant normal"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""></div>
-                      <select class="ps-rating ps-shoe__rating">
-                        <option value="1">1</option>
-                        <option value="1">2</option>
-                        <option value="1">3</option>
-                        <option value="1">4</option>
-                        <option value="2">5</option>
-                      </select>
+                    foreach($product_same_kind as $product_same_kind ) :
+                    ?>
+                <div class="ps-shoes--carousel">
+                  <div class="ps-shoe">
+                    <div class="ps-shoe__thumbnail">
+                      <div class="ps-badge"><span>New</span></div><a class="ps-shoe__favorite" href="#"><i
+                          class="ps-icon-heart"></i></a><img
+                        src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><a
+                        class="ps-shoe__overlay" href="product-detail.html"></a>
                     </div>
-                    <div class="ps-shoe__detail">
-                      <a class="ps-shoe__name" href="product-detai.html"><?= $product_same_kind['product_name']?></a>
+                    <div class="ps-shoe__content">
+                    
+                      <div class="ps-shoe__variants">
+                        <div class="ps-shoe__variant normal"><img
+                            src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>"
+                            alt=""><img
+                            src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>"
+                            alt=""><img
+                            src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>"
+                            alt=""><img
+                            src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="">
+                        </div>
+                        <select class="ps-rating ps-shoe__rating">
+                          <option value="1">1</option>
+                          <option value="1">2</option>
+                          <option value="1">3</option>
+                          <option value="1">4</option>
+                          <option value="2">5</option>
+                        </select>
+                      </div>
+                      <div class="ps-shoe__detail">
+                        <a class="ps-shoe__name" href="product-detai.html">
+                          <?= $product_same_kind['product_name']?>
+                        </a>
+                      </div>
+                      
                     </div>
                   </div>
                 </div>
@@ -269,11 +310,13 @@
               </div>
             </div>
           </div>
+
+
         </div>
       </div>
-        <!-- /.card-body -->
-      </div>
-      <!-- /.card -->
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
 
 
 
