@@ -157,7 +157,7 @@
             <div class="mt-4">
               <div class="btn btn-primary btn-lg btn-flat">
                 <i class="fas fa-cart-plus fa-lg mr-2"></i>
-                <a href="">Add to Cart</a>
+                Add to Cart
               </div>
 
               <div class="btn btn-default btn-lg btn-flat">
