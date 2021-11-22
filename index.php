@@ -8,6 +8,12 @@ switch ($url) {
     case '/':
         require_once './views/client/layouts/index.php';
         break;
+    case 'client/hoa-don/chi-tiet':
+        require_once "./business/client/orders.php";
+        order();
+    case 'client/hoa-don':
+        require_once './business/client/orders.php';
+        list_orders();
     case 'client/chi-tiet-san-pham':
         require_once './business/client/product-detail.php';
         product_detail();
@@ -52,9 +58,35 @@ switch ($url) {
         require_once "./business/admin/account.php";
         account_remove();
         break;
+    case 'cp-admin/hoa-don/ds-hoa-don/chi-tiet':
+        require_once "./business/admin/orders.php";
+        order_details();
+        break;
+    case 'cp-admin/hoa-don/ds-hoa-don':
+        require_once "./business/admin/orders.php";
+        list_order();
+        break;
+    case 'cp-admin/hoa-don/list-sua-tt':
+        require_once "./business/admin/orders.php";
+        show_user_order();
+        break;
+    case 'cp-admin/hoa-don/list-sua-tt/trang-thai':
+        require_once "./business/admin/orders.php";
+        list_update_status();
+        break;
+    case 'cp-admin/hoa-don/list-sua-tt/trang-thai/sua':
+        require_once "./business/admin/orders.php";
+        select_orders();
+        break;
+    case 'cp-admin/hoa-don/list-sua-tt/list-sua/trang-thai/luu-sua':
+        require_once "./business/admin/orders.php";
+        save_update_status();
+        break;
+    case 'cp-admin/hoa-don':
+        require_once "./business/admin/orders.php";
+        orders_manage();
+        break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
 }
-
-?>

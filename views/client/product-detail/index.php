@@ -1,203 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="<?= CLIENT_ASSETS ?>css/plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?= CLIENT_ASSETS ?>css/dist/css/adminlte.min.css">
+</head>
+<style>
+  body {
+    font-size: 15px;
+  }
+
+  h3 {
+    font-size: 2.05rem;
+    padding: 10px;
+  }
+
+  label.btn.btn-default.text-center {
+    font-size: 1.3rem;
+    padding: 8px;
+  }
+
+  h4.mt-3 {
+    font-size: 2rem;
+  }
+
+  h2.mb-0 {
+    font-size: 3rem;
+  }
+
+  .btn.btn-primary.btn-lg.btn-flat {
+    font-size: 2.05rem;
+  }
+
+  .btn.btn-default.btn-lg.btn-flat {
+    font-size: 2.05rem;
+  }
+
+  textarea#exampleFormControlTextarea1 {
+    font-size: 15px;
+  }
+
+  .mt-4.product-share {
+    font-size: 18px;
+  }
+
+  .col-12.product-image-thumbs {
+    text-align: center;
+  }
+</style>
+
 <body>
-    <div class="container-fluid">
-        <section>
-            <div class="learning-news">
-                <div class="container">
-                    <h2 style="margin-top: 20px;">Chi Tiết Sản Phẩm</h2>
-                    <hr>
+  <section class="content">
 
-                    <div class="row" style="margin-top: 15px; margin-bottom: 30px;">
-                        <?php
-                                product_detail();
-                            ?>
+    <!-- Default box -->
+    <div class="card card-solid">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12 col-sm-6" style="text-align:center">
+            <h2 class="d-inline-block d-sm-none"><?= $product_detail['product_name'] ?></h2>
+            <div class="col-12">
+              <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" class="product-image" alt="Product Image" style="width:500px;">
+            </div>
+            <div class="col-12 product-image-thumbs">
+              <div class="product-image-thumb active"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
+              <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
+              <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
+              <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
+              <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6">
+            <h2 style="font-size:30px" class="my-3"><?= $product_detail['product_name'] ?></h2>
+            <hr>
+            <h3>Available Colors</h3>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-default text-center">
+                <input type="radio" name="color_option" id="color_option_a2" autocomplete="off">
+                Blue
+                <br>
+                <i class="fas fa-circle fa-2x text-blue"></i>
+              </label>
+              <label class="btn btn-default text-center">
+                <input type="radio" name="color_option" id="color_option_a3" autocomplete="off">
+                warning
+                <br>
+                <i class="fas fa-circle fa-2x text-warning"></i>
+              </label>
+              <label class="btn btn-default text-center">
+                <input type="radio" name="color_option" id="color_option_a4" autocomplete="off">
+                Red
+                <br>
+                <i class="fas fa-circle fa-2x text-red"></i>
+              </label>
+              <label class="btn btn-default text-center">
+                <input type="radio" name="color_option" id="color_option_a5" autocomplete="off">
+                white
+                <br>
+                <i class="fas fa-circle fa-2x text-white"></i>
+              </label>
+              <label class="btn btn-default text-center">
+                <input type="radio" name="color_option" id="color_option_a6" autocomplete="off" checked>
+                Body
+                <br>
+                <i class="fas fa-circle fa-2x text-body"></i>
+              </label>
+            </div>
 
-                        <div class="col-sm-6 col-md-4" style="border: 1px double #adaaaa; padding:10px">
-                            <a href=""><img style="width:410px"
-                                    src="<?= PUBLIC_ASSETS . $product_detail['image'] ?>" /></a>
-                        </div>
+            <h3 class="mt-3">Size <small>Please select one</small></h3>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-default text-center">
+                <input type="radio" name="color_option" id="color_option_b1" autocomplete="off" type="36">
+                <span class="text-xl">36</span>
+              </label>
+              <label class="btn btn-default text-center">
+                <input type="radio" name="color_option" id="color_option_b2" autocomplete="off" type="37">
+                <span class="text-xl">37</span>
+              </label>
+              <label class="btn btn-default text-center">
+                <input type="radio" name="color_option" id="color_option_b3" autocomplete="off" type="38">
+                <span class="text-xl">38</span>
+              </label>
+              <label class="btn btn-default text-center">
+                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="39">
+                <span class="text-xl">39</span>
+              </label>
+              <label class="btn btn-default text-center">
+                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="40">
+                <span class="text-xl">40</span>
+              </label>
+              <label class="btn btn-default text-center">
+                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="41">
+                <span class="text-xl">41</span>
+              </label>
+              <label class="btn btn-default text-center">
+                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="42">
+                <span class="text-xl">42</span>
+              </label>
+              <label class="btn btn-default text-center">
+                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="43">
+                <span class="text-xl">43</span>
+              </label>
+            </div>
+            <div class="bg-gray py-2 px-3 mt-4">
+              <h2 class="mb-0">
+                <?= number_format($product_detail['price']) ?> <u>đ</u>
+              </h2>
+            </div>
+            <div class="mt-4">
+              <div class="btn btn-primary btn-lg btn-flat">
+                <i class="fas fa-cart-plus fa-lg mr-2"></i>
+                <a href="">Add to Cart</a>
+              </div>
 
+              <div class="btn btn-default btn-lg btn-flat">
+                <i class="fas fa-heart fa-lg mr-2"></i>
+                Add to Wishlist
+              </div>
+            </div>
 
+            <div class="mt-4 product-share">
+              <a href="#" class="text-gray">
+                <i class="fab fa-facebook-square fa-2x"></i>
+              </a>
+              <a href="#" class="text-gray">
+                <i class="fab fa-twitter-square fa-2x"></i>
+              </a>
+              <a href="#" class="text-gray">
+                <i class="fas fa-envelope-square fa-2x"></i>
+              </a>
+              <a href="#" class="text-gray">
+                <i class="fas fa-rss-square fa-2x"></i>
+              </a>
+            </div>
 
-                        <?php 
-                            ?>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <nav class="w-100">
+            <div class="nav nav-tabs" id="product-tab" role="tablist">
+              <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab" href="#product-desc" role="tab" aria-controls="product-desc" aria-selected="true">Description</a>
+              <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab" href="#product-comments" role="tab" aria-controls="product-comments" aria-selected="false">Comments</a>
+            </div>
+          </nav>
+          <div class="tab-content p-3" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab"><?= $product_detail['details'] ?></div>
+            <div class="tab-pane fade" id="product-comments" role="tabpanel" aria-labelledby="product-comments-tab">
+              <form id="cart-form" action="" method="POST" style="padding: 10px;">
+                <input type="hidden" name="ma_hh" value="<?= $ma_hh ?>">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="noi_dung"></textarea>
+                <button type="submit" name="btn_binhluan" style="margin-top:10px">Bình luận</button>
+              </form>
+              <div class="evaluate">
 
-                        <div class="col-sm-6 col-md-4" style="border: 1px double #adaaaa;">
-                            <h4 style="margin-top: 30px; margin-bottom: 20px; text-align: center;">Bảng Size Thời Trang
-                            </h4>
-                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="0" class="active" aria-current="true"
-                                        aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                </div>
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="<?= CLIENT_ASSETS ?>images/size4.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="<?= CLIENT_ASSETS ?>images/size2.png" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="<?= CLIENT_ASSETS ?>images/size3.png" class="d-block w-100" alt="...">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button"
-                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button"
-                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4" style="border: 1px double #adaaaa;">
-
-                            <?php
-                                    product_detail();
-                                ?>
-                            <h4 style="text-transform: uppercase; margin-top: 20px; margin-bottom: 20px;"><a
-                                    style="text-decoration: none; color:black" href="">
-                                    <?php echo $product_detail['product_name'] ?>
-                                </a></h4>
-
-                            <span> <a style="text-decoration: none; color:red; font-size:20px; font-weight: bold;"
-                                    href="">Giá:
-                                    <?php echo $product_detail['price'] ?>
-                                </a></span>
-
-                            <?php 
-                            ?>
-
-
-
-
-                            <br>
-
-                            <form id="cart-form" action="<?= CLIENT_URL . 'gio-hang?id='.$_GET['id'] ?>" method="POST" style="padding: 10px;">
-                                <strong>SIZE:</strong>
-                                <table style="margin-left: 50px;">
-                                    <tr>
-                                        <td><input type='radio' name='size' ng-model='mValue' value='36' checked /> 36
-                                        </td>
-                                        <td><input type='radio' name='size' ng-model='mValue' value='37' /> 37</td>
-                                        <td><input type='radio' name='size' ng-model='mValue' value='38' /> 38</td>
-                                        <td><input type='radio' name='size' ng-model='mValue' value='39' /> 39</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type='radio' name='size' ng-model='mValue' value='40' /> 40</td>
-                                        <td><input type='radio' name='size' ng-model='mValue' value='41' /> 41</td>
-                                        <td><input type='radio' name='size' ng-model='mValue' value='42' /> 42</td>
-                                        <td><input type='radio' name='size' ng-model='mValue' value='43' /> 43</td>
-                                    </tr>
-                                </table>
-                                <br>
-                                <strong>MÀU:</strong>
-                                <input type='radio' name='mausac' ng-model='mValue' value='Đen' checked />Đen
-                                <input type='radio' name='mausac' ng-model='mValue' value='Đỏ' />Đỏ
-                                <input type='radio' name='mausac' ng-model='mValue' value='Trắng' />Trắng
-                                <input type='radio' name='mausac' ng-model='mValue' value='Xám' />Xám
-                                <br><br>
-                                <strong>SỐ LƯỢNG:</strong>
-                                <input style="text-align: center; width:70px" type="number" name="soluong" value="1">
-                                <br><br>
-
-                                <input style="background: rgb(177, 15, 15); color: #fcfafa; font-size: 20px;"
-                                    type="submit" value="Mua Ngay" name="btn_them"> <br> <br>
-
-                                <input style="background: rgb(173, 21, 21); color: #fcfafa; font-size: 20px;"
-                                    type="submit" value="Thêm Vào Giỏ Hàng" name="btn_them">
-                            </form>
-                        </div>
-
-
-                        <div class="grid" style="margin-top: 30px;">
-                            <?php
-                                    product_detail();
-                                ?>
-                            <div class="grid__column">
-                                <div class="product-single__description">
-                                    <h3 class="product-single__heading">Mô tả chi tiết</h3>
-                                    <hr>
-
-                                    <div class="info-box">
-                                        <?php echo $product_detail['details'] ?></span>
-                                    </div>
-                                </div>
-                                <?php 
-                            ?>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
+                <div class="kh" style="display:flex; padding: 5px 15px">
+                  <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="" width="40px" style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;">
+                  <strong class="name" style="padding:10px">
+                    Nguyễn Văn Trăm
+                  </strong>
+                </div>
+                <div class="danh_gia" style="padding: 0px 50px;">
+                  <div class="nd_bl">
+                    Vivamus rhoncus nisl sed venenatis luctus. Sed condimentum risus ut tortor feugiat laoreet.
+                    Suspendisse potenti. Donec et finibus sem, ut commodo lectus. Cras eget neque dignissim, placerat
+                    orci interdum, venenatis odio. Nulla turpis elit, consequat eu eros ac, consectetur fringilla urna.
+                    Duis gravida ex pulvinar mauris ornare, eget porttitor enim vulputate. Mauris hendrerit, massa nec
+                    aliquam cursus, ex elit euismod lorem, vehicula rhoncus nisl dui sit amet eros. Nulla turpis lorem,
+                    dignissim a sapien eget, ultrices venenatis dolor. Curabitur vel turpis at magna elementum hendrerit
+                    vel id dui. Curabitur a ex ullamcorper, ornare velit vel, tincidunt ipsum.
+                  </div>
+                  <div class="date" style="font-size: 13px;">
+                    23/12/2022
+                  </div>
                 </div>
 
+              </div>
 
-                <div class="mb-3">
-                    <h4>Đánh Giá</h4>
+            </div>
+          </div>
+        </div>
 
-
-                    <form id="cart-form" action="" method="POST" style="padding: 10px;">
-                        <input type="hidden" name="ma_hh" value="<?=$ma_hh?>">
-
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                            name="noi_dung"></textarea>
-                        <button type="submit" name="btn_binhluan" style="margin-top:10px">GỬi</button>
-                    </form>
-                    <br><br>
-                    <div class="evaluate">
-                        <div class="kh" style="display:flex; padding: 5px 15px">
-                            <img src=" " alt="" width="40px"
-                                style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;">
-                            <strong class="name" style="padding:10px">Nguyễn Văn Trăm</strong>
-                        </div>
-
-                        <div class="danh_gia" style="padding: 0px 50px;">
-                            <div class="nd_bl">Sản phẩm đẹp chất lượng</div>
-                            <div class="date" style="font-size: 13px;">23/12/2022</div>
-                        </div>
+        <div class="ps-section ps-section--top-sales ps-owl-root pt-40 pb-80">
+        <div class="ps-container">
+          <div class="ps-section__header mb-50">
+            <div class="row">
+                  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 ">
+                    <h3 class="ps-section__title" data-mask="Related item">- YOU MIGHT ALSO LIKE</h3>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
+                    <div class="ps-owl-actions"><a class="ps-prev" href="#"><i class="ps-icon-arrow-right"></i>Prev</a><a class="ps-next" href="#">Next<i class="ps-icon-arrow-left"></i></a></div>
+                  </div>
+            </div>
+          </div>
+          <div class="ps-section__content">
+            <div class="ps-owl--colection owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="5000" data-owl-gap="30" data-owl-nav="false" data-owl-dots="false" data-owl-item="4" data-owl-item-xs="1" data-owl-item-sm="2" data-owl-item-md="3" data-owl-item-lg="4" data-owl-duration="1000" data-owl-mousedrag="on">
+              <div class="ps-shoes--carousel">
+                <div class="ps-shoe">
+                  <div class="ps-shoe__thumbnail">
+                    <div class="ps-badge"><span>New</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                  </div>
+                  <div class="ps-shoe__content">
+                    <div class="ps-shoe__variants">
+                      <div class="ps-shoe__variant normal"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""></div>
+                      <select class="ps-rating ps-shoe__rating">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="2">5</option>
+                      </select>
                     </div>
+                    <div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air Jordan 7 Retro</a>
+                      <p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ps-shoes--carousel">
+                <div class="ps-shoe">
+                  <div class="ps-shoe__thumbnail">
+                    <div class="ps-badge"><span>New</span></div>
+                    <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                  </div>
+                  <div class="ps-shoe__content">
+                    <div class="ps-shoe__variants">
+                      <div class="ps-shoe__variant normal"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""></div>
+                      <select class="ps-rating ps-shoe__rating">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="2">5</option>
+                      </select>
+                    </div>
+                    <div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air Jordan 7 Retro</a>
+                      <p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price">
+                        <del>£220</del> £ 120</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ps-shoes--carousel">
+                <div class="ps-shoe">
+                  <div class="ps-shoe__thumbnail">
+                    <div class="ps-badge"><span>New</span></div>
+                    <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                  </div>
+                  <div class="ps-shoe__content">
+                    <div class="ps-shoe__variants">
+                      <div class="ps-shoe__variant normal"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""></div>
+                      <select class="ps-rating ps-shoe__rating">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="2">5</option>
+                      </select>
+                    </div>
+                    <div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air Jordan 7 Retro</a>
+                      <p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price">
+                        <del>£220</del> £ 120</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ps-shoes--carousel">
+                <div class="ps-shoe">
+                  <div class="ps-shoe__thumbnail">
+                    <div class="ps-badge"><span>New</span></div>
+                    <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                  </div>
+                  <div class="ps-shoe__content">
+                    <div class="ps-shoe__variants">
+                      <div class="ps-shoe__variant normal"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""></div>
+                      <select class="ps-rating ps-shoe__rating">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="2">5</option>
+                      </select>
+                    </div>
+                    <div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air Jordan 7 Retro</a>
+                      <p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price">
+                        <del>£220</del> £ 120</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ps-shoes--carousel">
+                <div class="ps-shoe">
+                  <div class="ps-shoe__thumbnail">
+                    <div class="ps-badge"><span>New</span></div>
+                    <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                  </div>
+                  <div class="ps-shoe__content">
+                    <div class="ps-shoe__variants">
+                      <div class="ps-shoe__variant normal"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""></div>
+                      <select class="ps-rating ps-shoe__rating">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="2">5</option>
+                      </select>
+                    </div>
+                    <div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air Jordan 7 Retro</a>
+                      <p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price">
+                        <del>£220</del> £ 120</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ps-shoes--carousel">
+                <div class="ps-shoe">
+                  <div class="ps-shoe__thumbnail">
+                    <div class="ps-badge"><span>New</span></div>
+                    <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                  </div>
+                  <div class="ps-shoe__content">
+                    <div class="ps-shoe__variants">
+                      <div class="ps-shoe__variant normal"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt=""></div>
+                      <select class="ps-rating ps-shoe__rating">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="2">5</option>
+                      </select>
+                    </div>
+                    <div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Air Jordan 7 Retro</a>
+                      <p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price">
+                        <del>£220</del> £ 120</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
 
-                    <br><br><br>
-                    <table style="border-collapse: collapse; width: 100%; height: 340px;" border="1">
-                        <tbody>
-                            <tr style="height: 319px; ">
-                                <td style="width: 50%; text-align: center; height: 319px; "><iframe
-                                        src="//www.youtube.com/embed/Ltq0dkiG0QE?t=1684 " width="100% " height="314 "
-                                        allowfullscreen="allowfullscreen
-                                            " data-gtm-yt-inspected-11288696_41="true "></iframe></td>
-                                <td style="width: 50%; text-align: center; height: 319px; "><iframe
-                                        src="//www.youtube.com/embed/rZSTBOBL3Dk " width="100% " height="314 "
-                                        allowfullscreen="allowfullscreen
-                                            " data-gtm-yt-inspected-11288696_41="true "></iframe></td>
-                            </tr>
-                            <tr style="height: 18px; ">
-                                <td style="width: 50%; text-align: center; height: 18px; "><em>Youtuber Nguyễn Hữu
-                                        Trí</em>
-                                </td>
-                                <td style="width: 50%; text-align: center; height: 18px; "><em>Youtuber Vũ Lê Trang
-                                        Anh</em>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <hr>
-        </section>
-    </div>
+
+
+  </section>
 
 
 
-
-
-
-
-
+  <!-- jQuery -->
+  <script src="<?= CLIENT_ASSETS ?>css/plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="<?= CLIENT_ASSETS ?>css/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="<?= CLIENT_ASSETS ?>css/dist/js/adminlte.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="<?= CLIENT_ASSETS ?>css/dist/js/demo.js"></script>
 </body>
 
 </html>
