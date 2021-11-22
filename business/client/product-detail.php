@@ -8,7 +8,7 @@ function product_detail(){
     // Lấy ra sản phẩm theo danh mục
     $id_brand = $_GET['id_brand'];
     $sql = "select * from product where id_brand =".$id_brand." AND id_product <>".$id;
-    $product_same_kind = executeQuery($sql, false);
+    $product_same_kind = executeQuery($sql);
     client_render('product-detail/index.php', [
         'product_detail' => $product_detail,
         'product_same_kind' => $product_same_kind
