@@ -279,7 +279,6 @@
                         class="ps-shoe__overlay" href=""></a>
                     </div>
                     <div class="ps-shoe__content">
-                    
                       <div class="ps-shoe__variants">
                         <div class="ps-shoe__variant normal"><img
                             src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_same_kind['product_image'] ?>"
