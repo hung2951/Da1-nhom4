@@ -267,38 +267,36 @@
                 data-owl-item-sm="2" data-owl-item-md="3" data-owl-item-lg="4" data-owl-duration="1000"
                 data-owl-mousedrag="on">
                 <?php
-                    foreach($product_same_kind as $product_same_kind ) :
+                    foreach($product_same_kind as $ps ) :
                     ?>
                 <div class="ps-shoes--carousel">
-                  <a href="<?=CLIENT_URL.'chi-tiet-san-pham?id='.$product_same_kind['id_product'].'&id_brand='.$product_same_kind['id_brand'] ?>">
                   <div class="ps-shoe">
                     <div class="ps-shoe__thumbnail">
                       <div class="ps-badge"><span>New</span></div><a class="ps-shoe__favorite" href="#"><i
                           class="ps-icon-heart"></i></a><img
-                        src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_same_kind['product_image'] ?>" alt=""><a
-                        class="ps-shoe__overlay" href=""></a>
+                        src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt=""><a
+                        class="ps-shoe__overlay" href="<?=CLIENT_URL.'chi-tiet-san-pham?id='.$ps['id_product'].'&id_brand='.$ps['id_brand']?>"></a>
                     </div>
                     <div class="ps-shoe__content">
                       <div class="ps-shoe__variants">
                         <div class="ps-shoe__variant normal"><img
-                            src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_same_kind['product_image'] ?>"
+                            src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>"
                             alt=""><img
-                            src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_same_kind['product_image'] ?>"
+                            src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>"
                             alt=""><img
-                            src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_same_kind['product_image'] ?>"
+                            src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>"
                             alt=""><img
-                            src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_same_kind['product_image'] ?>" alt="">
+                            src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt="">
                         </div>
                       </div>
                       <div class="ps-shoe__detail">
-                        <a class="ps-shoe__name" href="">
-                          <?= $product_same_kind['product_name']?>
+                        <a class="ps-shoe__name" href="<?=CLIENT_URL.'chi-tiet-san-pham?id='.$ps['id_product'].'&id_brand='.$ps['id_brand']?>">
+                          <?= $ps['product_name']?>
                         </a>
                       </div>
                       
                     </div>
                   </div>
-                  </a>
                 </div>
                 <?php endforeach; ?>
               </div>
