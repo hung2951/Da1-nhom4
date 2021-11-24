@@ -14,10 +14,6 @@ switch ($url) {
     case 'client/hoa-don':
         require_once './business/client/orders.php';
         list_orders();
-    case 'client/chi-tiet-san-pham':
-        require_once './business/client/product-detail.php';
-        product_detail();
-        break;
     case 'cp-admin/dashboard':
         require_once './business/admin/dashboard.php';
         dashboard_info();
@@ -54,19 +50,11 @@ switch ($url) {
         require_once "./business/admin/orders.php";
         list_order();
         break;
-    case 'cp-admin/hoa-don/list-sua-tt':
-        require_once "./business/admin/orders.php";
-        show_user_order();
-        break;
-    case 'cp-admin/hoa-don/list-sua-tt/trang-thai':
-        require_once "./business/admin/orders.php";
-        list_update_status();
-        break;
-    case 'cp-admin/hoa-don/list-sua-tt/trang-thai/sua':
+    case 'cp-admin/hoa-don/ds-hoa-don/sua':
         require_once "./business/admin/orders.php";
         select_orders();
         break;
-    case 'cp-admin/hoa-don/list-sua-tt/list-sua/trang-thai/luu-sua':
+    case 'cp-admin/hoa-don/ds-hoa-don/sua/luu-sua':
         require_once "./business/admin/orders.php";
         save_update_status();
         break;
