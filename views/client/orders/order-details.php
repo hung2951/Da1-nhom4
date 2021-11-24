@@ -7,21 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="<?= CLIENT_ASSETS ?>/css/order-detail.css">
-    
+
 </head>
 
 <body>
     <div class="container">
         <div class="status">
-            <p><a href="<?= CLIENT_URL.'hoa-don?id='.$o['id_user']?>">Quay lại</a></p>
-            <p>ID ĐƠN HÀNG- <?= $o['id_orders'] ?> | <?= $o['status'] == 0 ? "ĐƠN HÀNG ĐANG GIAO ĐẾN BÊN BẠN" : "ĐƠN HÀNG ĐÃ GIAO" ?></p>
+            <p><a href="<?= CLIENT_URL . 'hoa-don?id=' . $o['id_user'] ?>">Quay lại</a></p>
+            <p>ID ĐƠN HÀNG- <?= $o['id_orders'] ?> |
+                <?php if ($o['status'] == 0) : ?>
+                    <span>CHỜ XÁC NHẬN</span>
+                <?php elseif ($o['status'] == 1) : ?>
+                    <span>ĐANG GIAO HÀNG</span>
+                <?php else : ?>
+                    <span>GIAO HÀNG THÀNH CÔNG</span>
+                <?php endif ?>
+            </p>
         </div>
         <div class="info-user">
             <p id="info-user-title">Địa chỉ nhận hàng</p>
             <p id="info-user-name"><?= $o['full_name'] ?></p>
             <p>(+84) <?= $o['phone'] ?></p>
             <p><?= $o['address'] ?></p>
-            <span>TRẠNG THÁI: </span><span id="info-user-status"> <?= $o['status'] == 0 ? "ĐƠN HÀNG ĐANG ĐƯỢC GIAO ĐẾN BÊN BẠN" : "GIAO HÀNG THÀNH CÔNG" ?></span>
+            <span>TRẠNG THÁI: </span><span id="info-user-status">
+                <?php if ($o['status'] == 0) : ?>
+                    <span>CHỜ XÁC NHẬN</span>
+                <?php elseif ($o['status'] == 1) : ?>
+                    <span>ĐANG GIAO HÀNG</span>
+                <?php else : ?>
+                    <span>GIAO HÀNG THÀNH CÔNG</span>
+                <?php endif ?>
+            </span>
         </div>
         <div class="orders">
             <p id="date">Ngày đặt hàng: <?= $o['order_date'] ?></p>
@@ -41,7 +57,7 @@
                 <p><span id="money"><?= number_format($o['money']) ?></span><u>đ</u></p>
             </div>
             <?php if ($o['status'] == 1) : ?>
-                <p id="ths">Cảm ơn bạn đã tin tưởng mua hàng của chúng tôi !</p>
+                <p id="ths">Vui lòng thanh toán khi nhận hàng !</p>
             <?php endif ?>
         </div>
     </div>
