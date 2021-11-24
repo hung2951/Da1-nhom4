@@ -53,14 +53,14 @@
 #order-info-price span,u{
     color: red;
 }
-.buy ,.wait{
+.buy ,.delivery{
     padding-bottom: 70px;
 }
-.buy p a{
+.buy p a,.update-order p a{
     color: black;
     padding-left: 20px;
 }
-.buy p,.wait p{
+.buy p,.delivery p{
     float: right;
     border: 1px solid #ccc;
     width: 100px;
@@ -70,12 +70,41 @@
     border-radius: 5px;
     font-weight: bold;
 }
-.buy p:hover{
+.buy p:hover,.update-order p:hover{
     background-color: rgb(253, 135, 135);
     border-radius: 5px;
+    transition: all 0.5s;
 }
-.wait p{
+.delivery p{
     width: 160px;
     padding-left: 20px;
     background-color: rgb(240, 240, 240);
+}
+.update-orders{
+    display: flex;
+    justify-content: space-between;
+}
+.wait{
+    width: 160px;
+    border: 1px solid #ccc;
+    height: 45px;
+    margin: 10px 0;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.wait p{
+    line-height: 45px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+.update-order p{
+    border: 1px solid #ccc;
+    width: 120px;
+    height: 45px;
+    margin: 10px 0;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+.update-order p a{
+    line-height: 45px;
 }

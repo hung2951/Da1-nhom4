@@ -14,7 +14,15 @@
         <?php foreach ($dsHoadon as $o) : ?>
             <div class="orders">
                 <div class="order-title">
-                    <span>ID ĐƠN HÀNG: <?= $o['id_orders'] ?> | <?= $o['status'] == 0 ? "ĐƠN HÀNG ĐANG GIAO ĐẾN BÊN BẠN" : "ĐƠN HÀNG ĐÃ GIAO" ?></span>
+                    <span>ID ĐƠN HÀNG: <?= $o['id_orders'] ?> |
+                        <?php if ($o['status'] == 0) : ?>
+                            <span>CHỜ XÁC NHẬN</span>
+                        <?php elseif ($o['status'] == 1) : ?>
+                            <span>ĐANG GIAO HÀNG</span>
+                        <?php else : ?>
+                            <span>GIAO HÀNG THÀNH CÔNG</span>
+                        <?php endif ?>
+                    </span>
                 </div>
                 <a href="<?= CLIENT_URL . 'hoa-don/chi-tiet?id=' . $o['id_orders'] ?>">
                     <div class="order">
@@ -33,13 +41,22 @@
                         <p><span> <?= number_format($o['money']) ?> <u>đ</u></span></p>
                     </div>
                 </a>
-                <?php if ($o['status']==1) : ?>
+                <?php if ($o['status'] == 2) : ?>
                     <div class="buy">
                         <p><a href="">Mua lại</a></p>
                     </div>
-                <?php else : ?>
-                    <div class="wait">
+                <?php elseif ($o['status'] == 1) : ?>
+                    <div class="delivery">
                         <p>Đang giao hàng</p>
+                    </div>
+                <?php else : ?>
+                    <div class="update-orders">
+                        <div class="update-order">
+                            <p><a href="#">Chỉnh sửa</a></p>
+                        </div>
+                        <div class="wait">
+                            <p>Chờ xác nhận</p>
+                        </div>
                     </div>
                 <?php endif ?>
 
