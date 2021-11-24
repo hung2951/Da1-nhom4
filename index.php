@@ -6,14 +6,20 @@ require_once './dao/system_dao.php';
 $url = isset($_GET['url']) ? $_GET['url'] : "/";
 switch ($url) {
     case '/':
-        require_once './views/client/layouts/index.php';
+        require_once './business/client/home.php';
+        category();
         break;
+    case 'client/hoa-don/chi-tiet':
+        require_once "./business/client/home.php";
+        order();
     case 'client/hoa-don/chi-tiet':
         require_once "./business/client/orders.php";
         order();
+        break;
     case 'client/hoa-don':
         require_once './business/client/orders.php';
         list_orders();
+        break;
     case 'client/chi-tiet-san-pham':
         require_once './business/client/product-detail.php';
         product_detail();

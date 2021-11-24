@@ -3,7 +3,7 @@
         $sql = " SELECT * FROM brand ORDER BY id_brand";
         $categorys=executeQuery($sql);
 
-        client_render('home/index.php', [
+        client_render('layouts/main.php', [
             'dsDanhMuc' => $categorys,
         ]);
     }
