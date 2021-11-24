@@ -31,14 +31,14 @@
                         </div>
                         <div class="order-info">
                             <p id="order-info-name"><?= $o['product_name'] ?></p>
-                            <p>Size: <?= $o['size'] ?></p>
+                            <p>Size: <?= $o['orders_size'] ?></p>
                             <p>x<?= $o['quantity_orders'] ?></p>
                             <p id="order-info-price">Đơn giá: <span><?= number_format($o['price']) ?></span><u>đ</u></p>
                         </div>
                     </div>
                     <div class="money">
                         <p>Tổng tiền: </p>
-                        <p><span> <?= number_format($o['money']) ?> <u>đ</u></span></p>
+                        <p><span> <?= number_format($o['price']*$o['quantity_orders']) ?> <u>đ</u></span></p>
                     </div>
                 </a>
                 <?php if ($o['status'] == 2) : ?>
@@ -52,7 +52,7 @@
                 <?php else : ?>
                     <div class="update-orders">
                         <div class="update-order">
-                            <p><a href="#">Chỉnh sửa</a></p>
+                            <p><a href="<?= CLIENT_URL .'hoa-don/sua?id='.$o['id_orders']?>">Chỉnh sửa</a></p>
                         </div>
                         <div class="wait">
                             <p>Chờ xác nhận</p>

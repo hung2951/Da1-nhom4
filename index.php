@@ -8,12 +8,22 @@ switch ($url) {
     case '/':
         require_once './views/client/layouts/index.php';
         break;
-    case 'client/hoa-don/chi-tiet':
-        require_once "./business/client/orders.php";
-        order();
     case 'client/hoa-don':
         require_once './business/client/orders.php';
         list_orders();
+        break;
+    case 'client/hoa-don/chi-tiet':
+        require_once "./business/client/orders.php";
+        order();
+        break;
+    case 'client/hoa-don/sua':
+        require_once "./business/client/orders.php";
+        update_order();
+        break;
+    case 'client/hoa-don/sua/luu-sua':
+        require_once "./business/client/orders.php";
+        save_update_order();
+        break;
     case 'client/chi-tiet-san-pham':
         require_once './business/client/product-detail.php';
         product_detail();
