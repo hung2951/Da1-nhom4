@@ -93,7 +93,9 @@
 						<li class="menu-item menu-item-has-children dropdown"><a href="index.html">Home</a>
 
 							<ul class="sub-menu">
-								<li class="menu-item"><a href="index.html">Homepage #1</a></li>
+								<?php foreach ($dsDanhMuc as $ds) :?>
+								<li class="menu-item"><a href="<?=ADMIN_ASSETS?>/?product&id_brand=<??>"></a></li>
+								<?php endforeach?>
 							</ul>
 						</li>
 						<li class="menu-item menu-item-has-children has-mega-menu"><a href="#">Men</a>
