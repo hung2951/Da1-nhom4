@@ -861,7 +861,7 @@
 					data-owl-gap="40" data-owl-item="6" data-owl-item-lg="6" data-owl-item-md="5" data-owl-item-sm="4"
 					data-owl-item-xs="2" data-owl-loop="true" data-owl-mousedrag="on" data-owl-nav="false"
 					data-owl-speed="5000"><a href="#"><img alt="" src="images/partner/1.png" /></a><a href="#"><img
-							alt="" src="images/partner/2.png" /></a><a href="#"><img alt=""
+							alt="" src="public/uploads/avatars/oki.jpg" /></a><a href="#"><img alt=""
 							src="images/partner/3.png" /></a><a href="#"><img alt="" src="images/partner/4.png" /></a><a
 						href="#"><img alt="" src="images/partner/5.png" /></a><a href="#"><img alt=""
 							src="images/partner/6.png" /></a><a href="#"><img alt="" src="images/partner/7.png" /></a><a
