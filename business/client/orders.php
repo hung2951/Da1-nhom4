@@ -50,8 +50,9 @@
     }
     function delete_order(){
         $id = $_GET['id'];
+        $id_user = $_GET['id_user'];
         $sql = "delete from orders where id_orders = $id";
         executeQuery($sql);
-        header('location: '.CLIENT_URL.'hoa-don?id=');
+        header('location: '.CLIENT_URL.'hoa-don?id='.$id_user);
     }
 ?>

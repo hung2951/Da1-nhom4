@@ -16,6 +16,10 @@ switch ($url) {
         require_once "./business/client/orders.php";
         order();
         break;
+    case 'client/hoa-don/xoa':
+        require_once "./business/client/orders.php";
+        delete_order();
+        break;
     case 'client/hoa-don/sua':
         require_once "./business/client/orders.php";
         update_order();
