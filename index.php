@@ -8,6 +8,10 @@ switch ($url) {
     case '/':
         require_once './views/client/layouts/index.php';
         break;
+    case 'client/home':
+        require_once './business/client/home.php';
+        product_home();
+        break;
     case 'client/hoa-don':
         require_once './business/client/orders.php';
         list_orders();
