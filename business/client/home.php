@@ -12,7 +12,7 @@
 
 function product_home(){
     // SẢN PHẨM ĐẶC BIỆT
-    $sql="select * from product where status=1 order by date_add desc limit 0,8";
+    $sql="select * from product where new_product=1 order by date_add desc limit 0,8";
     $list_spdacbiet = executeQuery($sql);
     // SẢN PHẨM CÓ LƯỢT XEM NHIỀU NHẤT
     $sql ="select * from product where 1 order by view desc limit 0,8";
