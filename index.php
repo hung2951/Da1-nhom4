@@ -9,9 +9,10 @@ switch ($url) {
         require_once './business/client/home.php';
         category();
         break;
-    case 'client/hoa-don/chi-tiet':
+    case 'client/product-category':
         require_once "./business/client/home.php";
-        order();
+        select_product_by_id();
+        break;
     case 'client/hoa-don/chi-tiet':
         require_once "./business/client/orders.php";
         order();

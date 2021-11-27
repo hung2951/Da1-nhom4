@@ -90,7 +90,7 @@
 							<ul class="sub-menu">
 								<?php foreach ($dsDanhMuc as $ds) : ?>
 									<li class="menu-item">
-										<a href="<?= CLIENT_ASSETS ?>/?id_brand=<?= $ds['id_brand'] ?>"><?= $ds['brand_name'] ?></a>
+										<a href="<?= CLIENT_URL ?>product-category?id_brand=<?= $ds['id_brand'] ?>"><?= $ds['brand_name'] ?></a>
 									</li>
 								<?php endforeach ?>
 							</ul>
@@ -186,7 +186,6 @@
 	</div>
 	<!-- end-header -->
 	<?php include_once $businessClientView; ?>
-	<?php var_dump($dsDanhMuc) ?>
 
 	<div class="ps-footer bg--cover" data-background="images/background/parallax.jpg">
 		<div class="ps-footer__content">
