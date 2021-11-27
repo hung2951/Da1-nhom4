@@ -252,14 +252,11 @@
 		<div class="ps-services owl-slider" data-owl-auto="true" data-owl-dots="false" data-owl-duration="1000"
 			data-owl-gap="0" data-owl-item="1" data-owl-item-lg="1" data-owl-item-md="1" data-owl-item-sm="1"
 			data-owl-item-xs="1" data-owl-loop="true" data-owl-mousedrag="on" data-owl-nav="true" data-owl-speed="7000">
-			<p class="ps-service"><strong>Free delivery</strong>: Get free standard delivery on every order with Shoe
-				Store</p>
+			<p class="ps-service"><strong>GIAO HÀNG TOÀN QUỐC </strong>: Vận chuyển khắp Việt Nam</p>
 
-			<p class="ps-service"><strong>Free delivery</strong>: Get free standard delivery on every order with Shoe
-				Store</p>
+			<p class="ps-service"><strong>THANH TOÁN KHI NHẬN HÀNG </strong>: Nhận hàng tại nhà rồi thanh toán</p>
 
-			<p class="ps-service"><strong>Free delivery</strong>: Get free standard delivery on every order with Shoe
-				Store</p>
+			<p class="ps-service"><strong>ĐỔI HÀNG DỄ DÀNG </strong>: Đổi hàng thoải mái trong 30 ngày</p>
 		</div>
 	</div>
     <!-- end-header -->
