@@ -87,11 +87,13 @@
 					<ul class="main-menu menu">
 						<li class="menu-item menu-item-has-children dropdown"><a href="">SNEAKER</a>
 							<ul class="sub-menu">
-								<?php foreach ($dsDanhMuc as $ds) : ?>
+								<?php if(category()):?>
+								<?php foreach (category() as $ds) : ?>
 									<li class="menu-item">
 										<a href="<?= CLIENT_URL ?>product-category?id_brand=<?= $ds['id_brand'] ?>"><?= $ds['brand_name'] ?></a>
 									</li>
 								<?php endforeach ?>
+								<?php endif?>
 							</ul>
 						</li>
 						<li class="menu-item"><a href="#">Women</a></li>

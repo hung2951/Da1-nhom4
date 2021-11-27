@@ -13,6 +13,11 @@ function client_render($viewpath, $data = []){
     include_once './views/client/layouts/main.php';
 }
 
+function category(){
+    $sql = " SELECT * FROM brand ORDER BY id_brand";
+    $data=executeQuery($sql);
+    return $data;
+}
 function dd(){
     echo "<pre>";
     $args = func_get_args();
