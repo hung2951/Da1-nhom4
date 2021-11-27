@@ -5,9 +5,13 @@ require_once './commons/helpers.php';
 require_once './dao/system_dao.php';
 $url = isset($_GET['url']) ? $_GET['url'] : "/";
 switch ($url) {
+    // case $url:
+    //     require_once './business/client/home.php';
+    //     category();
+    //     break;
     case '/':
-        require_once './business/client/home.php';
-        category();
+        require_once './views/client/layouts/main.php';
+        
         break;
     case 'client/product-category':
         require_once "./business/client/home.php";
@@ -73,6 +77,7 @@ switch ($url) {
         require_once "./business/admin/orders.php";
         orders_manage();
         break;
+    
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;

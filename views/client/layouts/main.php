@@ -85,8 +85,7 @@
 
 				<div class="navigation__column center">
 					<ul class="main-menu menu">
-						<li class="menu-item menu-item-has-children dropdown"><a href="index.html">GIÀY</a>
-
+						<li class="menu-item menu-item-has-children dropdown"><a href="">SNEAKER</a>
 							<ul class="sub-menu">
 								<?php foreach ($dsDanhMuc as $ds) : ?>
 									<li class="menu-item">
@@ -95,7 +94,6 @@
 								<?php endforeach ?>
 							</ul>
 						</li>
-
 						<li class="menu-item"><a href="#">Women</a></li>
 						<li class="menu-item"><a href="#">Kids</a></li>
 						<li class="menu-item menu-item-has-children dropdown"><a href="#">News</a>
