@@ -93,28 +93,28 @@
 					<div class="masonry-wrapper" data-col-md="4" data-col-sm="2" data-col-xs="1" data-gap="30" data-radio="100%">
 						<div class="ps-masonry">
 							<div class="grid-sizer"></div>
-							<?php foreach ($list_spdacbiet as $list_spdacbiet) : ?>
+							<?php foreach ($list_spdacbiet as $list_db) : ?>
 								<div class="grid-item kids">
 									<div class="grid-item__content-wrapper">
 										<div class="ps-shoe mb-30">
-											<a href="<?= CLIENT_URL . 'chi-tiet-san-pham?id=' . $list_spdacbiet['id_product'] . '&id_brand=' . $list_spdacbiet['id_brand'] ?>">
+											<a href="<?= CLIENT_URL . 'chi-tiet-san-pham?id=' . $list_db['id_product'] . '&id_brand=' . $list_db['id_brand'] ?>">
 												<div class="ps-shoe__thumbnail">
-													<img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_spdacbiet['product_image'] ?>" />
+													<img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_db['product_image'] ?>" />
 												</div>
 											</a>
 
 											<div class="ps-shoe__content">
 												<div class="ps-shoe__variants">
 													<div class="ps-shoe__variant normal">
-														<img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_spdacbiet['product_image'] ?>" />
-														<img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_spdacbiet['product_image'] ?>" />
-														<img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_spdacbiet['product_image'] ?>" />
-														<img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_spdacbiet['product_image'] ?>" />
+														<img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_db['product_image'] ?>" />
+														<img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_db['product_image'] ?>" />
+														<img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_db['product_image'] ?>" />
+														<img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_db['product_image'] ?>" />
 													</div>
 												</div>
 
-												<div class="ps-shoe__detail"><a class="ps-shoe__name" href="<?= CLIENT_URL . 'chi-tiet-san-pham?id=' . $list_spdacbiet['id_product'] . '&id_brand=' . $list_spdacbiet['id_brand'] ?>"><?= $list_spdacbiet['product_name'] ?></a>
-													<span class="ps-shoe__price"> <?= number_format($list_spdacbiet['price']) ?></span>
+												<div class="ps-shoe__detail"><a class="ps-shoe__name" href="<?= CLIENT_URL . 'chi-tiet-san-pham?id=' . $list_db['id_product'] . '&id_brand=' . $list_db['id_brand'] ?>"><?= $list_db['product_name'] ?></a>
+													<span class="ps-shoe__price"> <?= number_format($list_db['price']) ?></span>
 												</div>
 											</div>
 										</div>
