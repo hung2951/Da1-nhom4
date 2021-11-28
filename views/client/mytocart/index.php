@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <!--[if IE 7]><html class="ie ie7"><![endif]-->
 <!--[if IE 8]><html class="ie ie8"><![endif]-->
@@ -58,9 +61,9 @@
                   <th>Total</th>
                   <th></th>
                 </tr>
-              </thead>
+              </thead>  
               <tbody>
-              <?php foreach ($mytocart as $cart): ?>
+              <?php foreach ($_SESSION['cart'] as $cart): ?>
                
                     <?php
                       
@@ -69,6 +72,7 @@
                    
                     
                 <tr>
+                  <td><?= $cart['name']?></td>
                   <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $cart['product_image'] ?>" alt="" style="width:150px" ><?= $cart['product_name'] ?></a></td>
                   <td><?= number_format($cart['price']) ?></td>
                   <td>

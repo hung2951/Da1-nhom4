@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +14,9 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= CLIENT_ASSETS ?>css/dist/css/adminlte.min.css">
 </head>
+
 <style>
+ 
   body {
     font-size: 15px;
   }
@@ -58,6 +61,7 @@
 </style>
 
 <body>
+
   <section class="content">
 
     <!-- Default box -->
@@ -77,10 +81,12 @@
               <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
             </div>
           </div>
+          <form action="" method="POST" >
           <div class="col-12 col-sm-6">
             <h2 style="font-size:30px" class="my-3"><?= $product_detail['product_name'] ?></h2>
             <hr>
             <h3>Available Colors</h3>
+            
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <label class="btn btn-default text-center">
                 <input type="radio" name="color_option" id="color_option_a2" autocomplete="off">
@@ -154,10 +160,12 @@
                 <?= number_format($product_detail['price']) ?> <u>đ</u>
               </h2>
             </div>
+
             <div class="mt-4">
               <div class="btn btn-primary btn-lg btn-flat">
                 <i class="fas fa-cart-plus fa-lg mr-2"></i>
-                <a href="">Add to Cart</a>
+                <a href="http://localhost/Da1-nhom4/business/client/mytocart.php?id=<?= $product_detail['id_product']?>&product_name=<?= $product_detail['product_name'] ?>&product_image=<?= $product_detail['product_image'] ?>&price=<?= $product_detail['price'] ?>
+               ">Add to Cart</a>
               </div>
 
               <div class="btn btn-default btn-lg btn-flat">
@@ -182,7 +190,10 @@
             </div>
 
           </div>
+          </form>
         </div>
+        <h2><a href="http://localhost/Da1-nhom4/views/client/mytocart/listcart.php">DANH SÁCH GIỎI HÀNG</a></h2>
+        <!-- -------------------------------- -->
         <div class="row mt-4">
           <nav class="w-100">
             <div class="nav nav-tabs" id="product-tab" role="tablist">

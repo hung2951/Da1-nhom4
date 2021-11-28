@@ -1,5 +1,4 @@
 <?php
-
 require_once './commons/app_config.php';
 require_once './commons/helpers.php';
 require_once './dao/system_dao.php';
@@ -18,10 +17,11 @@ switch ($url) {
         require_once './business/client/product-detail.php';
         product_detail();
         break;
-    case 'client/gio-hang':
+    case 'client/them-gio-hang':
         require_once './business/client/mytocart.php';
-        mytocart();
+        addCart();
         break;
+
     case 'client/thanh-toan':
          require_once './business/client/bill.php';
          bill();

@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 function product_detail(){
     $id = $_GET['id'];
