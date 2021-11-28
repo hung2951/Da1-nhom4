@@ -5,8 +5,12 @@ require_once './commons/helpers.php';
 require_once './dao/system_dao.php';
 $url = isset($_GET['url']) ? $_GET['url'] : "/";
 switch ($url) {
-    case '/':
+    case 'client/':
         require_once './views/client/layouts/index.php';
+        break;
+    case 'client/search':
+        require_once './business/client/search.php';
+        search();
         break;
     case 'client/hoa-don':
         require_once './business/client/orders.php';
