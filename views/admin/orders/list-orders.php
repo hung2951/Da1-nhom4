@@ -22,7 +22,7 @@
                 <th>Số lượng</th>
                 <th>Tổng tiền</th>
                 <th>Ngày đặt hàng</th>
-                <th>Trạng thái</th>
+                <th colspan="2" style="text-align: center;">Trạng thái</th>
                 <th>Chi tiết</th>
             </tr>
         </thead>
@@ -32,11 +32,23 @@
                     <td><?= $d['id_orders'] ?></td>
                     <td><?= $d['product_name'] ?></td>
                     <td><?= $d['quantity_orders'] ?></td>
-                    <td><?= $d['money'] ?></td>
+                    <td><?= number_format($d['money']) ?> đ</td>
                     <td><?= $d['order_date'] ?></td>
-                    <td><?= $d['status'] == 0 ? "Đang giao hàng" : "Giao hàng thành công" ?></td>
-                    <td><a class="btn btn-sm btn-danger" href="<?= ADMIN_URL . 'hoa-don/ds-hoa-don/chi-tiet?id=' . $d['id_orders'] ?>">Chi tiết</a></td>
+                    <?php if ($d['status'] == 0) : ?>
+                        <td>CHỜ XÁC NHẬN</td>
+                        <td><a class="btn btn-sm btn-danger" href="<?= ADMIN_URL . 'hoa-don/ds-hoa-don/sua?id=' . $d['id_orders'] ?>">Cập nhật</a></td>
+                    <?php elseif ($d['status'] == 1) : ?>
+                        <td>ĐANG GIAO HÀNG</td>
+                        <td><a class="btn btn-sm btn-danger" href="<?= ADMIN_URL . 'hoa-don/ds-hoa-don/sua?id=' . $d['id_orders'] ?>">Cập nhật</a></td>
+                    <?php else : ?>
+                        <td>GIAO HÀNG THÀNH CÔNG</td>
+                        <td></td>
+                    <?php endif ?>
+                    <td>
+                        <a class="btn btn-sm btn-danger" href="<?= ADMIN_URL . 'hoa-don/ds-hoa-don/chi-tiet?id=' . $d['id_orders'] ?>">Chi tiết</a>
+                    </td>
                 </tr>
+
             <?php endforeach ?>
         </tbody>
     </table>

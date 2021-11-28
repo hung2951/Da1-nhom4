@@ -4,27 +4,30 @@ require_once './commons/helpers.php';
 require_once './dao/system_dao.php';
 $url = isset($_GET['url']) ? $_GET['url'] : "/";
 switch ($url) {
+
     case '/':
-        require_once './views/client/layouts/index.php';
+        require_once './business/client/home.php';
+        product_home();
+        break;
+    case 'client/hoa-don':
+        require_once './business/client/orders.php';
+        list_orders();
         break;
     case 'client/hoa-don/chi-tiet':
         require_once "./business/client/orders.php";
         order();
-    case 'client/hoa-don':
-        require_once './business/client/orders.php';
-        list_orders();
+        break;
+    case 'client/hoa-don/sua':
+        require_once "./business/client/orders.php";
+        update_order();
+        break;
+    case 'client/hoa-don/sua/luu-sua':
+        require_once "./business/client/orders.php";
+        save_update_order();
+        break;
     case 'client/chi-tiet-san-pham':
         require_once './business/client/product-detail.php';
         product_detail();
-        break;
-    case 'client/them-gio-hang':
-        require_once './business/client/mytocart.php';
-        addCart();
-        break;
-
-    case 'client/thanh-toan':
-         require_once './business/client/bill.php';
-         bill();
         break;
     case 'cp-admin/dashboard':
         require_once './business/admin/dashboard.php';
@@ -62,19 +65,11 @@ switch ($url) {
         require_once "./business/admin/orders.php";
         list_order();
         break;
-    case 'cp-admin/hoa-don/list-sua-tt':
-        require_once "./business/admin/orders.php";
-        show_user_order();
-        break;
-    case 'cp-admin/hoa-don/list-sua-tt/trang-thai':
-        require_once "./business/admin/orders.php";
-        list_update_status();
-        break;
-    case 'cp-admin/hoa-don/list-sua-tt/trang-thai/sua':
+    case 'cp-admin/hoa-don/ds-hoa-don/sua':
         require_once "./business/admin/orders.php";
         select_orders();
         break;
-    case 'cp-admin/hoa-don/list-sua-tt/list-sua/trang-thai/luu-sua':
+    case 'cp-admin/hoa-don/ds-hoa-don/sua/luu-sua':
         require_once "./business/admin/orders.php";
         save_update_status();
         break;

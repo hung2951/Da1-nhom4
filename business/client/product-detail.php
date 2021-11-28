@@ -2,11 +2,17 @@
 session_start();
 
 function product_detail(){
+    //lấy ra thông tin sản phẩm
     $id = $_GET['id'];
     $sql = "select * from product where id_product  = $id";
     $product_detail = executeQuery($sql, false);
+    // Lấy ra sản phẩm theo danh mục
+    $id_brand = $_GET['id_brand'];
+    $sql_same = "select * from product where id_brand =".$id_brand." AND id_product <>".$id;
+    $product_same_kind = executeQuery($sql_same);
     client_render('product-detail/index.php', [
-        'product_detail' => $product_detail
+        'product_detail' => $product_detail,
+        'product_same_kind' => $product_same_kind
     ]);
 }
 
@@ -18,17 +24,5 @@ function comment(){
     $comment = executeQuery($sql, false);
     client_render('product-detail/index.php', [
         'comment' => $comment
-    ]);
-}
-
-
-//lấy ra sản phẩm liên quan
-function product_same_kind(){
-    $id_brand = $_GET['id_brand'];
-    $id_product = $_GET['id'];
-    $sql = "select * from product where id_brand =".$id_brand." AND id_product<>".$id_product;
-    $product_same_kind = executeQuery($sql, false);
-    client_render('product-detail/index.php', [
-        'product_same_kind' => $product_same_kind
     ]);
 }

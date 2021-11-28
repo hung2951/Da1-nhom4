@@ -46,7 +46,7 @@
             </div>
             <div class="info">
                 <p id="info-title"><?= $o['product_name'] ?></p>
-                <p id="size">Phân loại hàng: <?= $o['size'] ?></p>
+                <p id="size">Phân loại hàng: <?= $o['orders_size'] ?></p>
                 <span>x<?= $o['quantity_orders'] ?></span>
                 <p>Đơn giá: <span id="price"><?= number_format($o['price']) ?></span><u>đ</u></p>
             </div>
