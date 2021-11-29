@@ -120,7 +120,7 @@
 					</div>
 
 					<div class="navigation__column right">
-						<form action="search" class="ps-search--header" method="get">
+						<form action="<?=CLIENT_URL?>search" class="ps-search--header" method="get">
 							<input class="form-control" placeholder="Tìm kiếm sản phẩm..." type="text" name="query" />
 							<button type="submit">Tìm kiếm</button>
 						</form>
