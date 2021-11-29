@@ -55,7 +55,6 @@
 							<div class="header__actions"><a href="#">Login &amp; Regiser</a>
 
 								<div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">USD</a>
-							<div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">USD</a>
 
 									<ul class="dropdown-menu">
 										<li><a href="#"><img alt="" src="<?= CLIENT_ASSETS ?>images/flag/usa.svg" /> USD</a></li>
@@ -64,7 +63,7 @@
 									</ul>
 								</div>
 
-							<div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">Language</a>
+								<div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">Language</a>
 
 									<ul class="dropdown-menu">
 										<li><a href="#">English</a></li>
@@ -233,47 +232,6 @@
 
 						<div class="menu-toggle"></div>
 					</div>
-		</div>
-
-		<nav class="navigation">
-			<div class="container-fluid">
-				<div class="navigation__column left">
-					<div class="header__logo"><a class="ps-logo" href="index.html"><img alt="" src="<?= CLIENT_ASSETS ?>images/logo.png" /></a></div>
-				</div>
-
-				<div class="navigation__column center">
-					<ul class="main-menu menu">
-						<li class="menu-item menu-item-has-children dropdown"><a href="">SNEAKER</a>
-							<ul class="sub-menu">
-								<?php if(category()):?>
-								<?php foreach (category() as $ds) : ?>
-									<li class="menu-item">
-										<a href="<?= CLIENT_URL ?>product-category?id_brand=<?= $ds['id_brand'] ?>"><?= $ds['brand_name'] ?></a>
-									</li>
-								<?php endforeach ?>
-								<?php endif?>
-							</ul>
-						</li>
-						<li class="menu-item"><a href="#">Women</a></li>
-						<li class="menu-item"><a href="#">Kids</a></li>
-						<li class="menu-item menu-item-has-children dropdown"><a href="#">News</a>
-							<ul class="sub-menu">
-								<li class="menu-item menu-item-has-children dropdown"><a href="blog-grid.html">Blog-grid</a>
-									<ul class="sub-menu">
-										<li class="menu-item"><a href="blog-grid.html">Blog Grid 1</a></li>
-										<li class="menu-item"><a href="blog-grid-2.html">Blog Grid 2</a></li>
-									</ul>
-								</li>
-								<li class="menu-item"><a href="blog-list.html">Blog List</a></li>
-							</ul>
-						</li>
-						<li class="menu-item menu-item-has-children dropdown"><a href="#">Contact</a>
-							<ul class="sub-menu">
-								<li class="menu-item"><a href="contact-us.html">Contact Us #1</a></li>
-								<li class="menu-item"><a href="contact-us.html">Contact Us #2</a></li>
-							</ul>
-						</li>
-					</ul>
 				</div>
 			</nav>
 		</header>
@@ -282,8 +240,6 @@
 			<div class="ps-services owl-slider" data-owl-auto="true" data-owl-dots="false" data-owl-duration="1000" data-owl-gap="0" data-owl-item="1" data-owl-item-lg="1" data-owl-item-md="1" data-owl-item-sm="1" data-owl-item-xs="1" data-owl-loop="true" data-owl-mousedrag="on" data-owl-nav="true" data-owl-speed="7000">
 				<p class="ps-service"><strong>Free delivery</strong>: Get free standard delivery on every order with Shoe
 					Store</p>
-				<div class="navigation__column right">
-					<form action="http://nouthemes.net/html/trueshoes/do_action" class="ps-search--header" method="post"><input class="form-control" placeholder="Search Product…" type="text" /><button></button></form>
 
 				<p class="ps-service"><strong>Free delivery</strong>: Get free standard delivery on every order with Shoe
 					Store</p>
@@ -302,7 +258,6 @@
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
 							<aside class="ps-widget--footer ps-widget--info">
 								<header><a class="ps-logo" href="index.html"><img alt="" src="<?= CLIENT_ASSETS ?>images/logo-white.png" /></a>
-									<div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">Amazin&rsquo; Glazin&rsquo;</a>
 
 									<h3 class="ps-widget__title">Address Office 1</h3>
 								</header>
@@ -312,7 +267,6 @@
 
 									<p>Email: <a href="http://nouthemes.net/cdn-cgi/l/email-protection#f98a8c8989968b8db98a8d968b9cd79a9694"><span class="__cf_email__" data-cfemail="7b080e0b0b14090f3b080f14091e55181416">[email&#160;protected]</span></a>
 									</p>
-									<div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">The Crusty Croissant</a>
 
 									<p>Phone: +323 32434 5334</p>
 
@@ -326,7 +280,6 @@
 								<header>
 									<h3 class="ps-widget__title">Address Office 2</h3>
 								</header>
-									<div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">The Rolling Pin</a>
 
 								<footer>
 									<p><strong>PO Box 16122 Collins Victoria 3000 Australia</strong></p>
@@ -405,9 +358,6 @@
 			<p class="ps-service"><strong>GIAO HÀNG TOÀN QUỐC </strong>: Vận chuyển khắp Việt Nam</p>
 
 			<p class="ps-service"><strong>THANH TOÁN KHI NHẬN HÀNG </strong>: Nhận hàng tại nhà rồi thanh toán</p>
-		<div class="ps-services owl-slider" data-owl-auto="true" data-owl-dots="false" data-owl-duration="1000" data-owl-gap="0" data-owl-item="1" data-owl-item-lg="1" data-owl-item-md="1" data-owl-item-sm="1" data-owl-item-xs="1" data-owl-loop="true" data-owl-mousedrag="on" data-owl-nav="true" data-owl-speed="7000">
-			<p class="ps-service"><strong>Free delivery</strong>: Get free standard delivery on every order with Shoe
-				Store</p>
 
 			<p class="ps-service"><strong>ĐỔI HÀNG DỄ DÀNG </strong>: Đổi hàng thoải mái trong 30 ngày</p>
 
