@@ -194,6 +194,7 @@
                             <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab" href="#product-comments" role="tab" aria-controls="product-comments" aria-selected="false">Comments</a>
                         </div>
                     </nav>
+
                     <div class="tab-content p-3" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab">
                             <?= $product_detail['details'] ?>
@@ -204,33 +205,47 @@
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="noi_dung"></textarea>
                                 <button type="submit" name="btn_binhluan" style="margin-top:10px">Bình luận</button>
                             </form>
-                            <div class="evaluate">
 
+                            <?php if ($comment) : ?>
+                            <?php  foreach($comment as $comment): ?>
+
+                            <div class="evaluate">
                                 <div class="kh" style="display:flex; padding: 5px 15px">
-                                    <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="" width="40px" style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;">
+                                    <img src="<?= PUBLIC_ASSETS . '/uploads/user2/' . $comment['avatar'] ?>" alt="" width="40px" style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;">
                                     <strong class="name" style="padding:10px">
-                                        Nguyễn Văn Trăm
+                                        <?= $comment['full_name'] ?>
                                     </strong>
                                 </div>
                                 <div class="danh_gia" style="padding: 0px 50px;">
                                     <div class="nd_bl">
-                                        Vivamus rhoncus nisl sed venenatis luctus. Sed condimentum risus ut tortor feugiat laoreet.
-                                        Suspendisse potenti. Donec et finibus sem, ut commodo lectus. Cras eget neque dignissim, placerat
-                                        orci interdum, venenatis odio. Nulla turpis elit, consequat eu eros ac, consectetur fringilla urna.
-                                        Duis gravida ex pulvinar mauris ornare, eget porttitor enim vulputate. Mauris hendrerit, massa nec
-                                        aliquam cursus, ex elit euismod lorem, vehicula rhoncus nisl dui sit amet eros. Nulla turpis lorem,
-                                        dignissim a sapien eget, ultrices venenatis dolor. Curabitur vel turpis at magna elementum hendrerit
-                                        vel id dui. Curabitur a ex ullamcorper, ornare velit vel, tincidunt ipsum.
+                                        <?= $comment['content'] ?>
                                     </div>
                                     <div class="date" style="font-size: 13px;">
-                                        23/12/2022
+                                        <?= $comment['date'] ?>
                                     </div>
                                 </div>
-
                             </div>
 
+                            <?php endforeach; ?>
+                            <?php endif; ?>
                         </div>
                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </div>
 
                 <div class="ps-section ps-section--top-sales ps-owl-root pt-40 pb-80">
