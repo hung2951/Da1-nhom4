@@ -11,7 +11,7 @@ function product_detail(){
     $product_same_kind = executeQuery($sql_same);
 
     //lấy ra bình luận
-    $sql = "SELECT * FROM comment bl INNER JOIN user kh ON bl.id_user = kh.id_user WHERE id_product = $id";
+    $sql = "SELECT * FROM comment bl INNER JOIN user kh ON bl.id_user = kh.id_user WHERE id_product = $id order by date desc";
     $comment = executeQuery($sql);
     
 
@@ -20,6 +20,24 @@ function product_detail(){
         'product_same_kind' => $product_same_kind,
         'comment' => $comment
     ]);
+}
+
+
+function save_add_commment(){
+    // nhận dữ liệu từ form gửi lên
+    $date = $_POST['date'];
+    $id_product = $_POST['id_product'];
+    $content = $_POST['content'];
+
+    $id = $_POST['id'];
+    $id_brand = $_POST['id_brand'];
+
+    // tạo ra câu sql insert tài khoản mới
+    $sql = "INSERT INTO comment(date, id_user, id_product, content) VALUES ('$date', '1', '$id_product', '$content')";
+    executeQuery($sql);
+
+    // Thực thi câu sql với db
+    header("location: " . CLIENT_URL . 'chi-tiet-san-pham?id='.$id .'&id_brand='.$id_brand); 
 }
 
 

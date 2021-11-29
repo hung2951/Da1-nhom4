@@ -200,17 +200,25 @@
                             <?= $product_detail['details'] ?>
                         </div>
                         <div class="tab-pane fade" id="product-comments" role="tabpanel" aria-labelledby="product-comments-tab">
-                            <form id="cart-form" action="" method="POST" style="padding: 10px;">
-                                <input type="hidden" name="ma_hh" value="<?= $ma_hh ?>">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="noi_dung"></textarea>
-                                <button type="submit" name="btn_binhluan" style="margin-top:10px">Bình luận</button>
+
+
+                            <form id="cart-form" action="<?= CLIENT_URL . 'binh_luan/luu-tao-moi' ?>" method="POST" style="padding: 10px;">
+                                <input type="hidden" name="id" value="<?= $_GET['id'] ?>" >
+                                <input type="hidden" name="id_brand" value="<?= $_GET['id_brand'] ?>" >
+
+                                <input type="hidden" name="id_product" value="<?= $product_detail['id_product']  ?>">
+                                <input type="hidden" name="date" value="<?= date('Y-m-d') ?>">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content"></textarea>
+                                <button type="submit" style="margin-top:10px">Bình luận</button>
                             </form>
+
+
 
                             <?php if ($comment) : ?>
                                 <?php  foreach($comment as $comment): ?>
                                 <div class="evaluate">
                                     <div class="kh" style="display:flex; padding: 5px 15px">
-                                        <img src="<?= PUBLIC_ASSETS . '/uploads/user2/' . $comment['avatar'] ?>" alt="" width="40px" style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;">
+                                        <img src="<?= PUBLIC_ASSETS . '/uploads/user/' . $comment['avatar'] ?>" alt="" width="40px" style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;">
                                         <strong class="name" style="padding:10px">
                                             <?= $comment['full_name'] ?>
                                         </strong>
@@ -220,7 +228,7 @@
                                             <?= $comment['content'] ?>
                                         </div>
                                         <div class="date" style="font-size: 13px;">
-                                            <?= $comment['date'] ?>
+                                            <?= date("d/m/Y", strtotime($comment['date'])) ?>
                                         </div>
                                     </div>
                                 </div>

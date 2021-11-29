@@ -1,13 +1,4 @@
 <?php
-function account_index(){
-    $sql = "select * from user";
-    $users = executeQuery($sql);
-
-    admin_render('account/index.php', [
-        'dsTaiKhoan' => $users,
-    ]);
-}
-
 function account_remove(){
     // lấy id từ đường dẫn
     $id = $_GET['id'];
