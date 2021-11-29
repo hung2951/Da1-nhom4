@@ -81,6 +81,7 @@
                             <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
                         </div>
                     </div>
+                    <form action="<?= CLIENT_URL?>them-gio-hang?id=<?= $product_detail['id_product']?>" method="POST">
                     <div class="col-12 col-sm-6">
                         <h2 style="font-size:30px" class="my-3">
                             <?= $product_detail['product_name'] ?>
@@ -161,15 +162,15 @@
                             </h2>
                         </div>
                         <div class="mt-4">
-                            <div class="btn btn-primary btn-lg btn-flat">
+                            <button type="submit" class="btn btn-primary btn-lg btn-flat">
                                 <i class="fas fa-cart-plus fa-lg mr-2"></i>
                                 Add to Cart
-                            </div>
+                            </button>
 
-                            <div class="btn btn-default btn-lg btn-flat">
+                            <a class="btn btn-default btn-lg btn-flat">
                                 <i class="fas fa-heart fa-lg mr-2"></i>
                                 Add to Wishlist
-                            </div>
+                          </a>
                         </div>
 
                         <div class="mt-4 product-share">
@@ -188,6 +189,7 @@
                         </div>
 
                     </div>
+                    </form>
                 </div>
                 <div class="row mt-4">
                     <nav class="w-100">

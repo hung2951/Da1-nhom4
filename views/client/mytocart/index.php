@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <!--[if IE 7]><html class="ie ie7"><![endif]-->
 <!--[if IE 8]><html class="ie ie8"><![endif]-->
@@ -47,43 +45,44 @@ session_start();
   <body class="ps-loading">
     <div class="header--sidebar"></div>
     <main class="ps-main">
+    <form action="<?= CLIENT_URL?>thanh-toan?id=<?= $cart['id'] ?>" method="POST">
       <div class="ps-content pt-80 pb-80">
         <div class="ps-container">
+
           <div class="ps-cart-listing">
             <table class="table ps-cart__table">
               <thead>
                 <tr>
                   <th>All Products</th>
+                  <th>Image</th>
                   <th>Price</th>
                   <th>Quantity</th>
-                  <th>Size</th>
-                  <th>Color</th>
+                  <th>Total Price</th>
                   <th>Total</th>
                   <th></th>
                 </tr>
               </thead>  
               <tbody>
+
               <?php foreach ($_SESSION['cart'] as $cart): ?>
                
                     <?php
                       
-                      $tong= $cart['price'] * $cart['product_quanity'];
+                      $tong= $cart['price'] * $cart['Quantity'];
                       ?>
                    
                     
                 <tr>
-                  <td><?= $cart['name']?></td>
+                  <td><?= $cart['id']?></td>
                   <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $cart['product_image'] ?>" alt="" style="width:150px" ><?= $cart['product_name'] ?></a></td>
                   <td><?= number_format($cart['price']) ?></td>
                   <td>
                     <div class="form-group--number">
-                      <button class="minus"><span>-</span></button>
-                      <input class="form-control" type="text" value="<?= $cart['product_quanity'] ?>">
-                      <button class="plus"><span>+</span></button>
+                      
+                      <input class="form-control" type="number" value="<?= $cart['Quantity'] ?>">
+                    
                     </div>
                   </td>
-                  <td><?= $cart['size'] ?></td>
-                  <td><?= $cart['color'] ?></td>
 
                   <td><?= $tong?><u>đ</u></td>
                   <td>
@@ -103,61 +102,22 @@ session_start();
                   </div>
                 </div>
                 <div class="form-group">
-                  <button class="ps-btn ps-btn--gray">Continue Shopping</button>
+               
+                  <a class="ps-btn ps-btn--gray" href="http://localhost/Da1-nhom4/index.php">Continue Shopping</a>
                 </div>
               </div>
               <div class="ps-cart__total">
-                <h3>Total Price: <span> 2599.00 $</span></h3><a class="ps-btn" href="checkout.html">Process to checkout<i class="ps-icon-next"></i></a>
+                <h3>Total Price: <span> 2599.00 $</span></h3>
+                <a href="<?= CLIENT_URL?>thanh-toan?id=<?= $cart['id'] ?>">aaaaaaaaaa</a>
+                <button type="submit" class="ps-btn">Process to checkout<i class="ps-icon-next"></i></button>
               </div>
-            </div>
+            </div>  
           </div>
-          <div class="ps-cart-listing">
-                        <table class="table ps-cart__table">
-              <thead>
-                <tr>
-                  <th>All Products</th>
-                  <th>Price</th>
-                  <th>Quantity</th>
-                  <th>Size</th>
-                  <th>Color</th>
-                  <th>Total</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-              <?php foreach ($mytocart as $cart): ?>
-               
-                    <?php
-                      
-                      $tong= $cart['price'] * $cart['product_quanity'];
-                      ?>
-                   
-                    
-                <tr>
-                  <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $cart['product_image'] ?>" alt="" style="width:150px" ><?= $cart['product_name'] ?></a></td>
-                  <td><?= number_format($cart['price']) ?></td>
-                  <td>
-                    <div class="form-group--number">
-                      <button class="minus"><span>-</span></button>
-                      <input class="form-control" type="text" value="<?= $cart['product_quanity'] ?>">
-                      <button class="plus"><span>+</span></button>
-                    </div>
-                  </td>
-                  <td><?= $cart['size'] ?></td>
-                  <td><?= $cart['color'] ?></td>
-
-                  <td><?= $tong?><u>đ</u></td>
-                  <td>
-                    <div class="ps-remove"></div>
-                  </td>
-                </tr>
-              <?php endforeach ?>  
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
       
+        </div>
+
+      </div>
+      </form>
     </main>
 
 

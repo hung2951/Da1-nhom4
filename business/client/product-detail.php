@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 function product_detail(){
     //lấy ra thông tin sản phẩm
     $id = $_GET['id'];

@@ -1,59 +1,63 @@
 <?php 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //     // b1 lấy id của sản phẩm cần thêm vào giỏ hàng
-    //   $id= isset($_GET['id']) ? $_GET['id'] :"";
-
-    //     // kiểm tra đã tồn tại session
-    //     if(isset($_SESSION['cart'])){
-    //         // var_dump(" đã tồn tại giỏi hàng");
-    //         if(isset($_SESSION['cart'] [$id])){
-    //             $_SESSION['cart'] [$id] ['qty'] +=1;
-
-              
-    //         }else{
-    //             $_SESSION['cart'] [$id] ['qty']=1;  
-    //         }
-    //         // $_SESSION['success'] = 'Tồn tại giỏi hàng cập nhật thành công';
-    //         header('location: http://localhost/Da1-nhom4/client/chi-tiet-san-pham?id=6');exit();
-    //     }else{
-    //         // var_dump(" Chưa tồn tại session");
-    //         $_SESSION['cart'] [$id] ['qty']=1;
-    //         // $_SESSION['success'] = 'Tạo Mới giỏi hàng thành công'; 
-    //         header('location: http://localhost/Da1-nhom4/client/chi-tiet-san-pham?id=6');exit();
+function addCart(){
+    if(isset($_GET['id']) && !empty($_POST)){
+     
+        
+        $id = $_GET['id'];
+        $sql = "select * from product where id_product  = $id";
+        $data_product = executeQuery($sql, false);
+        
+        // echo "<pre>";
+        // var_dump($data_product);
+        // echo "</pre>";
+        // die;
+            
+        // dd($data_product);
+        if(!isset($_SESSION['cart'])){  
+            $cart = [];
+            $cart[$id] = [
+                'id' => $id,
+                'product_name' => $data_product['product_name'],
+                'product_image' => $data_product['product_image'],
+                'price' => $data_product['price'],
+                'Quantity' => 1,
+                'sum_money' => $data_product['price'] + 1,
+            ];
+        }else{
+            $cart = $_SESSION['cart'];
+            if(array_key_exists($id,$cart)){ // kiểm tra $id có tồn tại trong mảng kg
+                $cart[$id] = [
+                    'id' => $id,
+                    'product_name' => $data_product['product_name'],
+                    'product_image' => $data_product['product_image'],
+                    'price' => $data_product['price'],
+                    'Quantity' => (int)$cart[$id]['product_number'] + 1,
+                    'sum_money' => $data_product['product_price'] + 1,
+                ];
+            }else{
+                $cart[$id] = [
+                    'id' => $id,
+                    'product_name' => $data_product['product_name'],
+                    'product_image' => $data_product['product_image'],
+                    'price' => $data_product['price'],
+                    'Quantity' => 1,
+                    'sum_money' => $data_product['price'] + 1,
+                ];
+            }
         }
+        $_SESSION['cart'] = $cart;
+
+    //   var_dump($_SESSION['cart']);
+    //   die;
+      client_render('mytocart/index.php', []);
+    }else {
+       
+        header('location: ' . $_SERVER['HTTP_REFERER']);
+    }
 
 
-
-
-
-
-
-
-
-
+}
 
 
 
@@ -103,6 +107,59 @@
 //             unset($_SESSION['cart'] [$id]); // xóa sp trong giỏi hàng
 //         }
 //     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //     // b1 lấy id của sản phẩm cần thêm vào giỏ hàng
+    //   $id= isset($_GET['id']) ? $_GET['id'] :"";
+
+    //     // kiểm tra đã tồn tại session
+    //     if(isset($_SESSION['cart'])){
+    //         // var_dump(" đã tồn tại giỏi hàng");
+    //         if(isset($_SESSION['cart'] [$id])){
+    //             $_SESSION['cart'] [$id] ['qty'] +=1;
+
+              
+    //         }else{
+    //             $_SESSION['cart'] [$id] ['qty']=1;  
+    //         }
+    //         // $_SESSION['success'] = 'Tồn tại giỏi hàng cập nhật thành công';
+    //         header('location: http://localhost/Da1-nhom4/client/chi-tiet-san-pham?id=6');exit();
+    //     }else{
+    //         // var_dump(" Chưa tồn tại session");
+    //         $_SESSION['cart'] [$id] ['qty']=1;
+    //         // $_SESSION['success'] = 'Tạo Mới giỏi hàng thành công'; 
+    //         header('location: http://localhost/Da1-nhom4/client/chi-tiet-san-pham?id=6');exit();
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 ?>
        

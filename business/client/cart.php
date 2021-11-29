@@ -30,6 +30,8 @@
 
 
 
+
+
     // session_start();
     // $connection= new PDO("mysql:host=127.0.0.1;dbname=web16303;charset=utf8","root","");
     // $query= "select * from product";
@@ -57,7 +59,7 @@
     
 
 
-    
+
     //     // b1 lấy id của sản phẩm cần thêm vào giỏ hàng
     //   $id= isset($_GET['id']) ? $_GET['id'] :"";
     //     // kiểm tra đã tồn tại session

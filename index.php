@@ -9,6 +9,18 @@ switch ($url) {
         require_once './business/client/home.php';
         product_home();
         break;
+    case 'client/thanh-toan':
+        require_once './business/client/bill.php';
+        billCart();
+        break;
+    case 'client/add/thanh-toan':
+        require_once './business/client/bill.php';
+        add_bill();
+        break;
+    case 'client/them-gio-hang':
+         require_once './business/client/mytocart.php';
+         addCart();
+        break;
     case 'client/hoa-don':
         require_once './business/client/orders.php';
         list_orders();

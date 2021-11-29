@@ -1,61 +1,42 @@
 
-
-
   <body class="ps-loading">
     <div class="header--sidebar"></div>
     <main class="ps-main">
       <div class="ps-checkout pt-80 pb-80">
         <div class="ps-container">
-          <form class="ps-checkout__form" action="http://nouthemes.net/html/trueshoes/do_action" method="post">
+          <form class="ps-checkout__form" action="<?= CLIENT_URL . 'add/thanh-toan'?>" method="POST">
             <div class="row">
+              
                   <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 ">
+                    
                     <div class="ps-checkout__billing">
                       <h3>Billing Detail</h3>
                             <div class="form-group form-group--inline">
-                              <label>First Name<span>*</span>
+                              <label>Name<span>*</span>
                               </label>
-                              <input class="form-control" type="text">
-                            </div>
-                            <div class="form-group form-group--inline">
-                              <label>Last Name<span>*</span>
-                              </label>
-                              <input class="form-control" type="text">
+                              <input class="form-control" type="text" name="bill_name">
                             </div>
                             <div class="form-group form-group--inline">
                               <label>Company Name<span>*</span>
                               </label>
-                              <input class="form-control" type="text">
+                              <input class="form-control" type="text" name="bill_compaly">
                             </div>
                             <div class="form-group form-group--inline">
                               <label>Email Address<span>*</span>
                               </label>
-                              <input class="form-control" type="email">
-                            </div>
-                            <div class="form-group form-group--inline">
-                              <label>Company Name<span>*</span>
-                              </label>
-                              <input class="form-control" type="text">
+                              <input class="form-control" type="email" name="bill_email">
                             </div>
                             <div class="form-group form-group--inline">
                               <label>Phone<span>*</span>
                               </label>
-                              <input class="form-control" type="text">
+                              <input class="form-control" type="text" name="bill_phone">
                             </div>
                             <div class="form-group form-group--inline">
                               <label>Address<span>*</span>
                               </label>
-                              <input class="form-control" type="text">
+                              <input class="form-control" type="text" name="quantity">
                             </div>
                       <div class="form-group">
-                        <div class="ps-checkbox">
-                          <input class="form-control" type="checkbox" id="cb01">
-                          <label for="cb01">Create an account?</label>
-                        </div>
-                      </div>
-                      <h3 class="mt-40"> Addition information</h3>
-                      <div class="form-group form-group--inline textarea">
-                        <label>Order Notes</label>
-                        <textarea class="form-control" rows="5" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
                       </div>
                     </div>
                   </div>
@@ -72,50 +53,32 @@
                               <th class="text-uppercase">Total</th>
                             </tr>
                           </thead>
+                          <!-- ---------------------------------BILL------------------------------- -->
                           <tbody>
+                          <?php
+                           foreach ($_SESSION['cart'] as $cart): ?>
                             <tr>
-                              <td>HABITANT x1</td>
-                              <td>$300.00</td>
+                              <td><?= $cart['product_name'] ?></td>
+                              <td><?= $cart['price']?></td>
                             </tr>
-                            <tr>
-                              <td>Card Subtitle</td>
-                              <td>$300.00</td>
-                            </tr>
-                            <tr>
-                              <td>Order Total</td>
-                              <td>$300.00</td>
-                            </tr>
+                            <?php endforeach ?> 
                           </tbody>
                         </table>
                       </div>
-                      <footer>
-                        <h3>Payment Method</h3>
-                        <div class="form-group cheque">
-                          <div class="ps-radio">
-                            <input class="form-control" type="radio" id="rdo01" name="payment" checked>
-                            <label for="rdo01">Cheque Payment</label>
-                            <p>Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
-                          </div>
-                        </div>
+                      
+                    </div>
+                    <footer>
                         <div class="form-group paypal">
-                          <div class="ps-radio ps-radio--inline">
-                            <input class="form-control" type="radio" name="payment" id="rdo02">
-                            <label for="rdo02">Paypal</label>
-                          </div>
-                          <ul class="ps-payment-method">
-                            <li><a href="#"><img src="<?= CLIENT_ASSETS ?>/images/payment/1.png" alt=""></a></li>
-                            <li><a href="#"><img src="<?= CLIENT_ASSETS ?>/images/payment/2.png" alt=""></a></li>
-                            <li><a href="#"><img src="<?= CLIENT_ASSETS ?>/images/payment/3.png" alt=""></a></li>
-                          </ul>
-                          <button class="ps-btn ps-btn--fullwidth">Place Order<i class="ps-icon-next"></i></button>
+                          <button type="submit" class="ps-btn ps-btn--fullwidth">Place Order<i class="ps-icon-next"></i></button>
                         </div>
                       </footer>
-                    </div>
+                    <!-- --------------------------end--------------------------------- -->
                     <div class="ps-shipping">
                       <h3>FREE SHIPPING</h3>
                       <p>YOUR ORDER QUALIFIES FOR FREE SHIPPING.<br> <a href="#"> Singup </a> for free shipping on every order, every time.</p>
                     </div>
                   </div>
+              
             </div>
           </form>
         </div>
