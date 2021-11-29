@@ -11,9 +11,9 @@ function product_detail(){
     $product_same_kind = executeQuery($sql_same);
 
     //lấy ra bình luận
-    $sql = "SELECT * FROM comment bl INNER JOIN user kh ON bl.id_user = kh.id_user WHERE id=?";
+    $sql = "SELECT * FROM comment bl INNER JOIN user kh ON bl.id_user = kh.id_user WHERE id_product = $id";
     $comment = executeQuery($sql);
-    var_dump($comment);
+    
 
     client_render('product-detail/index.php', [
         'product_detail' => $product_detail,

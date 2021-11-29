@@ -207,26 +207,24 @@
                             </form>
 
                             <?php if ($comment) : ?>
-                            <?php  foreach($comment as $comment): ?>
-
-                            <div class="evaluate">
-                                <div class="kh" style="display:flex; padding: 5px 15px">
-                                    <img src="<?= PUBLIC_ASSETS . '/uploads/user2/' . $comment['avatar'] ?>" alt="" width="40px" style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;">
-                                    <strong class="name" style="padding:10px">
-                                        <?= $comment['full_name'] ?>
-                                    </strong>
-                                </div>
-                                <div class="danh_gia" style="padding: 0px 50px;">
-                                    <div class="nd_bl">
-                                        <?= $comment['content'] ?>
+                                <?php  foreach($comment as $comment): ?>
+                                <div class="evaluate">
+                                    <div class="kh" style="display:flex; padding: 5px 15px">
+                                        <img src="<?= PUBLIC_ASSETS . '/uploads/user2/' . $comment['avatar'] ?>" alt="" width="40px" style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;">
+                                        <strong class="name" style="padding:10px">
+                                            <?= $comment['full_name'] ?>
+                                        </strong>
                                     </div>
-                                    <div class="date" style="font-size: 13px;">
-                                        <?= $comment['date'] ?>
+                                    <div class="danh_gia" style="padding: 0px 50px;">
+                                        <div class="nd_bl">
+                                            <?= $comment['content'] ?>
+                                        </div>
+                                        <div class="date" style="font-size: 13px;">
+                                            <?= $comment['date'] ?>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <?php endforeach; ?>
+                                <?php endforeach; ?>
                             <?php endif; ?>
                         </div>
                     </div>
