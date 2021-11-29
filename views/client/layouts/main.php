@@ -85,79 +85,19 @@
 
 					<div class="navigation__column center">
 						<ul class="main-menu menu">
-							<li class="menu-item menu-item-has-children dropdown"><a href="<?= CLIENT_URL?>">Trang chủ</a>
+							<li class="menu-item menu-item-has-children dropdown"><a href="http://localhost/da1-nhom4/">Trang chủ</a>
 							</li>
-							<li class="menu-item menu-item-has-children has-mega-menu"><a href="#">Men</a>
-								<div class="mega-menu">
-									<div class="mega-wrap">
-										<div class="mega-column">
-											<ul class="mega-item mega-features">
-												<li><a href="product-listing.html">NEW RELEASES</a></li>
-												<li><a href="product-listing.html">FEATURES SHOES</a></li>
-												<li><a href="product-listing.html">BEST SELLERS</a></li>
-												<li><a href="product-listing.html">NOW TRENDING</a></li>
-												<li><a href="product-listing.html">SUMMER ESSENTIALS</a></li>
-												<li><a href="product-listing.html">MOTHER&#39;S DAY COLLECTION</a></li>
-												<li><a href="product-listing.html">FAN GEAR</a></li>
-											</ul>
-										</div>
-
-										<div class="mega-column">
-											<h4 class="mega-heading">Shoes</h4>
-
-											<ul class="mega-item">
-												<li><a href="product-listing.html">All Shoes</a></li>
-												<li><a href="product-listing.html">Running</a></li>
-												<li><a href="product-listing.html">Training &amp; Gym</a></li>
-												<li><a href="product-listing.html">Basketball</a></li>
-												<li><a href="product-listing.html">Football</a></li>
-												<li><a href="product-listing.html">Soccer</a></li>
-												<li><a href="product-listing.html">Baseball</a></li>
-											</ul>
-										</div>
-
-										<div class="mega-column">
-											<h4 class="mega-heading">CLOTHING</h4>
-
-											<ul class="mega-item">
-												<li><a href="product-listing.html">Compression &amp; Nike Pro</a></li>
-												<li><a href="product-listing.html">Tops &amp; T-Shirts</a></li>
-												<li><a href="product-listing.html">Polos</a></li>
-												<li><a href="product-listing.html">Hoodies &amp; Sweatshirts</a></li>
-												<li><a href="product-listing.html">Jackets &amp; Vests</a></li>
-												<li><a href="product-listing.html">Pants &amp; Tights</a></li>
-												<li><a href="product-listing.html">Shorts</a></li>
-											</ul>
-										</div>
-
-										<div class="mega-column">
-											<h4 class="mega-heading">Accessories</h4>
-
-											<ul class="mega-item">
-												<li><a href="product-listing.html">Compression &amp; Nike Pro</a></li>
-												<li><a href="product-listing.html">Tops &amp; T-Shirts</a></li>
-												<li><a href="product-listing.html">Polos</a></li>
-												<li><a href="product-listing.html">Hoodies &amp; Sweatshirts</a></li>
-												<li><a href="product-listing.html">Jackets &amp; Vests</a></li>
-												<li><a href="product-listing.html">Pants &amp; Tights</a></li>
-												<li><a href="product-listing.html">Shorts</a></li>
-											</ul>
-										</div>
-
-										<div class="mega-column">
-											<h4 class="mega-heading">BRAND</h4>
-
-											<ul class="mega-item">
-												<li><a href="product-listing.html">NIKE</a></li>
-												<li><a href="product-listing.html">Adidas</a></li>
-												<li><a href="product-listing.html">Dior</a></li>
-												<li><a href="product-listing.html">B&amp;G</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
+							<li class="menu-item menu-item-has-children dropdown"><a href="">SNEAKER</a>
+								<ul class="sub-menu">
+									<?php if (category()) : ?>
+										<?php foreach (category() as $ds) : ?>
+											<li class="menu-item">
+												<a href="<?= CLIENT_URL ?>product-category?id_brand=<?= $ds['id_brand'] ?>"><?= $ds['brand_name'] ?></a>
+											</li>
+										<?php endforeach ?>
+									<?php endif ?>
+								</ul>
 							</li>
-							<li class="menu-item"><a href="#">Women</a></li>
 							<li class="menu-item"><a href="#">Kids</a></li>
 							<li class="menu-item menu-item-has-children dropdown"><a href="#">News</a>
 								<ul class="sub-menu">
@@ -180,7 +120,7 @@
 					</div>
 
 					<div class="navigation__column right">
-						<form action="<?= CLIENT_URL ?>search" class="ps-search--header" method="get">
+						<form action="<?=CLIENT_URL?>search" class="ps-search--header" method="get">
 							<input class="form-control" placeholder="Tìm kiếm sản phẩm..." type="text" name="query" />
 							<button type="submit">Tìm kiếm</button>
 						</form>
@@ -348,39 +288,37 @@
 					</div>
 				</div>
 			</div>
-		</nav>
-	</header>
+			</nav>
+			</header>
 
-	<div class="header-services">
-		<div class="ps-services owl-slider" data-owl-auto="true" data-owl-dots="false" data-owl-duration="1000"
-			data-owl-gap="0" data-owl-item="1" data-owl-item-lg="1" data-owl-item-md="1" data-owl-item-sm="1"
-			data-owl-item-xs="1" data-owl-loop="true" data-owl-mousedrag="on" data-owl-nav="true" data-owl-speed="7000">
-			<p class="ps-service"><strong>GIAO HÀNG TOÀN QUỐC </strong>: Vận chuyển khắp Việt Nam</p>
+			<div class="header-services">
+				<div class="ps-services owl-slider" data-owl-auto="true" data-owl-dots="false" data-owl-duration="1000" data-owl-gap="0" data-owl-item="1" data-owl-item-lg="1" data-owl-item-md="1" data-owl-item-sm="1" data-owl-item-xs="1" data-owl-loop="true" data-owl-mousedrag="on" data-owl-nav="true" data-owl-speed="7000">
+					<p class="ps-service"><strong>GIAO HÀNG TOÀN QUỐC </strong>: Vận chuyển khắp Việt Nam</p>
 
-			<p class="ps-service"><strong>THANH TOÁN KHI NHẬN HÀNG </strong>: Nhận hàng tại nhà rồi thanh toán</p>
+					<p class="ps-service"><strong>THANH TOÁN KHI NHẬN HÀNG </strong>: Nhận hàng tại nhà rồi thanh toán</p>
 
-			<p class="ps-service"><strong>ĐỔI HÀNG DỄ DÀNG </strong>: Đổi hàng thoải mái trong 30 ngày</p>
+					<p class="ps-service"><strong>ĐỔI HÀNG DỄ DÀNG </strong>: Đổi hàng thoải mái trong 30 ngày</p>
 
-			<div class="ps-footer__copyright">
-				<div class="ps-container">
-					<div class="row">
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-							<p>&copy; <a href="#">NOUTHEMES</a>, Inc. All rights Resevered. Design by <a href="#"> Alena
-									Studio</a></p>
-						</div>
+					<div class="ps-footer__copyright">
+						<div class="ps-container">
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+									<p>&copy; <a href="#">NOUTHEMES</a>, Inc. All rights Resevered. Design by <a href="#"> Alena
+											Studio</a></p>
+								</div>
 
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-							<ul class="ps-social">
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-							</ul>
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+									<ul class="ps-social">
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
 	</main>
 	<!-- JS Library-->
 
