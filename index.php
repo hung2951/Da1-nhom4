@@ -15,14 +15,17 @@ switch ($url) {
     case 'client/search':
         require_once './business/client/search.php';
         search();
-        break;
-    case 'client/hoa-don':
-        require_once './business/client/orders.php';
-        list_orders();
+    case 'client/product-category':
+        require_once "./business/client/home.php";
+        select_product_by_id();
         break;
     case 'client/hoa-don/chi-tiet':
         require_once "./business/client/orders.php";
         order();
+        break;
+    case 'client/hoa-don':
+        require_once './business/client/orders.php';
+        list_orders();
         break;
     case 'client/hoa-don/xoa':
         require_once "./business/client/orders.php";
@@ -88,6 +91,7 @@ switch ($url) {
         require_once "./business/admin/orders.php";
         orders_manage();
         break;
+    
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
