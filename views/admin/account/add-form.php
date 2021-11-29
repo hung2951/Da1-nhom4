@@ -21,6 +21,11 @@
                 <label for="">Mật khẩu</label>
                 <input type="password" name="password" id="" class="form-control" placeholder="">
             </div>
+            <div class="form-group">
+                <label for="">Nhập lại mật khẩu</label>
+                <input type="password" name="re-password" id="" class="form-control" placeholder="">
+            </div>
+            <!-- <span><?=isset($err)? $err : ""?></span> -->
             <br>
             <div class="d-flex justify-content-center">
                 <a href="<?= ADMIN_URL . 'tai-khoan'?>" class="btn btn-sm btn-danger">Hủy</a>
