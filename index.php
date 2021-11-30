@@ -89,7 +89,10 @@ switch ($url) {
         require_once "./business/admin/orders.php";
         orders_manage();
         break;
-    
+    case 'client/profile':
+        require_once "./business/client/profile.php";
+        select_user();
+        break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
