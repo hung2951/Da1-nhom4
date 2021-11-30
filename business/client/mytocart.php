@@ -32,8 +32,8 @@ function addCart(){
                     'product_name' => $data_product['product_name'],
                     'product_image' => $data_product['product_image'],
                     'price' => $data_product['price'],
-                    'Quantity' => (int)$cart[$id]['product_number'] + 1,
-                    'sum_money' => $data_product['product_price'] + 1,
+                    'Quantity' => 1,
+                    'sum_money' => $data_product['price'] + 1,
                 ];
             }else{
                 $cart[$id] = [
