@@ -108,8 +108,8 @@
               </div>
               <div class="ps-cart__total">
                 <h3>Total Price: <span> 2599.00 $</span></h3>
-                <a href="<?= CLIENT_URL?>thanh-toan?id=<?= $cart['id'] ?>">aaaaaaaaaa</a>
-                <button type="submit" class="ps-btn">Process to checkout<i class="ps-icon-next"></i></button>
+                <a href="<?= CLIENT_URL?>thanh-toan?id=<?= $cart['id'] ?>"> <strong class="ps-btn">Process to checkout<i class="ps-icon-next"></i></strong></a>
+               
               </div>
             </div>  
           </div>
