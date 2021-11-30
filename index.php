@@ -1,7 +1,10 @@
+
 <?php
+
 require_once './commons/app_config.php';
 require_once './commons/helpers.php';
 require_once './dao/system_dao.php';
+session_start();
 $url = isset($_GET['url']) ? $_GET['url'] : "/";
 switch ($url) {
 
