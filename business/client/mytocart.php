@@ -7,7 +7,7 @@ function addCart(){
         $id = $_GET['id'];
         $sql = "select * from product where id_product  = $id";
         $data_product = executeQuery($sql, false);
-        
+        $size = $_POST['size'];
         // echo "<pre>";
         // var_dump($data_product);
         // echo "</pre>";
@@ -22,6 +22,7 @@ function addCart(){
                 'product_image' => $data_product['product_image'],
                 'price' => $data_product['price'],
                 'Quantity' => 1,
+                'size' =>$size,
                 'sum_money' => $data_product['price'] + 1,
             ];
         }else{
@@ -33,6 +34,7 @@ function addCart(){
                     'product_image' => $data_product['product_image'],
                     'price' => $data_product['price'],
                     'Quantity' => 1,
+                    'size' =>$size,
                     'sum_money' => $data_product['price'] + 1,
                 ];
             }else{
@@ -42,6 +44,7 @@ function addCart(){
                     'product_image' => $data_product['product_image'],
                     'price' => $data_product['price'],
                     'Quantity' => 1,
+                    'size' =>$size,
                     'sum_money' => $data_product['price'] + 1,
                 ];
             }
@@ -144,23 +147,3 @@ function addCart(){
     //         // $_SESSION['success'] = 'Tạo Mới giỏi hàng thành công'; 
     //         header('location: http://localhost/Da1-nhom4/client/chi-tiet-san-pham?id=6');exit();
     // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-?>
-       
-  
