@@ -121,35 +121,35 @@
                         <h3 class="mt-3">Size <small>Please select one</small></h3>
                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b1" autocomplete="off" type="36">
+                                <input type="radio" name="color_option" id="color_option_b1" autocomplete="off" value="36">
                                 <span class="text-xl">36</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b2" autocomplete="off" type="37">
+                                <input type="radio" name="color_option" id="color_option_b2" autocomplete="off" value="37">
                                 <span class="text-xl">37</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b3" autocomplete="off" type="38">
+                                <input type="radio" name="color_option" id="color_option_b3" autocomplete="off" value="38">
                                 <span class="text-xl">38</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="39">
+                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" value="39">
                                 <span class="text-xl">39</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="40">
+                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" value="40">
                                 <span class="text-xl">40</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="41">
+                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" value="41">
                                 <span class="text-xl">41</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="42">
+                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" value="42">
                                 <span class="text-xl">42</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="43">
+                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" value="43">
                                 <span class="text-xl">43</span>
                             </label>
                         </div>
@@ -251,7 +251,7 @@
                                     <div class="ps-shoes--carousel">
                                         <div class="ps-shoe">
                                             <div class="ps-shoe__thumbnail">
-                                                <div class="ps-badge"><span>New</span></div>
+                                                
                                                 <a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a>
                                                 <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt="">
                                                 <a class="ps-shoe__overlay" href="<?= CLIENT_URL .'chi-tiet-san-pham?id='.$ps['id_product'].'&id_brand='.$ps['id_brand']?>"></a>

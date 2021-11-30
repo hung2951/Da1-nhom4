@@ -55,6 +55,7 @@
 								<div class="ps-shoe mb-30">
 									<a href="<?= CLIENT_URL . 'chi-tiet-san-pham?id=' . $list_db['id_product'] . '&id_brand=' . $list_db['id_brand'] ?>">
 										<div class="ps-shoe__thumbnail">
+											<div class="ps-badge"><span>New</span></div>
 											<img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_db['product_image'] ?>" />
 										</div>
 									</a>
