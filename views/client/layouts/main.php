@@ -55,7 +55,6 @@
 							<div class="header__actions"><a href="#">Login &amp; Regiser</a>
 
 								<div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">USD</a>
-
 									<ul class="dropdown-menu">
 										<li><a href="#"><img alt="" src="<?= CLIENT_ASSETS ?>images/flag/usa.svg" /> USD</a></li>
 										<li><a href="#"><img alt="" src="<?= CLIENT_ASSETS ?>images/flag/singapore.svg" /> SGD</a></li>
@@ -64,7 +63,6 @@
 								</div>
 
 								<div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">Language</a>
-
 									<ul class="dropdown-menu">
 										<li><a href="#">English</a></li>
 										<li><a href="#">Japanese</a></li>
