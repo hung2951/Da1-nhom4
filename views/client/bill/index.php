@@ -3,7 +3,7 @@
     <main class="ps-main">
       <div class="ps-checkout pt-80 pb-80">
         <div class="ps-container">
-          <form class="ps-checkout__form" action="<?= CLIENT_URL . 'add/thanh-toan'?>" method="POST">
+          <form class="ps-checkout__form" action="<?= CLIENT_URL . 'quen-mat-khau'?>" method="POST">
             <div class="row">
               
                   <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 ">

@@ -12,6 +12,10 @@ switch ($url) {
         require_once './business/client/home.php';
         product_home();
         break;
+    case 'client/quen-mat-khau':
+        require_once './business/client/acc.php';
+        // passRetrieval();
+        break;
     case 'client/thanh-toan':
         require_once './business/client/bill.php';
         billCart();
