@@ -94,7 +94,10 @@ switch ($url) {
         require_once "./business/client/login.php";
         login();
         break;
-
+    case 'client/check-dang-nhap':
+        require_once "./business/client/login.php";
+        check_login();
+        break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
