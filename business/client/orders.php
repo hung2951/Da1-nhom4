@@ -19,9 +19,11 @@
                 where u.id_user=$id
                 order by o.status asc";       
         $orders=executeQuery($sql);
-
+        $sql_user = "select * from user where id_user = $id";
+        $user = executeQuery($sql_user,false);
         client_render('orders/index.php', [
             'dsHoadon' => $orders,
+            'u' => $user,
         ]);
     }
     function update_order(){
