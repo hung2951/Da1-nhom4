@@ -15,13 +15,13 @@ function check_login(){
             if ($email == $oldData['email']) {
                 if ($password == password_verify($password, $oldData['password']) ){
                     $_SESSION['khach_hang'] = $oldData;
-                    header('location: ' .CLIENT_URL. 'index.php');
+                    header('http://localhost/da1-nhom4/');
                 } 
             } else{
                 echo 'Mật khẩu không đúng';
             }
         }else{
-            echo 'Tài khoản kh tồn tại';
+            echo 'Tài khoản không tồn tại';
         }
     
     //     if(isset($_POST['email'])){

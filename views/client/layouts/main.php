@@ -52,7 +52,7 @@
 						</div>
 
 						<div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
-							<div class="header__actions"><a href="#">Login &amp; Regiser</a>
+							<div class="header__actions"><a href="<?=CLIENT_URL.'dang-nhap'?>">Login &amp; Regiser</a>
 
 								<div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">USD</a>
 
