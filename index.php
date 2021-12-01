@@ -93,6 +93,10 @@ switch ($url) {
         require_once "./business/client/profile.php";
         select_user();
         break;
+    case 'client/profile/luu':
+        require_once "./business/client/profile.php";
+        save_update_user();
+        break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
