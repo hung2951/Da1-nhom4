@@ -28,6 +28,10 @@ switch ($url) {
          require_once './business/client/mytocart.php';
          addCart();
         break;
+    case 'client/delete':
+        require_once './business/client/mytocart.php';
+        delete_cart();
+        break;
     case 'client/hoa-don':
         require_once './business/client/orders.php';
         list_orders();

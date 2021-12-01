@@ -81,7 +81,8 @@
                             <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
                         </div>
                     </div>
-                    <form action="<?= CLIENT_URL?>them-gio-hang?id=<?= $product_detail['id_product']?>" method="POST">
+                    <form action="<?= CLIENT_URL?>them-gio-hang" method="POST">
+                    <input type="text" value="<?= $product_detail['id_product']?>" name="id">
                     <div class="col-12 col-sm-6">
                         <h2 style="font-size:30px" class="my-3">
                             <?= $product_detail['product_name'] ?>
