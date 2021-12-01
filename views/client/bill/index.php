@@ -48,8 +48,9 @@
                         <table class="table ps-checkout__products">
                           <thead>
                             <tr>
-                              <th class="text-uppercase">Product</th>
-                              <th class="text-uppercase">Total</th>
+                              <th class="text-uppercase">Product Name</th>
+                              <th class="text-uppercase">Quantity</th>
+                              <th class="text-uppercase">Price</th>
                             </tr>
                           </thead>
                           <!-- ---------------------------------BILL------------------------------- -->
@@ -57,11 +58,16 @@
                           <?php
                            foreach ($_SESSION['cart'] as $cart): ?>
                             <tr>
-                              <td><?= $cart['product_name'] ?></td>
+                              <td ><?= $cart['product_name'] ?></td>
+                              <td class="text-center"><?= $cart['Quantity'] ?></td>
                               <td><?= $cart['price']?></td>
                             </tr>
                             <?php endforeach ?> 
                           </tbody>
+                          <tr>
+                              <td>Total money</td>
+                              <td><?= $cart['price'] += $cart['price']?></td>
+                            </tr>
                         </table>
                       </div>
                       

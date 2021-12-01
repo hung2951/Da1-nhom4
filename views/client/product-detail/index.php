@@ -124,37 +124,41 @@
                         <h3 class="mt-3">Size <small>Please select one</small></h3>
                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b1" autocomplete="off" type="36">
+                                <input type="radio" name="color_option" id="color_option_b1" autocomplete="off" value="36">
                                 <span class="text-xl">36</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b2" autocomplete="off" type="37">
+                                <input type="radio" name="size" id="color_option_b2" autocomplete="off" value="37">
                                 <span class="text-xl">37</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b3" autocomplete="off" type="38">
+                                <input type="radio" name="size" id="color_option_b3" autocomplete="off" value="38">
                                 <span class="text-xl">38</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="39">
+                                <input type="radio" name="size" id="color_option_b4" autocomplete="off" value="39">
                                 <span class="text-xl">39</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="40">
+                                <input type="radio" name="size" id="color_option_b4" autocomplete="off" value="40">
                                 <span class="text-xl">40</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="41">
+                                <input type="radio" name="size" id="color_option_b4" autocomplete="off" value="41">
                                 <span class="text-xl">41</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="42">
+                                <input type="radio" name="size" id="color_option_b4" autocomplete="off" value="42">
                                 <span class="text-xl">42</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="43">
+                                <input type="radio" name="size" id="color_option_b4" autocomplete="off" value="43">
                                 <span class="text-xl">43</span>
                             </label>
+                        </div>
+                        <div class="ct_quantity" style="display: flex">
+                            <h3 class="mt-3">Số lượng</h3>
+                            <input name="quantity" style="text-align:center; width:100px; height:30px; margin-top:18px" type="number" value="1">
                         </div>
                         <div class="bg-gray py-2 px-3 mt-4">
                             <h2 class="mb-0">
