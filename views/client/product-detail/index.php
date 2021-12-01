@@ -153,6 +153,11 @@
                                 <span class="text-xl">43</span>
                             </label>
                         </div>
+                        <div class="ct_quantity" style="display: flex">
+                            <h3 class="mt-3">Số lượng</h3>
+                            <input name="quantity" style="text-align:center; width:100px; height:30px; margin-top:18px" type="number" value="1">
+                        </div>
+                        
                         <div class="bg-gray py-2 px-3 mt-4">
                             <h2 class="mb-0">
                                 <?= number_format($product_detail['price']) ?> <u>đ</u>
