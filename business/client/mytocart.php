@@ -5,9 +5,10 @@ function addCart(){
      
         
         $id = $_GET['id'];
-        $sql = "select * from product where id_product  = $id";
+        $sql = "select * from product where id_product = $id";
         $data_product = executeQuery($sql, false);
         $size = $_POST['size'];
+        $quantity = $_POST['quantity'];
         // echo "<pre>";
         // var_dump($data_product);
         // echo "</pre>";
@@ -21,7 +22,7 @@ function addCart(){
                 'product_name' => $data_product['product_name'],
                 'product_image' => $data_product['product_image'],
                 'price' => $data_product['price'],
-                'quantity' => $data_product['quantity'],
+                'quantity' => $quantity,
                 // 'Quantity' => 1,
                 'size' =>$size,
                 'sum_money' => $data_product['price'] + 1,
@@ -34,8 +35,8 @@ function addCart(){
                     'product_name' => $data_product['product_name'],
                     'product_image' => $data_product['product_image'],
                     'price' => $data_product['price'],
-                    'quantity' => $data_product['quantity'] +1,
-                    // 'quantity' => $quantity+ $cart[$id]['quantity'],
+                    // 'quantity' => $data_product['quantity'] +1,
+                    'quantity' => $quantity+ $cart[$id]['quantity'],
                     // 'Quantity' => 1,
                     'size' =>$size,
                     'sum_money' => $data_product['price'] + 1,
@@ -46,7 +47,7 @@ function addCart(){
                     'product_name' => $data_product['product_name'],
                     'product_image' => $data_product['product_image'],
                     'price' => $data_product['price'],
-                    'quantity' => $data_product['quantity'],
+                    'quantity' => $quantity,
                     // 'Quantity' => 1,
                     'size' =>$size,
                     'sum_money' => $data_product['price'] + 1,

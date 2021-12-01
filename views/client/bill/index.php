@@ -54,12 +54,12 @@
                            foreach ($_SESSION['cart'] as $cart): ?>
                             <tr>
                               <td ><?= $cart['product_name'] ?></td>
-                              <td class="text-center"><?= $cart['Quantity'] ?></td>
+                              <td class="text-center"><?= $cart['quantity'] ?></td>
                               <td><?= $cart['price']?></td>
                             </tr>
                             <?php endforeach ?> 
                           </tbody>
-                          <tr>
+                            <tr>
                               <td>Total money</td>
                               <td><?= $cart['price'] += $cart['price']?></td>
                             </tr>
