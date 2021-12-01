@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require_once './commons/app_config.php';
 require_once './commons/helpers.php';
@@ -89,7 +90,11 @@ switch ($url) {
         require_once "./business/admin/orders.php";
         orders_manage();
         break;
-    
+    case 'client/dang-nhap':
+        require_once "./business/client/login.php";
+        login();
+        break;
+
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
