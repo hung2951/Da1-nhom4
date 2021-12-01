@@ -13,7 +13,7 @@
 <body>
     <!-- partial:index.partial.html -->
     <div class="wrapper">
-        <form class="form-signin" action="<?= CLIENT_URL . 'dang-nhap' ?>" method="POST">
+        <form class="form-signin" action="<?= CLIENT_URL . 'check-dang-nhap' ?>" method="POST">
             <h2 class="form-signin-heading">Đăng nhập</h2>
             <input type="text" class="form-control" name="email" placeholder="Email Address">
             <input type="password" class="form-control" name="password" placeholder="Password">
