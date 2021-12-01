@@ -18,12 +18,12 @@ function billCart(){
 
 function add_bill(){
     $bill_name=$_POST['bill_name'];
-    $bill_compaly=$_POST['bill_compaly'];
+    $bill_address=$_POST['bill_address'];
     $bill_email=$_POST['bill_email'];
     $bill_phone=$_POST['bill_phone'];
-    $quantity=$_POST['quantity'];
 
-    $sql= "INSERT INTO billcart(bill_name,bill_compaly,bill_email,bill_phone,quantity) VALUES ('$bill_name','$bill_compaly','$bill_email','$bill_phone','$quantity')";
+
+    $sql= "INSERT INTO billcart(bill_name,bill_address,bill_email,bill_phone) VALUES ('$bill_name','$bill_address','$bill_email','$bill_phone')";
     executeQuery($sql);
     client_render('bill/saveBill.php', [
         

@@ -21,7 +21,8 @@ function addCart(){
                 'product_name' => $data_product['product_name'],
                 'product_image' => $data_product['product_image'],
                 'price' => $data_product['price'],
-                'Quantity' => 1,
+                'quantity' => $data_product['quantity'],
+                // 'Quantity' => 1,
                 'size' =>$size,
                 'sum_money' => $data_product['price'] + 1,
             ];
@@ -33,7 +34,9 @@ function addCart(){
                     'product_name' => $data_product['product_name'],
                     'product_image' => $data_product['product_image'],
                     'price' => $data_product['price'],
-                    'Quantity' => 1,
+                    'quantity' => $data_product['quantity'] +1,
+                    // 'quantity' => $quantity+ $cart[$id]['quantity'],
+                    // 'Quantity' => 1,
                     'size' =>$size,
                     'sum_money' => $data_product['price'] + 1,
                 ];
@@ -43,7 +46,8 @@ function addCart(){
                     'product_name' => $data_product['product_name'],
                     'product_image' => $data_product['product_image'],
                     'price' => $data_product['price'],
-                    'Quantity' => 1,
+                    'quantity' => $data_product['quantity'],
+                    // 'Quantity' => 1,
                     'size' =>$size,
                     'sum_money' => $data_product['price'] + 1,
                 ];

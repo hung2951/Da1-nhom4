@@ -3,7 +3,7 @@
     <main class="ps-main">
       <div class="ps-checkout pt-80 pb-80">
         <div class="ps-container">
-          <form class="ps-checkout__form" action="<?= CLIENT_URL . 'quen-mat-khau'?>" method="POST">
+          <form class="ps-checkout__form" action="<?= CLIENT_URL . 'add/thanh-toan'?>" method="POST">
             <div class="row">
               
                   <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 ">
@@ -16,9 +16,9 @@
                               <input class="form-control" type="text" name="bill_name">
                             </div>
                             <div class="form-group form-group--inline">
-                              <label>Company Name<span>*</span>
+                              <label>ddress<span>*</span>
                               </label>
-                              <input class="form-control" type="text" name="bill_compaly">
+                              <input class="form-control" type="text" name="bill_address">
                             </div>
                             <div class="form-group form-group--inline">
                               <label>Email Address<span>*</span>
@@ -29,11 +29,6 @@
                               <label>Phone<span>*</span>
                               </label>
                               <input class="form-control" type="text" name="bill_phone">
-                            </div>
-                            <div class="form-group form-group--inline">
-                              <label>Address<span>*</span>
-                              </label>
-                              <input class="form-control" type="text" name="quantity">
                             </div>
                       <div class="form-group">
                       </div>
