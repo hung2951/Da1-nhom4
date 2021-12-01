@@ -1,7 +1,7 @@
 <?php 
 
 function addCart(){
-    if(isset($_POST['id']) && !empty($_POST)){
+    if(isset($_POST['id'])){
         $id = $_POST['id'];
         $sql = "select * from product where id_product = $id";
         $data_product = executeQuery($sql, false);
@@ -67,13 +67,13 @@ function addCart(){
 function delete_cart(){
         // lấy về tên giỏi hàng
         $cart= $_SESSION['cart'];
-        // lấy về id sản phẩm trong giỏi hàng
+        // lấy về id sản phẩm trong giỏ hàng
         $id=$_GET['id'];
         if($id==0){
             unset($_SESSION['cart']); // xóa giỏ hàng
-            header('location: '.CLIENT_URL.'them-gio-hang');
+            client_render('mytocart/index.php', []);
         }else{
             unset($_SESSION['cart'] [$id]); // xóa sp trong giỏi hàng
-            header('location: '.CLIENT_URL.'them-gio-hang');
+            client_render('mytocart/index.php', []);
         }
 }

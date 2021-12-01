@@ -34,9 +34,7 @@
                     </td>
                     <td><?= $tong = $cart['price'] * $cart['quantity'] ?><u>đ</u></td>
                     <td>
-                      
-
-                      <a href="<?= CLIENT_URL . 'delete?id=' . $cart['id'] ?>" onclick="return confirm('Bạn có muốn xóa sản phẩm này ?')" class="btn btn-sm btn-danger">Xóa</a>
+                      <a href="<?= CLIENT_URL . 'gio-hang/delete?id=' . $cart['id'] ?>" onclick="return confirm('Bạn có muốn xóa sản phẩm này ?')" class="btn btn-sm btn-danger">Xóa</a>
                     </td>
                   </tr>
                 <?php endforeach ?>
