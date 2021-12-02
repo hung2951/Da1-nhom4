@@ -26,34 +26,33 @@ function account_add_form()
 }
 function account_save_add()
 {
-    
-        // nhận dữ liệu từ form gửi lên
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $phone = $_POST['phone'];
-        // mã hóa mật khẩu
-        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-        // lưu ảnh vào thư mục public/uploads
-        $file = $_FILES['image'];
-        $avatar = "";
-        // Lưu ảnh
-        if ($file['size'] > 0) {
-            $filename = uniqid() . '-' . $file['name'];
-            move_uploaded_file($file['tmp_name'], './public/uploads/avatars/' . $filename);
-            $avatar = "uploads/avatars/" . $filename;
-        }
+    // nhận dữ liệu từ form gửi lên
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $phone = $_POST['phone'];
+    // mã hóa mật khẩu
+    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+    // lưu ảnh vào thư mục public/uploads
+    $file = $_FILES['image'];
+    $avatar = "";
+    // Lưu ảnh
+    if ($file['size'] > 0) {
+        $filename = uniqid() . '-' . $file['name'];
+        move_uploaded_file($file['tmp_name'], './public/uploads/avatars/' . $filename);
+        $avatar = "uploads/avatars/" . $filename;
+    }
 
-        // tạo ra câu sql insert tài khoản mới
-        $sql = "insert into user
+    // tạo ra câu sql insert tài khoản mới
+    $sql = "insert into user
                 (full_name, email,phone, password, avatar) 
             values 
                 ('$name', '$email', '$phone','$passwordHash', '$avatar')";
-        // Thực thi câu sql với db
-        executeQuery($sql);
-        header("location: " . ADMIN_URL . 'tai-khoan');
-   
+    // Thực thi câu sql với db
+    executeQuery($sql);
+    header("location: " . ADMIN_URL . 'tai-khoan');
 }
+
 
 function account_edit_form()
 {
@@ -95,5 +94,5 @@ function account_save_edit()
             where id_user = $id";
     // Thực thi câu sql với db
     executeQuery($sql);
-header("location: " . ADMIN_URL . 'tai-khoan');
+    header("location: " . ADMIN_URL . 'tai-khoan');
 }
