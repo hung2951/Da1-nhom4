@@ -82,9 +82,12 @@
                         </div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <form action="<?= CLIENT_URL?>gio-hang" method="POST">
                     <input type="text" value="<?= $product_detail['id_product']?>" name="id" hidden>
 =======
+=======
+>>>>>>> parent of 2ef229b (update)
                     <form action="<?= CLIENT_URL?>them-gio-hang" method="POST">
                     <input type="text" value="<?= $product_detail['id_product']?>" name="id">
 >>>>>>> parent of 2ef229b (update)
