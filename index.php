@@ -28,7 +28,7 @@ switch ($url) {
          require_once './business/client/mytocart.php';
          addCart();
         break;
-    case 'client/delete':
+    case 'client/gio-hang/delete':
         require_once './business/client/mytocart.php';
         delete_cart();
         break;
