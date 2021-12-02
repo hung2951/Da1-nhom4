@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="<?= CLIENT_ASSETS ?>css/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
@@ -69,14 +70,25 @@
                             <?= $product_detail['product_name'] ?>
                         </h2>
                         <div class="col-12">
-                            <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" class="product-image" alt="Product Image" style="width:500px;">
+                            <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>"
+                                class="product-image" alt="Product Image" style="width:500px;">
                         </div>
                         <div class="col-12 product-image-thumbs">
-                            <div class="product-image-thumb active"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
-                            <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
-                            <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
-                            <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
-                            <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
+                            <div class="product-image-thumb active"><img
+                                    src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>"
+                                    alt="Product Image"></div>
+                            <div class="product-image-thumb"><img
+                                    src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>"
+                                    alt="Product Image"></div>
+                            <div class="product-image-thumb"><img
+                                    src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>"
+                                    alt="Product Image"></div>
+                            <div class="product-image-thumb"><img
+                                    src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>"
+                                    alt="Product Image"></div>
+                            <div class="product-image-thumb"><img
+                                    src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>"
+                                    alt="Product Image"></div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6">
@@ -121,35 +133,43 @@
                         <h3 class="mt-3">Size <small>Please select one</small></h3>
                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b1" autocomplete="off" type="36">
+                                <input type="radio" name="color_option" id="color_option_b1" autocomplete="off"
+                                    type="36">
                                 <span class="text-xl">36</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b2" autocomplete="off" type="37">
+                                <input type="radio" name="color_option" id="color_option_b2" autocomplete="off"
+                                    type="37">
                                 <span class="text-xl">37</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b3" autocomplete="off" type="38">
+                                <input type="radio" name="color_option" id="color_option_b3" autocomplete="off"
+                                    type="38">
                                 <span class="text-xl">38</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="39">
+                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off"
+                                    type="39">
                                 <span class="text-xl">39</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="40">
+                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off"
+                                    type="40">
                                 <span class="text-xl">40</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="41">
+                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off"
+                                    type="41">
                                 <span class="text-xl">41</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="42">
+                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off"
+                                    type="42">
                                 <span class="text-xl">42</span>
                             </label>
                             <label class="btn btn-default text-center">
-                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off" type="43">
+                                <input type="radio" name="color_option" id="color_option_b4" autocomplete="off"
+                                    type="43">
                                 <span class="text-xl">43</span>
                             </label>
                         </div>
@@ -190,52 +210,64 @@
                 <div class="row mt-4">
                     <nav class="w-100">
                         <div class="nav nav-tabs" id="product-tab" role="tablist">
-                            <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab" href="#product-desc" role="tab" aria-controls="product-desc" aria-selected="true">Description</a>
-                            <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab" href="#product-comments" role="tab" aria-controls="product-comments" aria-selected="false">Comments</a>
+                            <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab"
+                                href="#product-desc" role="tab" aria-controls="product-desc"
+                                aria-selected="true">Description</a>
+                            <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab"
+                                href="#product-comments" role="tab" aria-controls="product-comments"
+                                aria-selected="false">Comments</a>
                         </div>
                     </nav>
 
                     <div class="tab-content p-3" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab">
+                        <div class="tab-pane fade show active" id="product-desc" role="tabpanel"
+                            aria-labelledby="product-desc-tab">
                             <?= $product_detail['details'] ?>
                         </div>
-                        <div class="tab-pane fade" id="product-comments" role="tabpanel" aria-labelledby="product-comments-tab">
-                            <?php if (isset($_SESSION['user'])) : ?>
+                        <div class="tab-pane fade" id="product-comments" role="tabpanel"
+                            aria-labelledby="product-comments-tab">
 
-                            <form id="cart-form" action="<?= CLIENT_URL . 'binh_luan/luu-tao-moi' ?>" method="POST" style="padding: 10px;">
-                                <input type="hidden" name="id" value="<?= $_GET['id'] ?>" >
-                                <input type="hidden" name="id_brand" value="<?= $_GET['id_brand'] ?>" >
+                            <?php if (isset($_SESSION['khach_hang'])) : ?>
 
+                            <form id="cart-form" action="<?= CLIENT_URL . 'binh_luan/luu-tao-moi' ?>" method="POST"
+                                style="padding: 10px;">
+                                <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
+                                <input type="hidden" name="id_brand" value="<?= $_GET['id_brand'] ?>">
                                 <input type="hidden" name="id_product" value="<?= $product_detail['id_product']  ?>">
                                 <input type="hidden" name="date" value="<?= date('Y-m-d') ?>">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content"></textarea>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                    name="content"></textarea>
                                 <button type="submit" style="margin-top:10px">Bình luận</button>
                             </form>
+
                             <hr>
                             <?php else : ?>
-                                <div class="alert">Bạn cần phải đăng nhập để bình luận<a style="color:Blue" href=" ">. ĐĂNG NHẬP</a></div>
+                            <div class="alert">Bạn cần phải đăng nhập để bình luận<a style="color:Blue" href=" ">. ĐĂNG
+                                    NHẬP</a></div>
                             <?php endif; ?>
                             <hr>
 
                             <?php if ($comment) : ?>
-                                <?php  foreach($comment as $comment): ?>
-                                <div class="evaluate">
-                                    <div class="kh" style="display:flex; padding: 5px 15px">
-                                        <img src="<?= PUBLIC_ASSETS . '/uploads/user/' . $comment['avatar'] ?>" alt="" width="40px" style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;">
-                                        <strong class="name" style="padding:10px">
-                                            <?= $comment['full_name'] ?>
-                                        </strong>
+                            <?php  foreach($comment as $comment): ?>
+                            <div class="evaluate">
+                                <div class="kh" style="display:flex; padding: 5px 15px">
+                                    <img src="<?= PUBLIC_ASSETS . '/uploads/user/' . $comment['avatar'] ?>" alt=""
+                                        width="40px"
+                                        style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;">
+                                    <strong class="name" style="padding:10px">
+                                        <?= $comment['full_name'] ?>
+                                    </strong>
+                                </div>
+                                <div class="danh_gia" style="padding: 0px 50px;">
+                                    <div class="nd_bl">
+                                        <?= $comment['content'] ?>
                                     </div>
-                                    <div class="danh_gia" style="padding: 0px 50px;">
-                                        <div class="nd_bl">
-                                            <?= $comment['content'] ?>
-                                        </div>
-                                        <div class="date" style="font-size: 13px;">
-                                            <?= date("d/m/Y", strtotime($comment['date'])) ?>
-                                        </div>
+                                    <div class="date" style="font-size: 13px;">
+                                        <?= date("d/m/Y", strtotime($comment['date'])) ?>
                                     </div>
                                 </div>
-                                <?php endforeach; ?>
+                            </div>
+                            <?php endforeach; ?>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -265,38 +297,50 @@
                                     <h3 class="ps-section__title" data-mask="Related item">- YOU MIGHT ALSO LIKE</h3>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
-                                    <div class="ps-owl-actions"><a class="ps-prev" href="#"><i class="ps-icon-arrow-right"></i>Prev</a><a class="ps-next" href="#">Next<i class="ps-icon-arrow-left"></i></a></div>
+                                    <div class="ps-owl-actions"><a class="ps-prev" href="#"><i
+                                                class="ps-icon-arrow-right"></i>Prev</a><a class="ps-next"
+                                            href="#">Next<i class="ps-icon-arrow-left"></i></a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="ps-section__content">
-                            <div class="ps-owl--colection owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="5000" data-owl-gap="30" data-owl-nav="false" data-owl-dots="false" data-owl-item="4" data-owl-item-xs="1" data-owl-item-sm="2" data-owl-item-md="3" data-owl-item-lg="4" data-owl-duration="1000" data-owl-mousedrag="on">
+                            <div class="ps-owl--colection owl-slider" data-owl-auto="true" data-owl-loop="true"
+                                data-owl-speed="5000" data-owl-gap="30" data-owl-nav="false" data-owl-dots="false"
+                                data-owl-item="4" data-owl-item-xs="1" data-owl-item-sm="2" data-owl-item-md="3"
+                                data-owl-item-lg="4" data-owl-duration="1000" data-owl-mousedrag="on">
                                 <?php foreach ($product_same_kind as $ps) : ?>
-                                    <div class="ps-shoes--carousel">
-                                        <div class="ps-shoe">
-                                            <div class="ps-shoe__thumbnail">
-                                                <div class="ps-badge"><span>New</span></div>
-                                                <a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a>
-                                                <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt="">
-                                                <a class="ps-shoe__overlay" href="<?= CLIENT_URL .'chi-tiet-san-pham?id='.$ps['id_product'].'&id_brand='.$ps['id_brand']?>"></a>
+                                <div class="ps-shoes--carousel">
+                                    <div class="ps-shoe">
+                                        <div class="ps-shoe__thumbnail">
+                                            <div class="ps-badge"><span>New</span></div>
+                                            <a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a>
+                                            <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>"
+                                                alt="">
+                                            <a class="ps-shoe__overlay"
+                                                href="<?= CLIENT_URL .'chi-tiet-san-pham?id='.$ps['id_product'].'&id_brand='.$ps['id_brand']?>"></a>
+                                        </div>
+                                        <div class="ps-shoe__content">
+                                            <div class="ps-shoe__variants">
+                                                <div class="ps-shoe__variant normal">
+                                                    <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>"
+                                                        alt="">
+                                                    <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>"
+                                                        alt="">
+                                                    <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>"
+                                                        alt="">
+                                                    <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>"
+                                                        alt="">
+                                                </div>
                                             </div>
-                                            <div class="ps-shoe__content">
-                                                <div class="ps-shoe__variants">
-                                                    <div class="ps-shoe__variant normal">
-                                                        <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt="">
-                                                        <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt="">
-                                                        <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt="">
-                                                        <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="ps-shoe__detail">
-                                                    <a class="ps-shoe__name" href="<?= CLIENT_URL .'chi-tiet-san-pham?id='.$ps['id_product'].'&id_brand='.$ps['id_brand']?>">
-                                                        <?= $ps['product_name'] ?>
-                                                    </a>
-                                                </div>
+                                            <div class="ps-shoe__detail">
+                                                <a class="ps-shoe__name"
+                                                    href="<?= CLIENT_URL .'chi-tiet-san-pham?id='.$ps['id_product'].'&id_brand='.$ps['id_brand']?>">
+                                                    <?= $ps['product_name'] ?>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                                 <?php endforeach?>
                             </div>
                         </div>
