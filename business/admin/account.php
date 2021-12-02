@@ -11,6 +11,7 @@ function account_index()
 
 function account_remove()
 {
+function account_remove(){
     // lấy id từ đường dẫn
     $id = $_GET['id'];
     // thực thi câu lệnh xóa dựa vào id
