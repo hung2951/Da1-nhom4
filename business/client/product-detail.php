@@ -34,6 +34,9 @@ function save_add_commment(){
 
     // tạo ra câu sql insert tài khoản mới
     $sql = "INSERT INTO comment(date, id_user, id_product, content) VALUES ('$date', '1', '$id_product', '$content')";
+
+    // $sql = "INSERT INTO comment(date, id_user, id_product, content) VALUES ('$date', '$_SESSION['khach_hang']['id_user']', '$id_product', '$content')";
+
     executeQuery($sql);
 
     // Thực thi câu sql với db
