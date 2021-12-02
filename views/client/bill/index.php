@@ -32,8 +32,11 @@
                 </div>
                 <div class="form-group">
                 </div>
+                <hr>
               </div>
+              
             </div>
+            
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
               <div class="ps-checkout__order">
                 <header>
@@ -66,9 +69,12 @@
                     </tbody>
                     <tr>
                       <td>Total money</td>
-                      <td><?php $tong ?></td>
+                      <?php $tong += $cart['price'] * $cart['quantity']?>
+                      <td><?= $tong ?></td>
+                      
                     </tr>
                   </table>
+                 
                 </div>
 
               </div>
