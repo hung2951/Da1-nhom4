@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if IE 7]><html class="ie ie7"><![endif]-->
 <!--[if IE 8]><html class="ie ie8"><![endif]-->
@@ -43,3 +44,49 @@
   <!--[if IE 9]><body class="ie9 lt-ie10"><![endif]-->
   <body class="ps-loading">
     <div class="header--sidebar"></div>
+    <main class="ps-main" style="margin:10%">
+    <form class="ps-checkout__form" action="<?= CLIENT_URL . 'quen-mat-khau'?>" method="POST">
+              <div style="text-align: center;margin;:5%">
+              <div style="color: rgb(61, 184, 67); ">
+                    <h2 for="" style="color: rgb(61, 184, 67); ">Email</h2>
+                    <input type="email" name="email" placehol="email">
+
+                </div>
+                <div style="margin:15px">
+                <button type="submit" class="btn btn-primary btn-sm">Send Email</button>
+                </div>
+              </div>
+
+
+            </form>
+    </main>
+    
+    <!-- JS Library-->
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+    <script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/gmap3.min.js"></script>
+    <script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/imagesloaded.pkgd.js"></script>
+    <script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/slick/slick/slick.min.js"></script>
+    <script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/elevatezoom/jquery.elevatezoom.js"></script>
+    <script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAx39JFH5nhxze1ZydH-Kl8xXM3OK4fvcg&amp;region=GB"></script><script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script type="text/javascript" src="<?= CLIENT_ASSETS ?>css/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <!-- Custom scripts-->
+    <script type="text/javascript" src="js/main.js"></script>
+    
+  </body>
+
+<!-- Mirrored from nouthemes.net/html/trueshoes/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Nov 2021 02:15:28 GMT -->
+</html>

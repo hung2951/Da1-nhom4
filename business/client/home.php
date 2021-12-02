@@ -38,9 +38,9 @@ function product_home(){
         client_render('homepage/send_email_form.php');
     }
     function  send_email(){
-        $recceiver= $_POST['recceiver'];
-        $title= $_POST['title'];
-        $content= $_POST['content'];
+          $email=$_POST['email'];
+          $sql=" SELECT * FROM user WHERE email= $email";
+          $sendMail=executeQuery($sql);
 
         $mail = new PHPMailer(true);
 
@@ -57,20 +57,24 @@ function product_home(){
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
-            $mail->setFrom('dainxph14951@fpt.edu.vn', 'DaiNX');   // gửi từ ai
+            $mail->setFrom($email);   // gửi từ ai
 
             $arrEmail = explode(',', $recceiver); // gửi nhiều người
             foreach($arrEmail as $em){
                 $mail->addAddress(trim($em)); 
             }
 
-            $mail->addReplyTo('tramnvph14967@fpt.edu.vn', 'TramNV');
-
+            $mail->addReplyTo( $email);
+            $min= 100000;
+            $max= 9999999;
+            $passwordNew= rand($min,$max);
+            $sql = "UPDATE user SET password=$passwordNew WHERE id_user= ";
+            $product_detail = executeQuery($sql, false);
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = $title;
-            $mail->Body    = $content;
+            $mail->Subject = 'Cập nhật mật khẩu mới !';
+            $mail->Body    = 'Mật Khẩu Mới của bạn là: ' . $passwordNew;
             $mail->AltBody = $content; // trường hợp mạng yếu sẽ hiển thị
 
             $mail->send();

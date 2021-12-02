@@ -50,8 +50,8 @@ switch ($url) {
         dashboard_info();
         break;
     case 'client/quen-mat-khau':
-     require_once './business/client/acc.php';
-            // passRetrieval();
+     require_once './business/client/home.php';
+            send_email();
     break;
     case 'cp-admin/tai-khoan':
         require_once "./business/admin/account.php";
