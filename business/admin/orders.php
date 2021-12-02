@@ -27,32 +27,31 @@ function order_details()
         'o' => $order_detail,
     ]);
 }
-function select_orders()
-{
-    $id = $_GET['id'];
-    $sql = "select*from orders where id_orders=$id";
-    $orders = executeQuery($sql, false);
-    admin_render('orders/update-status.php', [
-        'o' => $orders,
-    ]);
-}
+
+
+
 function save_update_status()
 {
     $id = $_GET['id'];
     $status = $_POST['status'];
     $sql = "update orders set status = $status where id_orders = $id";
     executeQuery($sql);
-    header("location: " . ADMIN_URL . 'hoa-don');
+    header("location: " . ADMIN_URL . 'don-hang');
 }
-function orders_manage()
+function select_order()
 {
-    $sql = "select *, count(o.id_user) Tong, sum(o.money) tongtien
-        from orders o 
-        inner join user u on o.id_user=u.id_user
-        group by o.id_user 
-        having count(o.id_user)>=1";
+    $sql = "select * from orders";
     $orders = executeQuery($sql);
     admin_render('orders/index.php', [
         'dsHoadon' => $orders,
+    ]);
+}
+function order_status()
+{   
+    $id = $_GET['id'];
+    $sql = "select * from orders where id_orders=$id";
+    $orders = executeQuery($sql,false);
+    admin_render('orders/update-status.php', [
+        'o' => $orders,
     ]);
 }

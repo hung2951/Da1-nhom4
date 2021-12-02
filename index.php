@@ -27,7 +27,6 @@ switch ($url) {
         require_once "./business/client/product-detail.php";
         save_add_commment();
         break;
-
     case 'cp-admin/dashboard':
         require_once './business/admin/dashboard.php';
         dashboard_info();
@@ -56,25 +55,17 @@ switch ($url) {
         require_once "./business/admin/account.php";
         account_remove();
         break;
-    case 'cp-admin/hoa-don/ds-hoa-don/chi-tiet':
+    case 'cp-admin/don-hang':
         require_once "./business/admin/orders.php";
-        order_details();
+        select_order();
         break;
-    case 'cp-admin/hoa-don/ds-hoa-don':
+    case 'cp-admin/don-hang/trang-thai':
         require_once "./business/admin/orders.php";
-        list_order();
+        order_status();
         break;
-    case 'cp-admin/hoa-don/ds-hoa-don/sua':
-        require_once "./business/admin/orders.php";
-        select_orders();
-        break;
-    case 'cp-admin/hoa-don/ds-hoa-don/sua/luu-sua':
+    case 'cp-admin/don-hang/trang-thai/luu':
         require_once "./business/admin/orders.php";
         save_update_status();
-        break;
-    case 'cp-admin/hoa-don':
-        require_once "./business/admin/orders.php";
-        orders_manage();
         break;
     case 'client/gio-hang':
         require_once './business/client/mytocart.php';
