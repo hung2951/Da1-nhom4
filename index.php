@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once './commons/app_config.php';
 require_once './commons/helpers.php';
 require_once './dao/system_dao.php';
@@ -89,7 +89,18 @@ switch ($url) {
         require_once "./business/admin/orders.php";
         orders_manage();
         break;
-    
+    case 'client/gio-hang':
+        require_once './business/client/mytocart.php';
+        addCart();
+        break;
+    case 'client/gio-hang/delete':
+        require_once './business/client/mytocart.php';
+        delete_cart();
+        break;
+    case 'client/thanh-toan':
+        require_once './business/client/mytocart.php';
+        delete_cart();
+        break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;

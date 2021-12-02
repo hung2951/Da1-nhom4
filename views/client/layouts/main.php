@@ -16,6 +16,7 @@
 	<meta name="description" content="Default keyword">
 	<title>Shoe - Homepage</title>
 	<!-- Fonts-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:300,400,700%7CMontserrat:300,400,500,600,700,800,900" rel="stylesheet" />
 	<link href="<?= CLIENT_ASSETS ?>plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -83,7 +84,7 @@
 
 					<div class="navigation__column center">
 						<ul class="main-menu menu">
-							<li class="menu-item menu-item-has-children dropdown"><a href="http://localhost/da1-nhom4/">Trang chủ</a>
+							<li class="menu-item menu-item-has-children dropdown"><a href="<?= BASE_URL ?>">Trang chủ</a>
 							</li>
 							<li class="menu-item menu-item-has-children dropdown"><a href="">SNEAKER</a>
 								<ul class="sub-menu">
@@ -118,59 +119,48 @@
 					</div>
 
 					<div class="navigation__column right">
-						<form action="<?=CLIENT_URL?>search" class="ps-search--header" method="get">
+						<form action="<?= CLIENT_URL ?>search" class="ps-search--header" method="get">
 							<input class="form-control" placeholder="Tìm kiếm sản phẩm..." type="text" name="query" />
 							<button type="submit">Tìm kiếm</button>
 						</form>
 
-						<div class="ps-cart"><a class="ps-cart__toggle" href="#"><span><i>20</i></span></a>
+						<div class="ps-cart"><a class="ps-cart__toggle" href="<?= CLIENT_URL . 'gio-hang' ?>"><i class="fas fa-cart-plus"></i></i></a>
 
 							<div class="ps-cart__listing">
 								<div class="ps-cart__content">
-									<div class="ps-cart-item">
-										<div class="ps-cart-item__thumbnail"><img alt="" src="<?= CLIENT_ASSETS ?>images/cart-preview/1.jpg" />
+									<?php if (isset($_SESSION['cart'])) : ?>
+										<?php
+										$totalPrice = 0;
+										$count = 0;
+										?>
+										<?php foreach ($_SESSION['cart'] as $cart) : ?>
+											<div class="ps-cart-item">
+												<div class="ps-cart-item__thumbnail"><img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $cart['product_image'] ?>" />
+												</div>
+
+												<div class="ps-cart-item__content"><a class="ps-cart-item__title"><?= $cart['product_name'] ?></a>
+
+													<p><span>Quantity:<i><?= $cart['quantity'] ?></i></span><span>Total:<i><?= number_format($cart['price'] * $cart['quantity']) ?></i></span></p>
+												</div>
+											</div>
+											<?php $totalPrice += $cart['price'] * $cart['quantity'];$count++; ?>
+
+										<?php endforeach ?>
+										<div class="ps-cart__total">
+											<p>Number of items:<span><?= $count ?></span></p>
+
+											<p>Total money:<span><?= number_format($totalPrice) ?></span></p>
+											<div class="ps-cart__footer"><a class="ps-btn" href="">Check out</a></div>
 										</div>
-
-										<div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">Amazin&rsquo; Glazin&rsquo;</a>
-
-											<p><span>Quantity:<i>12</i></span><span>Total:<i>&pound;176</i></span></p>
+									<?php else : ?>
+										<div class="ps-cart-item__content"><a class="ps-cart-item__title">Bạn chưa có sản phẩm nào trong giỏ hàng</a>
+										<?php endif ?>
 										</div>
-									</div>
-
-									<div class="ps-cart-item">
-										<div class="ps-cart-item__thumbnail"><img alt="" src="<?= CLIENT_ASSETS ?>images/cart-preview/2.jpg" />
-										</div>
-
-										<div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">The Crusty Croissant</a>
-
-											<p><span>Quantity:<i>12</i></span><span>Total:<i>&pound;176</i></span></p>
-										</div>
-									</div>
-
-									<div class="ps-cart-item">
-										<div class="ps-cart-item__thumbnail"><img alt="" src="<?= CLIENT_ASSETS ?>images/cart-preview/3.jpg" />
-										</div>
-
-										<div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">The Rolling Pin</a>
-
-											<p><span>Quantity:<i>12</i></span><span>Total:<i>&pound;176</i></span></p>
-										</div>
-									</div>
 								</div>
 
-								<div class="ps-cart__total">
-									<p>Number of items:<span>36</span></p>
-
-									<p>Item Total:<span>&pound;528.00</span></p>
-								</div>
-
-								<div class="ps-cart__footer"><a class="ps-btn" href="cart.html">Check out</a></div>
+								<div class="menu-toggle"></div>
 							</div>
 						</div>
-
-						<div class="menu-toggle"></div>
-					</div>
-				</div>
 			</nav>
 		</header>
 
