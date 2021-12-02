@@ -60,7 +60,7 @@
                         </tr>
                         <tr>
                           <td><?php $tong = 0;
-                              echo $tong += $cart['price'] ?></td>
+                              // echo $tong += $cart['price'] ?></td>
                         </tr>
                       <?php endforeach ?>
                     </tbody>
