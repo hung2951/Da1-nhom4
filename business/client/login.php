@@ -16,12 +16,18 @@ function check_login()
     if ($oldData) {
         if (password_verify($password, $oldData['password'])) {
             $_SESSION['khach_hang'] = $oldData;
-            header('location: http://localhost/da1-nhom4/');
+            header('location: '.BASE_URL);
         }else{
-            echo "mật khẩu sai";
+            $err = "Mật khẩu sai";
+            client_render('login/login.php',[
+                'err'=>$err
+            ]);
         }
     } else {
-        echo 'Tài khoản không tồn tại';
+        $email = "Tài khoản không tồn tại";
+            client_render('login/login.php',[
+                'err'=>$email
+            ]);
     }
 
 

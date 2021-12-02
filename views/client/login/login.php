@@ -14,14 +14,16 @@
     <!-- partial:index.partial.html -->
     <div class="wrapper">
         <form class="form-signin" action="<?= CLIENT_URL . 'check-dang-nhap' ?>" method="POST">
-            <h2 class="form-signin-heading">Đăng nhập</h2>
-            <input type="text" class="form-control" name="email" placeholder="Email Address">
+            <h2 class="form-signin-heading">Login</h2>
+            <input type="text" class="form-control" name="email" placeholder="Email Address"> 
+            <span style="color: red;"><?= isset($email)?$email:""?></span>
             <input type="password" class="form-control" name="password" placeholder="Password">
+            <span style="color: red;"><?= isset($err)?$err:""?></span>
             <label class="checkbox">
                 <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
             </label>
             <button class="btn btn-lg btn-primary btn-block" type="submit" name="btn-submit">Login</button>
-            <p style="text-align: center; margin-top: 50px; ">Bạn đã có tài khoản chưa?<a href="">Đăng ký ở đây</a></p>
+            <p style="text-align: center; margin-top: 50px; ">Do you have an account?<a href="">Register now</a></p>
         </form>
     </div>
     <!-- partial -->
