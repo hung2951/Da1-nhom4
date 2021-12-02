@@ -82,7 +82,7 @@
                         </div>
                     </div>
                     <form action="<?= CLIENT_URL?>gio-hang" method="POST">
-                    <input type="text" value="<?= $product_detail['id_product']?>" name="id">
+                    <input type="text" value="<?= $product_detail['id_product']?>" name="id" hidden>
                     <div class="col-12 col-sm-6">
                         <h2 style="font-size:30px" class="my-3">
                             <?= $product_detail['product_name'] ?>
