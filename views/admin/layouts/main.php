@@ -1,3 +1,16 @@
+<?php
+if (isset($_SESSION['khach_hang'])) {
+  if ($_SESSION['khach_hang']['role'] != 1) {
+    echo '<a href="http://localhost/da1-nhom4/">' . 'Quay lại trang chủ' . '</a>';
+    echo "<pre>";
+    die('Đường dẫn không tồn tại');
+  } else {
+    header('location:' . CLIENT_URL . 'dang-nhap');
+  }
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
