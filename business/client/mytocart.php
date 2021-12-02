@@ -103,17 +103,17 @@ function addCart(){
 //     }
 
 //     // xóa giỏi hàng
-//     function dellCart(){
-//         // lấy về tên giỏi hàng
-//         $cart= $_SESSION['cart'];
-//         // lấy về id sản phẩm trong giỏi hàng
-//         $id=$_GET['id'];
-//         if($id==0){
-//             unset($_SESSION['cart']); // xóa giỏi hàng
-//         }else{
-//             unset($_SESSION['cart'] [$id]); // xóa sp trong giỏi hàng
-//         }
-//     }
+    // function dellCart(){
+    //     // lấy về tên giỏi hàng
+    //     $cart= $_SESSION['cart'];
+    //     // lấy về id sản phẩm trong giỏi hàng
+    //     $id=$_GET['id'];
+    //     if($id==0){
+    //         unset($_SESSION['cart']); // xóa giỏi hàng
+    //     }else{
+    //         unset($_SESSION['cart'] [$id]); // xóa sp trong giỏi hàng
+    //     }
+    // }
 
 
 
