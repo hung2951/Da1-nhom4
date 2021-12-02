@@ -53,128 +53,131 @@
 						</div>
 
 						<div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
-							<?php
-							$khach_hang = (isset($_SESSION['khach_hang'])) ? $_SESSION['khach_hang'] : [];
-							if (isset($khach_hang['email'])) {
-							?>
-								<div class="header__actions"><a href="<?= CLIENT_URL . 'profile' ?>"><?= $khach_hang['full_name'] ?></a>
-								<?php } else { ?>
-									<div class="header__actions"><a href="<?= CLIENT_URL . 'dang-nhap' ?>">Login &amp; Regiser</a>
-									<?php } ?>
-									<div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">USD</a>
+							<?php if (isset($_SESSION['khach_hang'])) { ?>
+								<?php if ($_SESSION['khach_hang']['role'] == 1) : ?>
+									<div class="header__actions"><a href="<?= ADMIN_URL.'tai-khoan'?>">Trang quản trị</a></div>
+									<div class="header__actions"><a href="<?= CLIENT_URL . 'profile' ?>"><?= $_SESSION['khach_hang']['full_name'] ?></a>
+									<?php else : ?>
+										<div class="header__actions"><a href="<?= CLIENT_URL . 'profile' ?>"><?= $_SESSION['khach_hang']['full_name'] ?></a>
+										<?php endif ?>
 
-										<ul class="dropdown-menu">
-											<li><a href="#"><img alt="" src="<?= CLIENT_ASSETS ?>images/flag/usa.svg" /> USD</a></li>
-											<li><a href="#"><img alt="" src="<?= CLIENT_ASSETS ?>images/flag/singapore.svg" /> SGD</a></li>
-											<li><a href="#"><img alt="" src="<?= CLIENT_ASSETS ?>images/flag/japan.svg" /> JPN</a></li>
-										</ul>
-									</div>
+									<?php } else { ?>
+										<div class="header__actions"><a href="<?= CLIENT_URL . 'dang-nhap' ?>">Login &amp; Regiser</a>
+										<?php } ?>
+										<div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">USD</a>
 
-									<div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">Language</a>
+											<ul class="dropdown-menu">
+												<li><a href="#"><img alt="" src="<?= CLIENT_ASSETS ?>images/flag/usa.svg" /> USD</a></li>
+												<li><a href="#"><img alt="" src="<?= CLIENT_ASSETS ?>images/flag/singapore.svg" /> SGD</a></li>
+												<li><a href="#"><img alt="" src="<?= CLIENT_ASSETS ?>images/flag/japan.svg" /> JPN</a></li>
+											</ul>
+										</div>
 
-										<ul class="dropdown-menu">
-											<li><a href="#">English</a></li>
-											<li><a href="#">Japanese</a></li>
-											<li><a href="#">Chinese</a></li>
-										</ul>
+										<div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">Language</a>
+
+											<ul class="dropdown-menu">
+												<li><a href="#">English</a></li>
+												<li><a href="#">Japanese</a></li>
+												<li><a href="#">Chinese</a></li>
+											</ul>
+										</div>
+										</div>
+										</div>
 									</div>
-									</div>
-								</div>
 						</div>
 					</div>
-				</div>
 
-				<nav class="navigation">
-					<div class="container-fluid">
-						<div class="navigation__column left">
-							<div class="header__logo"><a class="ps-logo" href="index.html"><img alt="" src="<?= CLIENT_ASSETS ?>images/logo.png" /></a></div>
-						</div>
+					<nav class="navigation">
+						<div class="container-fluid">
+							<div class="navigation__column left">
+								<div class="header__logo"><a class="ps-logo" href="index.html"><img alt="" src="<?= CLIENT_ASSETS ?>images/logo.png" /></a></div>
+							</div>
 
-						<div class="navigation__column center">
-							<ul class="main-menu menu">
-								<li class="menu-item menu-item-has-children dropdown"><a href="<?= BASE_URL ?>">HOME</a>
-								</li>
-								<li class="menu-item menu-item-has-children dropdown"><a href="javascript: void(0)">SNEAKER</a>
-									<ul class="sub-menu">
-										<?php if (category()) : ?>
-											<?php foreach (category() as $ds) : ?>
-												<li class="menu-item">
-													<a href="<?= CLIENT_URL ?>product-category?id_brand=<?= $ds['id_brand'] ?>"><?= $ds['brand_name'] ?></a>
-												</li>
-											<?php endforeach ?>
-										<?php endif ?>
-									</ul>
-								</li>
-								<li class="menu-item"><a href="#">Kids</a></li>
-								<li class="menu-item menu-item-has-children dropdown"><a href="#">News</a>
-									<ul class="sub-menu">
-										<li class="menu-item menu-item-has-children dropdown"><a href="blog-grid.html">Blog-grid</a>
-											<ul class="sub-menu">
-												<li class="menu-item"><a href="blog-grid.html">Blog Grid 1</a></li>
-												<li class="menu-item"><a href="blog-grid-2.html">Blog Grid 2</a></li>
-											</ul>
-										</li>
-										<li class="menu-item"><a href="blog-list.html">Blog List</a></li>
-									</ul>
-								</li>
-								<li class="menu-item menu-item-has-children dropdown"><a href="#">Contact</a>
-									<ul class="sub-menu">
-										<li class="menu-item"><a href="contact-us.html">Contact Us #1</a></li>
-										<li class="menu-item"><a href="contact-us.html">Contact Us #2</a></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
+							<div class="navigation__column center">
+								<ul class="main-menu menu">
+									<li class="menu-item menu-item-has-children dropdown"><a href="<?= BASE_URL ?>">HOME</a>
+									</li>
+									<li class="menu-item menu-item-has-children dropdown"><a href="javascript: void(0)">SNEAKER</a>
+										<ul class="sub-menu">
+											<?php if (category()) : ?>
+												<?php foreach (category() as $ds) : ?>
+													<li class="menu-item">
+														<a href="<?= CLIENT_URL ?>product-category?id_brand=<?= $ds['id_brand'] ?>"><?= $ds['brand_name'] ?></a>
+													</li>
+												<?php endforeach ?>
+											<?php endif ?>
+										</ul>
+									</li>
+									<li class="menu-item"><a href="#">Kids</a></li>
+									<li class="menu-item menu-item-has-children dropdown"><a href="#">News</a>
+										<ul class="sub-menu">
+											<li class="menu-item menu-item-has-children dropdown"><a href="blog-grid.html">Blog-grid</a>
+												<ul class="sub-menu">
+													<li class="menu-item"><a href="blog-grid.html">Blog Grid 1</a></li>
+													<li class="menu-item"><a href="blog-grid-2.html">Blog Grid 2</a></li>
+												</ul>
+											</li>
+											<li class="menu-item"><a href="blog-list.html">Blog List</a></li>
+										</ul>
+									</li>
+									<li class="menu-item menu-item-has-children dropdown"><a href="#">Contact</a>
+										<ul class="sub-menu">
+											<li class="menu-item"><a href="contact-us.html">Contact Us #1</a></li>
+											<li class="menu-item"><a href="contact-us.html">Contact Us #2</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
 
-						<div class="navigation__column right">
-							<form action="<?= CLIENT_URL ?>search" class="ps-search--header" method="get">
-								<input class="form-control" placeholder="Search product..." type="text" name="query" />
-								<button type="submit"><i class="fas fa-search"></i></button>
-							</form>
-							<?php if (isset($_SESSION['cart'])) : ?>
-								<div class="ps-cart"><a class="ps-cart__toggle" href="<?= CLIENT_URL . 'gio-hang' ?>"><i class="fas fa-cart-plus"></i></i></a>
+							<div class="navigation__column right">
+								<form action="<?= CLIENT_URL ?>search" class="ps-search--header" method="get">
+									<input class="form-control" placeholder="Search product..." type="text" name="query" />
+									<button type="submit"><i class="fas fa-search"></i></button>
+								</form>
+								<?php if (isset($_SESSION['cart'])) : ?>
+									<div class="ps-cart"><a class="ps-cart__toggle" href="<?= CLIENT_URL . 'gio-hang' ?>"><i class="fas fa-cart-plus"></i></i></a>
 
-									<div class="ps-cart__listing">
-										<div class="ps-cart__content">
+										<div class="ps-cart__listing">
+											<div class="ps-cart__content">
 
-											<?php
-											$totalPrice = 0;
-											$count = 0;
-											?>
-											<?php foreach ($_SESSION['cart'] as $cart) : ?>
-												<div class="ps-cart-item">
-													<div class="ps-cart-item__thumbnail"><img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $cart['product_image'] ?>" />
-													</div>
+												<?php
+												$totalPrice = 0;
+												$count = 0;
+												?>
+												<?php foreach ($_SESSION['cart'] as $cart) : ?>
+													<div class="ps-cart-item">
+														<div class="ps-cart-item__thumbnail"><img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $cart['product_image'] ?>" />
+														</div>
 
-													<div class="ps-cart-item__content"><a class="ps-cart-item__title"><?= $cart['product_name'] ?></a>
+														<div class="ps-cart-item__content"><a class="ps-cart-item__title"><?= $cart['product_name'] ?></a>
 
-														<p><span>Quantity:<i><?= $cart['quantity'] ?></i></span><span>Total:<i><?= number_format($cart['price'] * $cart['quantity']) ?></i></span></p>
-													</div>
-												</div>
-												<?php $totalPrice += $cart['price'] * $cart['quantity'];
-												$count++; ?>
-
-											<?php endforeach ?>
-											<div class="ps-cart__total">
-												<p>Number of items:<span><?= $count ?></span></p>
-
-												<p>Total money:<span><?= number_format($totalPrice) ?></span></p>
-												<div class="ps-cart__footer"><a class="ps-btn" href="<?= CLIENT_URL . 'gio-hang/checkout' ?>">Check out</a></div>
-											</div>
-										<?php else : ?>
-											<div class="ps-cart"><a class="ps-cart__toggle"><i class="fas fa-cart-plus"></i></i></a>
-
-												<div class="ps-cart__listing">
-													<div class="ps-cart__content">
-														<div class="ps-cart-item__content"><a class="ps-cart-item__title">Bạn chưa có sản phẩm nào trong giỏ hàng</a>
-														<?php endif ?>
+															<p><span>Quantity:<i><?= $cart['quantity'] ?></i></span><span>Total:<i><?= number_format($cart['price'] * $cart['quantity']) ?></i></span></p>
 														</div>
 													</div>
+													<?php $totalPrice += $cart['price'] * $cart['quantity'];
+													$count++; ?>
 
-													<div class="menu-toggle"></div>
+												<?php endforeach ?>
+												<div class="ps-cart__total">
+													<p>Number of items:<span><?= $count ?></span></p>
+
+													<p>Total money:<span><?= number_format($totalPrice) ?></span></p>
+													<div class="ps-cart__footer"><a class="ps-btn" href="<?= CLIENT_URL . 'gio-hang/checkout' ?>">Check out</a></div>
 												</div>
-											</div>
-				</nav>
+											<?php else : ?>
+												<div class="ps-cart"><a class="ps-cart__toggle"><i class="fas fa-cart-plus"></i></i></a>
+
+													<div class="ps-cart__listing">
+														<div class="ps-cart__content">
+															<div class="ps-cart-item__content"><a class="ps-cart-item__title">Bạn chưa có sản phẩm nào trong giỏ hàng</a>
+															<?php endif ?>
+															</div>
+														</div>
+
+														<div class="menu-toggle"></div>
+													</div>
+												</div>
+					</nav>
 		</header>
 
 		<div class="header-services">

@@ -19,7 +19,7 @@
 
     </div>
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-      <a class="nav-link" href="">Đi tới trang chủ &raquo;</a>
+      <a class="nav-link" href="<?= BASE_URL?>">Đi tới trang chủ &raquo;</a>
     </div>
     <!-- SidebarSearch Form -->
 
