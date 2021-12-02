@@ -18,30 +18,16 @@ switch ($url) {
         require_once "./business/client/home.php";
         select_product_by_id();
         break;
-    case 'client/hoa-don/chi-tiet':
-        require_once "./business/client/orders.php";
-        order();
-        break;
-    case 'client/hoa-don':
-        require_once './business/client/orders.php';
-        list_orders();
-        break;
-    case 'client/hoa-don/xoa':
-        require_once "./business/client/orders.php";
-        delete_order();
-        break;
-    case 'client/hoa-don/sua':
-        require_once "./business/client/orders.php";
-        update_order();
-        break;
-    case 'client/hoa-don/sua/luu-sua':
-        require_once "./business/client/orders.php";
-        save_update_order();
-        break;
     case 'client/chi-tiet-san-pham':
         require_once './business/client/product-detail.php';
         product_detail();
         break;
+
+    case 'client/binh_luan/luu-tao-moi':
+        require_once "./business/client/product-detail.php";
+        save_add_commment();
+        break;
+
     case 'cp-admin/dashboard':
         require_once './business/admin/dashboard.php';
         dashboard_info();
@@ -90,6 +76,21 @@ switch ($url) {
         require_once "./business/admin/orders.php";
         orders_manage();
         break;
+    case 'client/gio-hang':
+        require_once './business/client/mytocart.php';
+        addCart();
+        break;
+    case 'client/gio-hang/delete':
+        require_once './business/client/mytocart.php';
+        delete_cart();
+        break;
+    case 'client/gio-hang/checkout':
+        require_once './business/client/mytocart.php';
+        checkout();
+        break;
+    case 'client/pay-cart':
+        require_once './business/client/mytocart.php';
+        pay_cart();
     case 'client/dang-nhap':
         require_once "./business/client/login.php";
         login();
@@ -97,6 +98,21 @@ switch ($url) {
     case 'client/check-dang-nhap':
         require_once "./business/client/login.php";
         check_login();
+    case 'client/profile':
+        require_once "./business/client/profile.php";
+        select_user();
+        break;
+    case 'client/profile/luu':
+        require_once "./business/client/profile.php";
+        save_update_user();
+        break;
+    case 'client/logout':
+        require_once "./business/client/profile.php";
+        logout();
+        break;
+    case 'client/shoes':
+        require_once "./business/client/product-listing.php";
+        product_listing();
         break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
