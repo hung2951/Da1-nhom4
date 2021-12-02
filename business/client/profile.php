@@ -1,7 +1,7 @@
 <?php
 function select_user()
 {
-    $id = $_GET['id'];
+    $id = $_SESSION['khach_hang']['id_user'];
     $sql = "select * from user where id_user = $id";
     $user = executeQuery($sql, false);
     client_render('profile/index.php', [
@@ -45,4 +45,8 @@ function save_update_user()
     executeQuery($sql);
     header('location: '.CLIENT_URL.'profile?id='.$id);
    
+}
+function logout(){
+    session_destroy();
+    header('location: '.BASE_URL);
 }

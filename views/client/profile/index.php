@@ -30,7 +30,7 @@
                     <!-- END SIDEBAR USER TITLE -->
                     <!-- SIDEBAR BUTTONS -->
                     <div class="profile-userbuttons">
-                        <button type="button" class="btn btn-danger btn-sm">Đăng xuất</button>
+                        <button type="button" class="btn btn-danger btn-sm"><a style="color: #fff;" href="<?=CLIENT_URL .'logout'?>">Log Out</a></button>
                     </div>
                     <!-- END SIDEBAR BUTTONS -->
                     <!-- SIDEBAR MENU -->
@@ -50,8 +50,8 @@
             <div class="col-md-9">
                 <div class="profile-content">
                     <div class="content-right-title">
-                        <p>Hồ sơ của tôi</p>
-                        <span>Quản lý thông tin hồ sơ để bảo mật tài khoản</span>
+                        <p>My Profile</p>
+                        <span>Manage profile information for account security</span>
                     </div>
                     <div class="content-right-input">
                         <form action="<?=CLIENT_URL . 'profile/luu'?>" method="post" enctype="multipart/form-data">
@@ -59,31 +59,31 @@
                                 <div class="col-6 offset-3">
                                     <input type="text" name="id_user" value="<?= $u['id_user']?>" hidden>
                                     <div class="form-group">
-                                        <label for="">Họ và tên</label>
-                                        <input type="text" name="full_name" id="" class="form-control" placeholder="Họ và tên" value="<?= isset($u['full_name']) ? $u['full_name'] : "" ?>">
+                                        <label for="">First and Last name</label>
+                                        <input type="text" name="full_name" id="" class="form-control" placeholder="First and Last name" value="<?= isset($u['full_name']) ? $u['full_name'] : "" ?>">
                                     </div>
                                     <div class="form-group">
                                         <label for="">Email</label>
                                         <input type="text" name="email" id="" class="form-control" placeholder="Email" value="<?= isset($u['email']) ? $u['email'] : "" ?>">
                                     </div>
                                     <div class="form-group">
-                                        <label for="">Số điện thoại</label>
-                                        <input type="number" name="phone" id="" class="form-control" placeholder="Số điện thoại" value="<?= isset($u['phone']) ? $u['phone'] : "" ?>">
+                                        <label for="">Phone Number</label>
+                                        <input type="text" name="phone" id="" class="form-control" placeholder="Phone number" value="<?= isset($u['phone']) ? $u['phone'] : "" ?>">
                                     </div>
                                     <div class="form-group">
-                                        <label for="">Ảnh đại diện</label>
+                                        <label for="">Avatar</label>
                                         <input type="file" name="avatar" id="" class="form-control" placeholder="">
                                     </div>
                                     <div class="form-group">
-                                        <label for="">Địa chỉ</label>
-                                        <input type="text" name="address" id="" class="form-control" placeholder="Địa chỉ" value="<?= isset($u['address']) ? $u['address'] : "" ?>">
+                                        <label for="">Address</label>
+                                        <input type="text" name="address" id="" class="form-control" placeholder="Address" value="<?= isset($u['address']) ? $u['address'] : "" ?>">
                                     </div>
                                     <div class="form-group" hidden>
                                         <label for="">Vai trò</label> <br>
                                         <input type="radio" value="0" checked name="role" > Khách hàng
                                         <input type="radio" value="1" name="role" > Quản trị
                                     </div>
-                                    <button type="submit" name="btn-submit" id="btn-submit">Lưu</button>
+                                    <button type="submit" name="btn-submit" id="btn-submit">Save</button>
                                 </div>
                             </div>
                         </form>

@@ -57,7 +57,7 @@
 							$khach_hang = (isset($_SESSION['khach_hang'])) ? $_SESSION['khach_hang'] : [];
 							if (isset($khach_hang['email'])) {
 							?>
-								<div class="header__actions"><a href="<?= CLIENT_URL . 'dang-nhap' ?>"><?= $khach_hang['full_name'] ?></a>
+								<div class="header__actions"><a href="<?= CLIENT_URL . 'profile' ?>"><?= $khach_hang['full_name'] ?></a>
 								<?php } else { ?>
 									<div class="header__actions"><a href="<?= CLIENT_URL . 'dang-nhap' ?>">Login &amp; Regiser</a>
 									<?php } ?>

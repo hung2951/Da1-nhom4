@@ -120,6 +120,10 @@ switch ($url) {
         require_once "./business/client/profile.php";
         save_update_user();
         break;
+    case 'client/logout':
+        require_once "./business/client/profile.php";
+        logout();
+        break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
