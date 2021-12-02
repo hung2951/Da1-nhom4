@@ -29,7 +29,7 @@
                     <td><?= $cart['size'] ?></td>
                     <td>
                       <div class="form-group--number">
-                        <input class="form-control" type="number" value="<?= $cart['quantity'] ?>">
+                        <input class="form-control" type="text" value="<?= $cart['quantity'] ?>">
                       </div>
                     </td>
                     <td><?= $tong = $cart['price'] * $cart['quantity'] ?><u>đ</u></td>
