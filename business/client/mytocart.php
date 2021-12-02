@@ -1,7 +1,7 @@
 <?php 
 
 function addCart(){
-    if(isset($_POST['id'])){
+    if(isset($_POST['id']) && !empty($_POST)){
         $id = $_POST['id'];
         $sql = "select * from product where id_product = $id";
         $data_product = executeQuery($sql, false);
@@ -64,6 +64,7 @@ function addCart(){
 
 }
 
+<<<<<<< HEAD
 
 
 
@@ -149,3 +150,18 @@ function addCart(){
     //         // $_SESSION['success'] = 'Tạo Mới giỏi hàng thành công'; 
     //         header('location: http://localhost/Da1-nhom4/client/chi-tiet-san-pham?id=6');exit();
     // }
+=======
+function delete_cart(){
+        // lấy về tên giỏi hàng
+        $cart= $_SESSION['cart'];
+        // lấy về id sản phẩm trong giỏi hàng
+        $id=$_GET['id'];
+        if($id==0){
+            unset($_SESSION['cart']); // xóa giỏ hàng
+            header('location: '.CLIENT_URL.'them-gio-hang');
+        }else{
+            unset($_SESSION['cart'] [$id]); // xóa sp trong giỏi hàng
+            header('location: '.CLIENT_URL.'them-gio-hang');
+        }
+}
+>>>>>>> parent of 2ef229b (update)
