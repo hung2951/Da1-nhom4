@@ -14,31 +14,31 @@
                                 <th>Size</th>
                                 <th>Quantity</th>
                                 <th>Total Price</th>
-                                <th>Xóa sản phẩm</th>
+                                <th>Delete</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
+                            <form action="" method="post">
+                                <?php $totalMoney = 0; ?>
+                                <?php foreach ($_SESSION['cart'] as $cart) : ?>
+                                    <tr>
+                                        <td><?= $cart['id'] ?></td>
+                                        <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $cart['product_image'] ?>" alt="" style="width:150px"><?= $cart['product_name'] ?></a></td>
+                                        <td><?= number_format($cart['price']) ?></td>
+                                        <td><?= $cart['size'] ?></td>
+                                        <td>
+                                            <?= $cart['quantity'] ?>
+                                        </td>
+                                        <td><?= $tong = number_format($cart['price'] * $cart['quantity']) ?><u>đ</u></td>
+                                        <td>
+                                            <a href="<?= CLIENT_URL . 'gio-hang/delete?id=' . $cart['id'] ?>" onclick="return confirm('Bạn có muốn xóa sản phẩm này ?')"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                        <td><?php $totalMoney += $cart['price'] * $cart['quantity']; ?></td>
+                                    </tr>
+                                <?php endforeach ?>
+                            </form>
 
-                            <?php foreach ($_SESSION['cart'] as $cart) : ?>
-                                <tr>
-                                    <td><?= $cart['id'] ?></td>
-                                    <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $cart['product_image'] ?>" alt="" style="width:150px"><?= $cart['product_name'] ?></a></td>
-                                    <td><?= number_format($cart['price']) ?></td>
-                                    <td><?= $cart['size'] ?></td>
-                                    <td>
-                                        <div class="form-group--number">
-                                            <input class="form-control" type="text" value="<?= $cart['quantity'] ?>">
-                                        </div>
-                                    </td>
-                                    <td><?= $tong = number_format($cart['price'] * $cart['quantity']) ?><u>đ</u></td>
-                                    <td>
-
-
-                                        <a href="<?= CLIENT_URL . 'gio-hang/delete?id=' . $cart['id'] ?>" onclick="return confirm('Bạn có muốn xóa sản phẩm này ?')" class="btn btn-sm btn-danger">Xóa</a>
-                                    </td>
-                                </tr>
-                            <?php endforeach ?>
                         </tbody>
                     </table>
                     <div class="ps-cart__actions">
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                         <div class="ps-cart__total">
-                            <a href="<?= CLIENT_URL.'thanh-toan' ?>"> <strong class="ps-btn">Process to checkout<i class="ps-icon-next"></i></strong></a>
+                            <a href="<?= CLIENT_URL . 'gio-hang/checkout' ?>"> <strong class="ps-btn">Process to checkout<i class="ps-icon-next"></i></strong></a>
                         </div>
                     </div>
                 </div>

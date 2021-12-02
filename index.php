@@ -97,13 +97,13 @@ switch ($url) {
         require_once './business/client/mytocart.php';
         delete_cart();
         break;
-    case 'client/thanh-toan':
+    case 'client/gio-hang/checkout':
         require_once './business/client/mytocart.php';
-        delete_cart();
+        checkout();
         break;
-    case 'client/thanh-toan':
+    case 'client/pay-cart':
         require_once './business/client/mytocart.php';
-        delete_cart();
+        pay_cart();
         break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";

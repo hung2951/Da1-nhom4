@@ -86,40 +86,7 @@
                                 <?= $product_detail['product_name'] ?>
                             </h2>
                             <hr>
-                            <h3>Available Colors</h3>
-                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-default text-center">
-                                    <input type="radio" name="color_option" id="color_option_a2" autocomplete="off">
-                                    Blue
-                                    <br>
-                                    <i class="fas fa-circle fa-2x text-blue"></i>
-                                </label>
-                                <label class="btn btn-default text-center">
-                                    <input type="radio" name="color_option" id="color_option_a3" autocomplete="off">
-                                    warning
-                                    <br>
-                                    <i class="fas fa-circle fa-2x text-warning"></i>
-                                </label>
-                                <label class="btn btn-default text-center">
-                                    <input type="radio" name="color_option" id="color_option_a4" autocomplete="off">
-                                    Red
-                                    <br>
-                                    <i class="fas fa-circle fa-2x text-red"></i>
-                                </label>
-                                <label class="btn btn-default text-center">
-                                    <input type="radio" name="color_option" id="color_option_a5" autocomplete="off">
-                                    white
-                                    <br>
-                                    <i class="fas fa-circle fa-2x text-white"></i>
-                                </label>
-                                <label class="btn btn-default text-center">
-                                    <input type="radio" name="color_option" id="color_option_a6" autocomplete="off" checked>
-                                    Body
-                                    <br>
-                                    <i class="fas fa-circle fa-2x text-body"></i>
-                                </label>
-                            </div>
-
+                           
                             <h3 class="mt-3">Size <small>Please select one</small></h3>
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                 <label class="btn btn-default text-center">
