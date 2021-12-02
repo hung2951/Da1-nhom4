@@ -6,6 +6,15 @@
                 <input type="text" name="name" value="<?= $products['product_name'] ?>" class="form-control" placeholder="">
             </div>
             <div class="form-group">
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="brand" id="">
+                    <option selected>Thương hiệu</option>
+                    <?php foreach($brand as $brand):?>
+                        <option <?= $products['id_brand']==$brand['id_brand']?"selected":""?>
+                        value="<?=$brand['id_brand']?>"><?=$brand['brand_name']?></option>
+                    <?php endforeach?>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="">Ảnh</label>
                 <input type="file" name="image" value="<?= $products['product_image'] ?>" class="form-control" placeholder="">
             </div>

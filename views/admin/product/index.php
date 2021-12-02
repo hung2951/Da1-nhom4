@@ -6,11 +6,8 @@
         <th>Ảnh</th>
         <th>Giá</th>
         <th>Giảm giá</th>
-        <th>Chi tiết sản phẩm</th>
         <th>Số lượng</th>
         <th>Trạng thái</th>
-        <th>Loại sản phẩm</th>
-        <th>Lượt xem</th>
         <th>Ngày nhập</th>
         <th>Ngày sửa</th>
         <th>
@@ -27,11 +24,8 @@
                 </td>
                 <td><?= $p['price'] ?></td>
                 <td><?= $p['discount']?></td>
-                <td><?=$p['details']?></td>
                 <td><?=$p['product_quantity']?></td>
-                <td><?=$p['status']?></td>
-                <td><?=$p['new_product']?></td>
-                <td><?=$p['view']?></td>
+                <td><?=$p['status']==1?"Còn hàng":"Hết hàng"?></td>
                 <td><?=$p['date_add']?></td>
                 <td><?=$p['date_fix']?></td>
                 <td>

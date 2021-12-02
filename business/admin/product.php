@@ -23,7 +23,14 @@ function product_add_form()
 {
     $getCateQuery = "select * from product";
     $categories = executeQuery($getCateQuery, true);
-    admin_render('product/add-form.php', compact('categories'));
+
+    $sql= "select* from brand";
+    $brand=executeQuery($sql);
+
+    admin_render('product/add-form.php', [
+        'brands'=> $brand,
+        'category'=> $categories,
+    ]);
 }
 
 function product_save_add()
@@ -72,8 +79,13 @@ function product_edit_form()
     $id = $_GET['id'];
     $sql = "select * from product where id_product = $id";
     $products = executeQuery($sql, false);
+
+    $sql= "select* from brand";
+    $brand=executeQuery($sql);
+
     admin_render('product/edit-form.php', [
-        'products' => $products
+        'products' => $products,
+        'brand'=> $brand
     ]);
 }
 
