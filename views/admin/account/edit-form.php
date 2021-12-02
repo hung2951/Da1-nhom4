@@ -15,10 +15,10 @@
             </div>
             <div class="form-group">
                 <div>
-                    <img src="<?= PUBLIC_ASSETS . $user['image']?>" width="250">
+                    <img src="<?= PUBLIC_ASSETS . $user['avatar']?>" width="250">
                 </div>
                 <label for="">Ảnh đại diện</label>
-                <input type="file" name="image" id="" class="form-control" placeholder="">
+                <input type="file" name="avatar" id="" class="form-control" placeholder="">
             </div>
             <br>
             <div class="d-flex justify-content-center">
