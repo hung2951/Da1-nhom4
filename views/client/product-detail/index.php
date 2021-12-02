@@ -257,7 +257,7 @@
                                         <div class="ps-shoe">
                                             <div class="ps-shoe__thumbnail">
                                                 
-                                                <a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a>
+                                                <a class="ps-shoe__favorite" href="<?= CLIENT_URL .'chi-tiet-san-pham?id='.$ps['id_product'].'&id_brand='.$ps['id_brand']?>"><i class="ps-icon-heart"></i></a>
                                                 <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt="">
                                                 <a class="ps-shoe__overlay" href="<?= CLIENT_URL .'chi-tiet-san-pham?id='.$ps['id_product'].'&id_brand='.$ps['id_brand']?>"></a>
                                             </div>
@@ -274,6 +274,7 @@
                                                     <a class="ps-shoe__name" href="<?= CLIENT_URL .'chi-tiet-san-pham?id='.$ps['id_product'].'&id_brand='.$ps['id_brand']?>">
                                                         <?= $ps['product_name'] ?>
                                                     </a>
+                                                    <span class="ps-shoe__price"><?= $ps['price'] ?></span>
                                                 </div>
                                             </div>
                                         </div>
