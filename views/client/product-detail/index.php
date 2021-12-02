@@ -200,7 +200,7 @@
                             <?= $product_detail['details'] ?>
                         </div>
                         <div class="tab-pane fade" id="product-comments" role="tabpanel" aria-labelledby="product-comments-tab">
-
+                            <?php if (isset($_SESSION['user'])) : ?>
 
                             <form id="cart-form" action="<?= CLIENT_URL . 'binh_luan/luu-tao-moi' ?>" method="POST" style="padding: 10px;">
                                 <input type="hidden" name="id" value="<?= $_GET['id'] ?>" >
@@ -211,8 +211,11 @@
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content"></textarea>
                                 <button type="submit" style="margin-top:10px">Bình luận</button>
                             </form>
-
-
+                            <hr>
+                            <?php else : ?>
+                                <div class="alert">Bạn cần phải đăng nhập để bình luận<a style="color:Blue" href=" ">. ĐĂNG NHẬP</a></div>
+                            <?php endif; ?>
+                            <hr>
 
                             <?php if ($comment) : ?>
                                 <?php  foreach($comment as $comment): ?>
