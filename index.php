@@ -49,6 +49,10 @@ switch ($url) {
         require_once './business/admin/dashboard.php';
         dashboard_info();
         break;
+    case 'client/quen-mat-khau':
+     require_once './business/client/acc.php';
+            // passRetrieval();
+    break;
     case 'cp-admin/tai-khoan':
         require_once "./business/admin/account.php";
         account_index();
