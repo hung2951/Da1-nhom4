@@ -3,6 +3,10 @@ session_start();
 require_once './commons/app_config.php';
 require_once './commons/helpers.php';
 require_once './dao/system_dao.php';
+
+require_once './vender/PHPMailer/src/Exception.php';
+require_once './vender/PHPMailer/src/PHPMailer.php';
+require_once './vender/PHPMailer/src/SMTP.php';
 $url = isset($_GET['url']) ? $_GET['url'] : "/";
 switch ($url) {
 
@@ -105,6 +109,14 @@ switch ($url) {
         require_once './business/client/mytocart.php';
         delete_cart();
         break;
+    case 'see-mail-form':
+        require_once './business/client/home.php';
+        email_form();
+        break;
+    case 'submit-email':
+        require_once './business/client/home.php';
+        send_email();
+        break;        
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
