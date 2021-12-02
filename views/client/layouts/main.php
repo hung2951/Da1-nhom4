@@ -53,34 +53,42 @@
 						</div>
 
 						<div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
-							<div class="header__actions"><a href="#">Login &amp; Regiser</a>
+							<?php
+							$khach_hang = (isset($_SESSION['khach_hang'])) ? $_SESSION['khach_hang'] : [];
+							if (isset($khach_hang['email'])) {
+							?>
+								<div class="header__actions"><a href="<?= CLIENT_URL . 'dang-nhap' ?>"><?php echo $khach_hang['email']?></a>
+								<?php } else { ?>
+									<div class="header__actions"><a href="<?= CLIENT_URL . 'dang-nhap' ?>">Login &amp; Regiser</a>
+								<?php } ?>
+									<div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">USD</a>
 
-								<div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">USD</a>
-									<ul class="dropdown-menu">
-										<li><a href="#"><img alt="" src="<?= CLIENT_ASSETS ?>images/flag/usa.svg" /> USD</a></li>
-										<li><a href="#"><img alt="" src="<?= CLIENT_ASSETS ?>images/flag/singapore.svg" /> SGD</a></li>
-										<li><a href="#"><img alt="" src="<?= CLIENT_ASSETS ?>images/flag/japan.svg" /> JPN</a></li>
-									</ul>
-								</div>
+										<ul class="dropdown-menu">
+											<li><a href="#"><img alt="" src="<?= CLIENT_ASSETS ?>images/flag/usa.svg" /> USD</a></li>
+											<li><a href="#"><img alt="" src="<?= CLIENT_ASSETS ?>images/flag/singapore.svg" /> SGD</a></li>
+											<li><a href="#"><img alt="" src="<?= CLIENT_ASSETS ?>images/flag/japan.svg" /> JPN</a></li>
+										</ul>
+									</div>
 
-								<div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">Language</a>
-									<ul class="dropdown-menu">
-										<li><a href="#">English</a></li>
-										<li><a href="#">Japanese</a></li>
-										<li><a href="#">Chinese</a></li>
-									</ul>
+									<div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">Language</a>
+
+										<ul class="dropdown-menu">
+											<li><a href="#">English</a></li>
+											<li><a href="#">Japanese</a></li>
+											<li><a href="#">Chinese</a></li>
+										</ul>
+									</div>
+									</div>
 								</div>
-							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<nav class="navigation">
-				<div class="container-fluid">
-					<div class="navigation__column left">
-						<div class="header__logo"><a class="ps-logo" href="index.html"><img alt="" src="<?= CLIENT_ASSETS ?>images/logo.png" /></a></div>
-					</div>
+				<nav class="navigation">
+					<div class="container-fluid">
+						<div class="navigation__column left">
+							<div class="header__logo"><a class="ps-logo" href="index.html"><img alt="" src="<?= CLIENT_ASSETS ?>images/logo.png" /></a></div>
+						</div>
 
 					<div class="navigation__column center">
 						<ul class="main-menu menu">

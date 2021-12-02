@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 require_once './commons/app_config.php';
 require_once './commons/helpers.php';
 require_once './dao/system_dao.php';
@@ -104,6 +105,13 @@ switch ($url) {
     case 'client/pay-cart':
         require_once './business/client/mytocart.php';
         pay_cart();
+    case 'client/dang-nhap':
+        require_once "./business/client/login.php";
+        login();
+        break;
+    case 'client/check-dang-nhap':
+        require_once "./business/client/login.php";
+        check_login();
         break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
