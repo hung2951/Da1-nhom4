@@ -84,9 +84,9 @@
 
 					<div class="navigation__column center">
 						<ul class="main-menu menu">
-							<li class="menu-item menu-item-has-children dropdown"><a href="<?= BASE_URL ?>">Trang chủ</a>
+							<li class="menu-item menu-item-has-children dropdown"><a href="<?= BASE_URL ?>">HOME</a>
 							</li>
-							<li class="menu-item menu-item-has-children dropdown"><a href="">SNEAKER</a>
+							<li class="menu-item menu-item-has-children dropdown"><a href="javascript: void(0)">SNEAKER</a>
 								<ul class="sub-menu">
 									<?php if (category()) : ?>
 										<?php foreach (category() as $ds) : ?>
@@ -120,8 +120,8 @@
 
 					<div class="navigation__column right">
 						<form action="<?= CLIENT_URL ?>search" class="ps-search--header" method="get">
-							<input class="form-control" placeholder="Tìm kiếm sản phẩm..." type="text" name="query" />
-							<button type="submit">Tìm kiếm</button>
+							<input class="form-control" placeholder="Search product..." type="text" name="query" />
+							<button type="submit"><i class="fas fa-search"></i></button>
 						</form>
 						<?php if (isset($_SESSION['cart'])) : ?>
 							<div class="ps-cart"><a class="ps-cart__toggle" href="<?= CLIENT_URL . 'gio-hang' ?>"><i class="fas fa-cart-plus"></i></i></a>
