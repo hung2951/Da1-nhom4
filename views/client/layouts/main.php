@@ -108,7 +108,7 @@
 											<?php endif ?>
 										</ul>
 									</li>
-									<li class="menu-item"><a href="#">Kids</a></li>
+									<li class="menu-item"><a href="<?= CLIENT_URL.'shoes'?>">Shoes</a></li>
 									<li class="menu-item menu-item-has-children dropdown"><a href="#">News</a>
 										<ul class="sub-menu">
 											<li class="menu-item menu-item-has-children dropdown"><a href="blog-grid.html">Blog-grid</a>

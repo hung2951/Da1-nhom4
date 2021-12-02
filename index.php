@@ -22,12 +22,11 @@ switch ($url) {
         require_once './business/client/product-detail.php';
         product_detail();
         break;
-        
+
     case 'client/binh_luan/luu-tao-moi':
         require_once "./business/client/product-detail.php";
         save_add_commment();
         break;
-
 
     case 'cp-admin/dashboard':
         require_once './business/admin/dashboard.php';
@@ -110,6 +109,10 @@ switch ($url) {
     case 'client/logout':
         require_once "./business/client/profile.php";
         logout();
+        break;
+    case 'client/shoes':
+        require_once "./business/client/product-listing.php";
+        product_listing();
         break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
