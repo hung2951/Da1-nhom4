@@ -40,9 +40,6 @@
                                 <a href="<?= CLIENT_URL .'profile?id='.$u['id_user']?>"><i class="glyphicon glyphicon-user"></i>Hồ sơ </a>
                             </li>
                             <li>
-                                <a href="<?= CLIENT_URL .'hoa-don?id='.$u['id_user']?>"><i class="fas fa-table"></i></i>Đơn mua </a>
-                            </li>
-                            <li>
                                 <a href="#"><i class="fas fa-key"></i></i>Đổi mật khẩu </a>
                             </li>
                         </ul>
