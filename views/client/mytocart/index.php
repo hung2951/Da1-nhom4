@@ -29,12 +29,12 @@
                     <td><?= $cart['size'] ?></td>
                     <td>
                       <div class="form-group--number">
-                        <input class="form-control" type="number" value="<?= $cart['quantity'] ?>">
+                        <input class="form-control" type="text" value="<?= $cart['quantity'] ?>">
                       </div>
                     </td>
                     <td><?= $tong = $cart['price'] * $cart['quantity'] ?><u>đ</u></td>
                     <td>
-                      <div class="ps-remove"></div>
+                      <a href="<?= CLIENT_URL . 'gio-hang/delete?id=' . $cart['id'] ?>" onclick="return confirm('Bạn có muốn xóa sản phẩm này ?')" class="btn btn-sm btn-danger">Xóa</a>
                     </td>
                   </tr>
                 <?php endforeach ?>

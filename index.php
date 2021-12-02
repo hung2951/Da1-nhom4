@@ -24,9 +24,13 @@ switch ($url) {
         require_once './business/client/bill.php';
         add_bill();
         break;
-    case 'client/them-gio-hang':
+    case 'client/gio-hang':
          require_once './business/client/mytocart.php';
          addCart();
+        break;
+    case 'client/gio-hang/delete':
+        require_once './business/client/mytocart.php';
+        delete_cart();
         break;
     case 'client/hoa-don':
         require_once './business/client/orders.php';
