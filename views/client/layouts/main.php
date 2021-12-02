@@ -90,7 +90,7 @@
 					<nav class="navigation">
 						<div class="container-fluid">
 							<div class="navigation__column left">
-								<div class="header__logo"><a class="ps-logo" href="index.html"><img alt="" src="<?= CLIENT_ASSETS ?>images/logo.png" /></a></div>
+								<div class="header__logo"><a class="ps-logo" href="<?= BASE_URL?>"><img alt="" src="<?= CLIENT_ASSETS ?>images/logo.png" /></a></div>
 							</div>
 
 							<div class="navigation__column center">

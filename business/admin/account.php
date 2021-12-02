@@ -91,7 +91,7 @@ function account_save_edit()
                 full_name = '$name', 
                 email = '$email', 
                 phone = '$phone',
-                avatar = '$avatar' 
+                avatar = '$avatar'
             where id_user = $id";
     // Thực thi câu sql với db
     executeQuery($sql);

@@ -104,6 +104,30 @@ switch ($url) {
         require_once "./business/client/profile.php";
         logout();
         break;
+    case 'cp-admin/san-pham':
+        require_once "./business/admin/product.php";
+        list_product();
+        break;
+    case 'cp-admin/san-pham/tao-moi':
+        require_once "./business/admin/product.php";
+        product_add_form();
+        break;
+    case 'cp-admin/san-pham/luu-tao-moi':
+        require_once "./business/admin/product.php";
+        product_save_add();
+        break;
+    case 'cp-admin/san-pham/sua':
+        require_once "./business/admin/product.php";
+        product_edit_form();
+        break;
+    case 'cp-admin/san-pham/luu-sua':
+        require_once "./business/admin/product.php";
+        product_save_edit();
+        break;
+    case 'cp-admin/san-pham/xoa':
+        require_once "./business/admin/product.php";
+        product_remove();
+        break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
