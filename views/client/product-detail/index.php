@@ -242,8 +242,8 @@
 
                             <hr>
                             <?php else : ?>
-                            <div class="alert">Bạn cần phải đăng nhập để bình luận<a style="color:Blue" href=" ">. ĐĂNG
-                                    NHẬP</a></div>
+                            <div class="alert">Bạn cần phải đăng nhập để bình luận
+                                <a style="color:Blue" href="<?=CLIENT_URL.'dang-nhap'?>">. ĐĂNG NHẬP</a></div>
                             <?php endif; ?>
                             <hr>
 
