@@ -66,11 +66,4 @@ function delete_cart()
     }
 }
 
-function checkout(){
-    if(!isset($_SESSION['cart']) || empty($_SESSION['cart'])){
-        header('location: '. BASE_URL);
-        die;
-    }
-    $cart = $_SESSION['cart'];
-    client_render('mytocart/index.php', compact('cart'));
-}
+

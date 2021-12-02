@@ -101,6 +101,10 @@ switch ($url) {
         require_once './business/client/mytocart.php';
         delete_cart();
         break;
+    case 'client/thanh-toan':
+        require_once './business/client/mytocart.php';
+        delete_cart();
+        break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
