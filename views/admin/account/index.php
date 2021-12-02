@@ -17,7 +17,7 @@
                 <td><?= $u['full_name'] ?></td>
                 <td><?= $u['email'] ?></td>
                 <td>
-                    <img src="<?= PUBLIC_ASSETS . $u['avatar'] ?>" width="100">
+                    <img src="<?= PUBLIC_ASSETS . $u['image'] ?>" width="100">
                 </td>
                 <td><?=$u['phone']?></td>
                 <td>

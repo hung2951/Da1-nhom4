@@ -21,11 +21,6 @@
                 <label for="">Mật khẩu</label>
                 <input type="password" name="password" id="" class="form-control" placeholder="">
             </div>
-            <div class="form-group" hidden>
-                <label for="">Vai trò</label>
-                <input type="radio" name="role" value="0"> khách hàng
-                <input type="radio" name="role" value="1" checked> Quản trị
-            </div>
             <br>
             <div class="d-flex justify-content-center">
                 <a href="<?= ADMIN_URL . 'tai-khoan'?>" class="btn btn-sm btn-danger">Hủy</a>
