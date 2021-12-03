@@ -22,10 +22,6 @@
     padding-top: 20px;
     margin-bottom: 10px;
 } 
-.orders:hover{
-    background-color: rgb(232, 255, 255);
-    transition: all 0.5s;
-}
 .orders-info{
     padding-left: 20px;
     display: grid;

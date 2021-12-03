@@ -36,10 +36,10 @@
                     <!-- SIDEBAR MENU -->
                     <div class="profile-usermenu">
                         <ul class="nav">
-                            <li class="active">
+                            <li >
                                 <a href="<?= CLIENT_URL . 'profile?id=' . $u['id_user'] ?>"><i class="glyphicon glyphicon-user"></i>Hồ sơ </a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="<?= CLIENT_URL .'doi-mat-khau'?>"><i class="fas fa-key"></i></i>Đổi mật khẩu </a>
                             </li>
                         </ul>
@@ -54,36 +54,25 @@
                         <span>Manage profile information for account security</span>
                     </div>
                     <div class="content-right-input">
-                        <form action="<?= CLIENT_URL . 'profile/luu' ?>" method="post" enctype="multipart/form-data">
+                        <form action="<?= CLIENT_URL . 'profile/luu-mat-khau' ?>" method="post" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-6 offset-3">
                                     <input type="text" name="id_user" value="<?= $u['id_user'] ?>" hidden>
                                     <div class="form-group">
-                                        <label for="">First and Last name</label>
-                                        <input type="text" name="full_name" id="" class="form-control" placeholder="First and Last name" value="<?= isset($u['full_name']) ? $u['full_name'] : "" ?>">
+                                        <label for="">Mật khẩu cũ</label>
+                                        <input type="password" name="password" id="" class="form-control" placeholder="Mật khẩu cũ">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="">Mật khẩu mới</label>
+                                        <input type="password" name="password-new" id="" class="form-control" placeholder="Mật khẩu mới">
                                     </div>
                                     <div class="form-group">
-                                        <label for="">Email</label>
-                                        <input type="text" name="email" id="" class="form-control" placeholder="Email" value="<?= isset($u['email']) ? $u['email'] : "" ?>">
+                                        <label for="">Nhập lại mật khẩu</label>
+                                        <input type="password" name="re-password-new" id="" class="form-control" placeholder="Nhập lại mật khẩu mới">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="">Phone Number</label>
-                                        <input type="text" name="phone" id="" class="form-control" placeholder="Phone number" value="<?= isset($u['phone']) ? $u['phone'] : "" ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Avatar</label>
-                                        <input type="file" name="avatar" id="" class="form-control" placeholder="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Address</label>
-                                        <input type="text" name="address" id="" class="form-control" placeholder="Address" value="<?= isset($u['address']) ? $u['address'] : "" ?>">
-                                    </div>
-                                    <div class="form-group" hidden>
-                                        <label for="">Vai trò</label> <br>
-                                        <input type="radio" value="0" checked name="role"> Khách hàng
-                                        <input type="radio" value="1" name="role"> Quản trị
-                                    </div>
-                                    <button type="submit" name="btn-submit" id="btn-submit">Save</button>
+                                    
+                                    <button type="submit" name="btn-submit" id="btn-submit">Đổi mật khẩu</button>
                                 </div>
                             </div>
                         </form>

@@ -1,7 +1,7 @@
 <?php
 function account_index()
 {
-    $sql = "select * from user";
+    $sql = "select * from user order by role desc";
     $users = executeQuery($sql);
 
     admin_render('account/index.php', [

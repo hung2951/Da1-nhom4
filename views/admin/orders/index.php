@@ -41,7 +41,7 @@
                             <a href="<?= ADMIN_URL . 'don-hang/trang-thai?id='.$o['id_orders'] ?>">Giao hàng thất bại <i class="far fa-times-circle"></i></a>
                         <?php endif ?>
                     </td>
-                    <td><a href="">Chi tiết</a></td>
+                    <td><a href="<?= ADMIN_URL.'don-hang/chi-tiet?id='.$o['id_orders']?>">Chi tiết</a></td>
                 </tr>
             <?php endforeach ?>
         </tbody>

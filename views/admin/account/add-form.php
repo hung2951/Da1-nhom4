@@ -1,3 +1,5 @@
+<h2 style="text-align: center; margin-top: 20px;">Tạo mới tài khoản</h2>
+<p style="text-align: center; margin-bottom: 30px;">(Tài khoản admin)</p>
 <form action="<?= ADMIN_URL . 'tai-khoan/luu-tao-moi' ?>" method="post" enctype="multipart/form-data">
     <div class="row">
         <div class="col-6 offset-3">

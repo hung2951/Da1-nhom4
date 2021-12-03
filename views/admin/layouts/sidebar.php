@@ -34,12 +34,12 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="" class="nav-link"><i class="far fa-circle nav-icon"></i>
+              <a href="<?= ADMIN_URL .'tai-khoan/tao-moi'?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
                 <p>Tạo mới</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link"><i class="far fa-circle nav-icon"></i>
+              <a href="<?= ADMIN_URL .'tai-khoan'?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
                 <p>Danh sách</p>
               </a>
             </li>
@@ -92,12 +92,12 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="" class="nav-link">
             <p>Đơn hàng<i class="fas fa-angle-left right"></i></p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="" class="nav-link"><i class="far fa-circle nav-icon"></i>
+              <a href="<?= ADMIN_URL.'don-hang'?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
                 <p>Danh sách</p>
               </a>
             </li>

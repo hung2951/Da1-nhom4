@@ -4,6 +4,7 @@
         <th>ID</th>
         <th>Họ và tên</th>
         <th>Email</th>
+        <th>Vai trò</th>
         <th>Avatar</th>
         <th>Số điện thoại</th>
         <th>
@@ -16,6 +17,7 @@
                 <td><?= $u['id_user'] ?></td>
                 <td><?= $u['full_name'] ?></td>
                 <td><?= $u['email'] ?></td>
+                <td><?= $u['role']==0?"Khách hàng":"Quản trị" ?></td>
                 <td>
                     <img src="<?= PUBLIC_ASSETS . $u['avatar'] ?>" width="100">
                 </td>

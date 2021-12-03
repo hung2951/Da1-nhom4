@@ -67,6 +67,10 @@ switch ($url) {
         require_once "./business/admin/orders.php";
         save_update_status();
         break;
+    case 'cp-admin/don-hang/chi-tiet':
+        require_once "./business/admin/orders.php";
+        order_details();
+        break;
     case 'client/gio-hang':
         require_once './business/client/mytocart.php';
         addCart();
@@ -89,6 +93,19 @@ switch ($url) {
     case 'client/check-dang-nhap':
         require_once "./business/client/login.php";
         check_login();
+    case 'client/dang-ky':
+        require_once "./business/client/login.php";
+        regester();
+        break;
+    case 'client/dang-ky/luu':
+        require_once "./business/client/login.php";
+        save_regester();
+        break;
+    case 'client/doi-mat-khau':
+        require_once "./business/client/login.php";
+        change_password();
+        break;
+
     case 'client/profile':
         require_once "./business/client/profile.php";
         select_user();

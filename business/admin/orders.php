@@ -25,3 +25,15 @@ function order_status()
         'o' => $orders,
     ]);
 }
+function order_details(){
+    $id = $_GET['id'];
+    $sql = "select*from orders where id_orders=$id";
+    $orders = executeQuery($sql,false); 
+    $sql = "select*from order_detail od join product p on p.id_product = od.id_product
+                                     where id_orders=$id and p.id_product = od.id_product";
+    $order_detail = executeQuery($sql);
+    admin_render('orders/order-detail.php',[
+        'orders' => $orders,
+        'order_detail' => $order_detail,
+    ]);
+}

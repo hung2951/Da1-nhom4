@@ -23,7 +23,7 @@
                 <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
             </label>
             <button class="btn btn-lg btn-primary btn-block" type="submit" name="btn-submit">Login</button>
-            <p style="text-align: center; margin-top: 50px; ">Do you have an account?<a href="">Register now</a></p>
+            <p style="text-align: center; margin-top: 50px; ">You don't have an account?<a href="<?= CLIENT_URL.'dang-ky'?>">Register now</a></p>
         </form>
     </div>
     <!-- partial -->
