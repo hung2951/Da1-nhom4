@@ -49,9 +49,12 @@ switch ($url) {
         require_once './business/admin/dashboard.php';
         dashboard_info();
         break;
-    case 'client/quen-mat-khau':
+    case 'client/quen-mat-khau': // ------------------------------------------------
      require_once './business/client/home.php';
             send_email();
+    break;
+    case 'client/xac-nhan-email': // ------------------------------------------------
+        require_once './business/client/acc.php';
     break;
     case 'cp-admin/tai-khoan':
         require_once "./business/admin/account.php";

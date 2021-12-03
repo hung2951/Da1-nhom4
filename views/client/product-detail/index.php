@@ -59,6 +59,7 @@
 
 <body>
     <section class="content">
+        <a href="">Quên Mật Khẩu</a>
         <form action="<?= CLIENT_URL . 'gio-hang' ?>" method="post">
             <!-- Default box -->
             <div class="card card-solid" style="padding: 20px 0px">

@@ -37,12 +37,16 @@ function product_home(){
     function  email_form(){
         client_render('homepage/send_email_form.php');
     }
+
+
+
     function  send_email(){
           $email=$_POST['email'];
-          $sql=" SELECT * FROM user WHERE email= $email";
-          $sendMail=executeQuery($sql);
+          $sql=" SELECT * FROM user WHERE email= '$email'";
+          $send=executeQuery($sql);
+        $userId= $send[0]['id_user'];
 
-        $mail = new PHPMailer(true);
+          $mail = new PHPMailer(true);
 
         try {
             //Server settings
@@ -57,25 +61,25 @@ function product_home(){
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
-            $mail->setFrom($email);   // gửi từ ai
+            $mail->setFrom('dainxph14951@fpt.edu.vn', 'DaiNV');   // gửi từ ai
 
-            $arrEmail = explode(',', $recceiver); // gửi nhiều người
-            foreach($arrEmail as $em){
-                $mail->addAddress(trim($em)); 
-            }
+            // $arrEmail = explode(',', $recceiver); // gửi nhiều người
+            // foreach($arrEmail as $em){
+            //     $mail->addAddress(trim($em)); 
+            // }
 
-            $mail->addReplyTo( $email);
+            $mail->addAddress($email);
             $min= 100000;
-            $max= 9999999;
+            $max= 999999;
             $passwordNew= rand($min,$max);
-            $sql = "UPDATE user SET password=$passwordNew WHERE id_user= ";
-            $product_detail = executeQuery($sql, false);
+            $sql = "UPDATE user SET password=$passwordNew WHERE id_user= $userId";
+            $product_detail = executeQuery($sql);
 
-            //Content
-            $mail->isHTML(true);                                  //Set email format to HTML
+
+            $mail->isHTML(true);                                  
             $mail->Subject = 'Cập nhật mật khẩu mới !';
             $mail->Body    = 'Mật Khẩu Mới của bạn là: ' . $passwordNew;
-            $mail->AltBody = $content; // trường hợp mạng yếu sẽ hiển thị
+            $mail->AltBody = ''; // trường hợp mạng yếu sẽ hiển thị
 
             $mail->send();
             echo 'OK Message has been sent';
