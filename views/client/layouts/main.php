@@ -55,12 +55,12 @@
 							<?php if (isset($_SESSION['khach_hang'])) { ?>
 								<?php if($_SESSION['khach_hang']['role'] == 1) {?>
 									<div class="header__actions"><a href="<?= ADMIN_URL.'tai-khoan'?>">Trang quản trị</a></div>
-									<div class="header__actions"><a href="<?= CLIENT_URL . 'profile' ?>"><?= $_SESSION['khach_hang']['full_name'] ?></a>
+									<div class="header__actions"><a href="<?= CLIENT_URL . 'dang-nhap' ?>"><?= $_SESSION['khach_hang']['full_name'] ?></a>
 								<?php }else{?>
-									<div class="header__actions"><a href="<?= CLIENT_URL . 'profile' ?>"><?= $_SESSION['khach_hang']['full_name'] ?></a>
+									<div class="header__actions"><a href="<?= CLIENT_URL . 'dang-nhap' ?>"><?= $_SESSION['khach_hang']['full_name'] ?></a>
 								<?php }?>
 							<?php } else { ?>
-								<div class="header__actions"><a href="#">Login &amp; Regiser</a>
+								<div class="header__actions"><a href="<?= CLIENT_URL . 'dang-nhap' ?>">Login &amp; Regiser</a>
 								<?php } ?>
 
 								<div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">USD</a>
