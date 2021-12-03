@@ -24,7 +24,7 @@
                                 <?php foreach ($_SESSION['cart'] as $cart) : ?>
                                     <tr>
                                         <td><?= $cart['id'] ?></td>
-                                        <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $cart['product_image'] ?>" alt="" style="width:150px"><?= $cart['product_name'] ?></a></td>
+                                        <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="<?= PUBLIC_ASSETS  . $cart['product_image'] ?>" alt="" style="width:150px"><?= $cart['product_name'] ?></a></td>
                                         <td><?= number_format($cart['price']) ?></td>
                                         <td><?= $cart['size'] ?></td>
                                         <td>

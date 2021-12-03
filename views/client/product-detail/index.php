@@ -70,14 +70,14 @@
                                 <?= $product_detail['product_name'] ?>
                             </h2>
                             <div class="col-12">
-                                <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" class="product-image" alt="Product Image" style="width:500px;">
+                                <img src="<?= PUBLIC_ASSETS  . $product_detail['product_image'] ?>" class="product-image" alt="Product Image" style="width:500px;">
                             </div>
                             <div class="col-12 product-image-thumbs">
-                                <div class="product-image-thumb active"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
-                                <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
-                                <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
-                                <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
-                                <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $product_detail['product_image'] ?>" alt="Product Image"></div>
+                                <div class="product-image-thumb active"><img src="<?= PUBLIC_ASSETS  . $product_detail['product_image'] ?>" alt="Product Image"></div>
+                                <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS  . $product_detail['product_image'] ?>" alt="Product Image"></div>
+                                <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS  . $product_detail['product_image'] ?>" alt="Product Image"></div>
+                                <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS  . $product_detail['product_image'] ?>" alt="Product Image"></div>
+                                <div class="product-image-thumb"><img src="<?= PUBLIC_ASSETS  . $product_detail['product_image'] ?>" alt="Product Image"></div>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">
@@ -241,16 +241,16 @@
                                     <div class="ps-shoe__thumbnail">
                                         <div class="ps-badge"><span>New</span></div>
                                         <a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a>
-                                        <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt="">
+                                        <img src="<?= PUBLIC_ASSETS  . $ps['product_image'] ?>" alt="">
                                         <a class="ps-shoe__overlay" href="<?= CLIENT_URL . 'chi-tiet-san-pham?id=' . $ps['id_product'] . '&id_brand=' . $ps['id_brand'] ?>"></a>
                                     </div>
                                     <div class="ps-shoe__content">
                                         <div class="ps-shoe__variants">
                                             <div class="ps-shoe__variant normal">
-                                                <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt="">
-                                                <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt="">
-                                                <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt="">
-                                                <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt="">
+                                                <img src="<?= PUBLIC_ASSETS  . $ps['product_image'] ?>" alt="">
+                                                <img src="<?= PUBLIC_ASSETS  . $ps['product_image'] ?>" alt="">
+                                                <img src="<?= PUBLIC_ASSETS  . $ps['product_image'] ?>" alt="">
+                                                <img src="<?= PUBLIC_ASSETS  . $ps['product_image'] ?>" alt="">
                                             </div>
                                         </div>
                                         <div class="ps-shoe__detail">

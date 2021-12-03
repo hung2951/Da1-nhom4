@@ -10,15 +10,15 @@
                 <div class="ps-product__column">
                     <div class="ps-shoe mb-30">
                         <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a>
-                            <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt=""><a class="ps-shoe__overlay" href="<?= CLIENT_URL . 'chi-tiet-san-pham?id=' . $ps['id_product'] . '&id_brand=' . $ps['id_brand'] ?>"></a>
+                            <img src="<?= PUBLIC_ASSETS  . $ps['product_image'] ?>" alt=""><a class="ps-shoe__overlay" href="<?= CLIENT_URL . 'chi-tiet-san-pham?id=' . $ps['id_product'] . '&id_brand=' . $ps['id_brand'] ?>"></a>
                         </div>
                         <div class="ps-shoe__content">
                             <div class="ps-shoe__variants">
                                 <div class="ps-shoe__variant normal">
-                                    <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt="">
-                                    <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt="">
-                                    <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt="">
-                                    <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $ps['product_image'] ?>" alt="">
+                                    <img src="<?= PUBLIC_ASSETS  . $ps['product_image'] ?>" alt="">
+                                    <img src="<?= PUBLIC_ASSETS  . $ps['product_image'] ?>" alt="">
+                                    <img src="<?= PUBLIC_ASSETS  . $ps['product_image'] ?>" alt="">
+                                    <img src="<?= PUBLIC_ASSETS  . $ps['product_image'] ?>" alt="">
                                 </div>
                             </div>
                             <div class="ps-shoe__detail"><a class="ps-shoe__name" href="<?= CLIENT_URL . 'chi-tiet-san-pham?id=' . $ps['id_product'] . '&id_brand=' . $ps['id_brand'] ?>"><?= $ps['product_name'] ?></a>

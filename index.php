@@ -122,6 +122,56 @@ switch ($url) {
         require_once "./business/client/product-listing.php";
         product_listing();
         break;
+        // quản lý thương hiệu
+    case 'cp-admin/thuong-hieu':
+        require_once "./business/admin/brand.php";
+        list_brand();
+        break;
+    case 'cp-admin/thuong-hieu/tao-moi':
+        require_once "./business/admin/brand.php";
+        add_brand();
+        break;
+    case 'cp-admin/thuong-hieu/luu-tao-moi':
+        require_once "./business/admin/brand.php";
+        save_add_brand();
+        break;
+    case 'cp-admin/thuong-hieu/xoa':
+        require_once "./business/admin/brand.php";
+        delete_brand();
+        break;
+    case 'cp-admin/thuong-hieu/sua':
+        require_once "./business/admin/brand.php";
+        update_brand();
+        break;
+    case 'cp-admin/thuong-hieu/luu-sua':
+        require_once "./business/admin/brand.php";
+        save_update_brand();
+        break;
+        // quản lý sản phẩm 
+    case 'cp-admin/san-pham':
+        require_once "./business/admin/product.php";
+        list_product();
+        break;
+    case 'cp-admin/san-pham/tao-moi':
+        require_once "./business/admin/product.php";
+        product_add_form();
+        break;
+    case 'cp-admin/san-pham/luu-tao-moi':
+        require_once "./business/admin/product.php";
+        product_save_add();
+        break;
+    case 'cp-admin/san-pham/sua':
+        require_once "./business/admin/product.php";
+        product_edit_form();
+        break;
+    case 'cp-admin/san-pham/luu-sua':
+        require_once "./business/admin/product.php";
+        product_save_edit();
+        break;
+    case 'cp-admin/san-pham/xoa':
+        require_once "./business/admin/product.php";
+        product_remove();
+        break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;

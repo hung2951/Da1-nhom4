@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
-  <a href="" class="brand-link">
+  <a href="" class="brand-link" style="text-decoration: none;">
     <img src="<?= ADMIN_ASSETS ?>dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
     <span class="brand-text font-weight-light">Shose Store</span>
   </a>
@@ -10,10 +10,10 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-        <img src="<?= ADMIN_ASSETS ?>dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        <img src="<?= PUBLIC_ASSETS .$_SESSION['khach_hang']['avatar']?>" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-        <a href="#" class="d-block">Alexander Pierce</a>
+        <a href="#" style="text-decoration: none;" class="d-block"><?= $_SESSION['khach_hang']['full_name']?></a>
 
       </div>
 
@@ -51,12 +51,12 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="" class="nav-link"><i class="far fa-circle nav-icon"></i>
+              <a href="<?= ADMIN_URL .'thuong-hieu/tao-moi'?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
                 <p>Tạo mới</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link"><i class="far fa-circle nav-icon"></i>
+              <a href="<?= ADMIN_URL .'thuong-hieu'?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
                 <p>Danh sách</p>
               </a>
             </li>
@@ -68,12 +68,12 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="" class="nav-link"><i class="far fa-circle nav-icon"></i>
+              <a href="<?= ADMIN_URL .'san-pham/tao-moi'?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
                 <p>Tạo mới</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link"><i class="far fa-circle nav-icon"></i>
+              <a href="<?= ADMIN_URL .'san-pham'?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
                 <p>Danh sách</p>
               </a>
             </li>
@@ -106,7 +106,7 @@
       </ul>
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
         <li style="text-align: center; margin-top: 20px;">
-          <a href="" class="nav-link">Đăng xuất <i class="fas fa-sign-out-alt "></i></a>
+          <a href="<?= CLIENT_URL . 'logout' ?>" class="nav-link">Đăng xuất <i class="fas fa-sign-out-alt "></i></a>
         </li>
       </ul>
     </nav>

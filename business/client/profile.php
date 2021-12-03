@@ -48,5 +48,5 @@ function save_update_user()
 }
 function logout(){
     session_destroy();
-    header('location: '.BASE_URL);
+    header('location: '.CLIENT_URL.'dang-nhap');
 }

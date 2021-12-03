@@ -49,6 +49,7 @@
 			<div class="masonry-wrapper" data-col-md="4" data-col-sm="2" data-col-xs="1" data-gap="30" data-radio="100%">
 				<div class="ps-masonry">
 					<div class="grid-sizer"></div>
+					
 					<?php foreach ($list_spdacbiet as $list_db) : ?>
 						<div class="grid-item kids">
 							<div class="grid-item__content-wrapper">
@@ -56,17 +57,17 @@
 									<a href="<?= CLIENT_URL . 'chi-tiet-san-pham?id=' . $list_db['id_product'] . '&id_brand=' . $list_db['id_brand'] ?>">
 										<div class="ps-shoe__thumbnail">
 											<div class="ps-badge"><span>New</span></div>
-											<img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_db['product_image'] ?>" />
+											<img alt="" src="<?= PUBLIC_ASSETS . $list_db['product_image'] ?>" />
 										</div>
 									</a>
 
 									<div class="ps-shoe__content">
 										<div class="ps-shoe__variants">
 											<div class="ps-shoe__variant normal">
-												<img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_db['product_image'] ?>" />
-												<img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_db['product_image'] ?>" />
-												<img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_db['product_image'] ?>" />
-												<img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_db['product_image'] ?>" />
+												<img alt="" src="<?= PUBLIC_ASSETS  . $list_db['product_image'] ?>" />
+												<img alt="" src="<?= PUBLIC_ASSETS  . $list_db['product_image'] ?>" />
+												<img alt="" src="<?= PUBLIC_ASSETS  . $list_db['product_image'] ?>" />
+												<img alt="" src="<?= PUBLIC_ASSETS  . $list_db['product_image'] ?>" />
 											</div>
 										</div>
 
@@ -114,14 +115,14 @@
 								<div class="ps-shoe mb-30">
 									<a href="<?= CLIENT_URL . 'chi-tiet-san-pham?id=' . $list_sp['id_product'] . '&id_brand=' . $list_sp['id_brand'] ?>">
 										<div class="ps-shoe__thumbnail">
-											<img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_sp['product_image'] ?>" />
+											<img alt="" src="<?= PUBLIC_ASSETS  . $list_sp['product_image'] ?>" />
 										</div>
 									</a>
 
 
 									<div class="ps-shoe__content">
 										<div class="ps-shoe__variants">
-											<div class="ps-shoe__variant normal"><img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_sp['product_image'] ?>" /><img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_sp['product_image'] ?>" /><img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_sp['product_image'] ?>" /><img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $list_sp['product_image'] ?>" />
+											<div class="ps-shoe__variant normal"><img alt="" src="<?= PUBLIC_ASSETS  . $list_sp['product_image'] ?>" /><img alt="" src="<?= PUBLIC_ASSETS  . $list_sp['product_image'] ?>" /><img alt="" src="<?= PUBLIC_ASSETS  . $list_sp['product_image'] ?>" /><img alt="" src="<?= PUBLIC_ASSETS  . $list_sp['product_image'] ?>" />
 											</div>
 										</div>
 

@@ -146,7 +146,7 @@
 												?>
 												<?php foreach ($_SESSION['cart'] as $cart) : ?>
 													<div class="ps-cart-item">
-														<div class="ps-cart-item__thumbnail"><img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $cart['product_image'] ?>" />
+														<div class="ps-cart-item__thumbnail"><img alt="" src="<?= PUBLIC_ASSETS  . $cart['product_image'] ?>" />
 														</div>
 
 														<div class="ps-cart-item__content"><a class="ps-cart-item__title"><?= $cart['product_name'] ?></a>
