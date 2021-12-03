@@ -10,16 +10,17 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-        <img src="<?= PUBLIC_ASSETS .$_SESSION['khach_hang']['avatar']?>" class="img-circle elevation-2" alt="User Image">
+        <img src="<?= PUBLIC_ASSETS . $_SESSION['khach_hang']['avatar'] ?>" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-        <a href="#" style="text-decoration: none;" class="d-block"><?= $_SESSION['khach_hang']['full_name']?></a>
-
+        <a href="#" style="text-decoration: none;" class="d-block"><?= $_SESSION['khach_hang']['full_name'] ?></a>
       </div>
-
     </div>
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-      <a class="nav-link" href="<?= BASE_URL?>">Đi tới trang chủ &raquo;</a>
+      <div class="info">
+        <a class="nav-link" href="<?= BASE_URL ?>">Đi tới trang chủ &raquo;</a>
+      </div>
+
     </div>
     <!-- SidebarSearch Form -->
 
@@ -34,12 +35,12 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= ADMIN_URL .'tai-khoan/tao-moi'?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
+              <a href="<?= ADMIN_URL . 'tai-khoan/tao-moi' ?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
                 <p>Tạo mới</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= ADMIN_URL .'tai-khoan'?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
+              <a href="<?= ADMIN_URL . 'tai-khoan' ?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
                 <p>Danh sách</p>
               </a>
             </li>
@@ -51,12 +52,12 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= ADMIN_URL .'thuong-hieu/tao-moi'?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
+              <a href="<?= ADMIN_URL . 'thuong-hieu/tao-moi' ?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
                 <p>Tạo mới</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= ADMIN_URL .'thuong-hieu'?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
+              <a href="<?= ADMIN_URL . 'thuong-hieu' ?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
                 <p>Danh sách</p>
               </a>
             </li>
@@ -68,12 +69,12 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= ADMIN_URL .'san-pham/tao-moi'?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
+              <a href="<?= ADMIN_URL . 'san-pham/tao-moi' ?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
                 <p>Tạo mới</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= ADMIN_URL .'san-pham'?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
+              <a href="<?= ADMIN_URL . 'san-pham' ?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
                 <p>Danh sách</p>
               </a>
             </li>
@@ -97,7 +98,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= ADMIN_URL.'don-hang'?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
+              <a href="<?= ADMIN_URL . 'don-hang' ?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
                 <p>Danh sách</p>
               </a>
             </li>
@@ -105,8 +106,10 @@
         </li>
       </ul>
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
-        <li style="text-align: center; margin-top: 20px;">
-          <a href="<?= CLIENT_URL . 'logout' ?>" class="nav-link">Đăng xuất <i class="fas fa-sign-out-alt "></i></a>
+        <li class="nav-item">
+          <a href="<?= CLIENT_URL . 'logout' ?>" class="nav-link">
+            <p style="color: #ff6a57;">Đăng xuất <i class="fas fa-sign-out-alt "></i></p>
+          </a>
         </li>
       </ul>
     </nav>

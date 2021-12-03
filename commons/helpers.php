@@ -1,12 +1,12 @@
 <?php
 
-function admin_render($viewpath, $data = []){
+function admin_render($viewpath, $data = [], $jsFiles = []){
 
     extract($data);
     $businessView = "./views/admin/" . $viewpath;
     include_once './views/admin/layouts/main.php';
 }
-function client_render($viewpath, $data = []){
+function client_render($viewpath, $data = [],$jsFiles = []){
 
     extract($data);
     $businessClientView = "./views/client/" . $viewpath;

@@ -1,7 +1,7 @@
 <?php
 if (isset($_SESSION['khach_hang'])) {
   if ($_SESSION['khach_hang']['role'] != 1) {
-    echo '<a href="http://localhost/da1-nhom4/">'.'Quay lại trang chủ'.'</a>';
+    echo '<a href="http://localhost/da1-nhom4/">' . 'Quay lại trang chủ' . '</a>';
     echo '<pre>';
     die('Đường dẫn không tồn tại !');
   }
@@ -29,7 +29,7 @@ if (isset($_SESSION['khach_hang'])) {
     </div>
 
     <!-- Navbar -->
-
+    <?php include_once "./views/admin/layouts/header.php" ?>
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
@@ -39,7 +39,14 @@ if (isset($_SESSION['khach_hang'])) {
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
       <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
 
+            <div class="col-sm-6">
+
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
       </div>
       <!-- /.content-header -->
 
@@ -55,7 +62,6 @@ if (isset($_SESSION['khach_hang'])) {
     </div>
     <!-- /.content-wrapper -->
 
-
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
       <!-- Control sidebar content goes here -->
@@ -64,6 +70,12 @@ if (isset($_SESSION['khach_hang'])) {
   </div>
   <!-- ./wrapper -->
   <?php include_once "./views/admin/layouts/script.php" ?>
+
+  <?php if (count($jsFiles) > 0) : ?>
+    <?php foreach ($jsFiles as $jsFile) : ?>
+      <script src="<?= PUBLIC_ASSETS . $jsFile ?>" type="text/javascript"></script>
+    <?php endforeach ?>
+  <?php endif ?>
 
 </body>
 
