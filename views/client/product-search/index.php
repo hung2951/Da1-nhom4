@@ -60,16 +60,16 @@
                                     <div class="ps-shoe mb-30">
                                         <a href="<?= CLIENT_URL . 'chi-tiet-san-pham?id=' . $sp['id_product'] . '&id_brand=' . $sp['id_brand'] ?>">
                                             <div class="ps-shoe__thumbnail">
-                                                <img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $sp['product_image'] ?>" />
+                                                <img alt="" src="<?= PUBLIC_ASSETS  . $sp['product_image'] ?>" />
                                             </div>
                                         </a>
                                         <div class="ps-shoe__content">
                                             <div class="ps-shoe__variants">
                                                 <div class="ps-shoe__variant normal">
-                                                    <img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $sp['product_image'] ?>" />
-                                                    <img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $sp['product_image'] ?>" />
-                                                    <img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $sp['product_image'] ?>" />
-                                                    <img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $sp['product_image'] ?>" />
+                                                    <img alt="" src="<?= PUBLIC_ASSETS  . $sp['product_image'] ?>" />
+                                                    <img alt="" src="<?= PUBLIC_ASSETS  . $sp['product_image'] ?>" />
+                                                    <img alt="" src="<?= PUBLIC_ASSETS  . $sp['product_image'] ?>" />
+                                                    <img alt="" src="<?= PUBLIC_ASSETS  . $sp['product_image'] ?>" />
                                                 </div>
                                             </div>
 

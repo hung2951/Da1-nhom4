@@ -55,17 +55,17 @@
                                 <div class="ps-shoe mb-30">
                                     <a href="<?= CLIENT_URL . 'chi-tiet-san-pham?id=' . $category['id_product'] . '&id_brand=' . $category['id_brand'] ?>">
                                         <div class="ps-shoe__thumbnail">
-                                            <img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $category['product_image'] ?>" />
+                                            <img alt="" src="<?= PUBLIC_ASSETS  . $category['product_image'] ?>" />
                                         </div>
                                     </a>
 
                                     <div class="ps-shoe__content">
                                         <div class="ps-shoe__variants">
                                             <div class="ps-shoe__variant normal">
-                                                <img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $category['product_image'] ?>" />
-                                                <img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $category['product_image'] ?>" />
-                                                <img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $category['product_image'] ?>" />
-                                                <img alt="" src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $category['product_image'] ?>" />
+                                                <img alt="" src="<?= PUBLIC_ASSETS  . $category['product_image'] ?>" />
+                                                <img alt="" src="<?= PUBLIC_ASSETS  . $category['product_image'] ?>" />
+                                                <img alt="" src="<?= PUBLIC_ASSETS  . $category['product_image'] ?>" />
+                                                <img alt="" src="<?= PUBLIC_ASSETS  . $category['product_image'] ?>" />
                                             </div>
                                         </div>
 
