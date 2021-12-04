@@ -133,3 +133,23 @@ function product_save_edit()
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'san-pham');
 }
+function search_product_admin()
+{
+    $query = $_GET['query'];
+    $sql = "select *from product p join brand b on p.id_brand = b.id_brand 
+                        where 
+                        product_name like'%" . $query . "%'
+                        or
+                        brand_name like'%" . $query . "%'
+                        or 
+                        product_quantity like '%" . $query . "%'
+                        or
+                        status like '%" . $query . "%'
+                        or
+                        price like '%" . $query . "%'
+                        ";
+    $search = executeQuery($sql);
+    admin_render('product/search.php', [
+        'dsSanPham' => $search,
+    ]);
+}

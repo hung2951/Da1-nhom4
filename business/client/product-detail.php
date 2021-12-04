@@ -14,15 +14,13 @@ function product_detail()
     //lấy ra bình luận
     $sql = "SELECT * FROM comment bl INNER JOIN user kh ON bl.id_user = kh.id_user WHERE id_product = $id order by date desc";
     $comment = executeQuery($sql);
-
-
+ 
     client_render('product-detail/index.php', [
         'product_detail' => $product_detail,
         'product_same_kind' => $product_same_kind,
         'comment' => $comment
     ]);
 }
-
 
 function save_add_commment()
 {

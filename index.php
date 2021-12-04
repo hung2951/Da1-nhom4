@@ -172,6 +172,10 @@ switch ($url) {
         require_once "./business/admin/product.php";
         product_remove();
         break;
+    case 'cp-admin/san-pham/search':
+        require_once "./business/admin/product.php";
+        search_product_admin();
+        break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
