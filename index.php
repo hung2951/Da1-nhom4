@@ -176,6 +176,14 @@ switch ($url) {
         require_once "./business/admin/product.php";
         search_product_admin();
         break;
+    case 'cp-admin/thong-ke':
+        require_once "./business/admin/statistic.php";
+        statistic();
+        break;
+    case 'cp-admin/thong-ke/bieu-do':
+        require_once "./business/admin/statistic.php";
+        chart();
+        break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
