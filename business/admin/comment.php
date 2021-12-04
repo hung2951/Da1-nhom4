@@ -2,9 +2,9 @@
 function comment_index()
 {
     $sql =     $sql = "SELECT p.id_product, p.product_name, 
-                COUNT(*) AS 'quantity', 
-                MIN(cmt.date) AS 'older',
-                MAX(cmt.date) AS 'newest'
+                COUNT(cmt.id_comment) AS quantity, 
+                MIN(cmt.date) AS older,
+                MAX(cmt.date) AS newest   
                 FROM comment cmt JOIN product p ON p.id_product=cmt.id_product
                 GROUP BY p.id_product, p.product_name HAVING quantity > 0";
 
