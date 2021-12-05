@@ -227,6 +227,14 @@ switch ($url) {
         require_once "./business/client/home.php";
         notificaEmail();
         break;
+    case 'client/lien-he':
+        require_once "./business/client/contact.php";
+        contact_add_form();
+        break;
+    case 'client/lien-he/luu-tao-moi':
+        require_once "./business/client/contact.php";
+        save_add_contact();
+        break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
