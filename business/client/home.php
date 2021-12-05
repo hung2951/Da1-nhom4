@@ -45,7 +45,7 @@ function  email_form()
 function  send_email()
 {
     $email = $_POST['email'];
-    $sql = "select *from user where email = $email";
+    $sql = " SELECT * FROM user WHERE email= '$email'";
     $send = executeQuery($sql);
     $userId = $send[0]['id_user'];
 
@@ -58,8 +58,8 @@ function  send_email()
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'xuandai300092@gmail.com';                     //SMTP username
-        $mail->Password   = '01686300092';                               //SMTP password
+        $mail->Username   = 'hungtv290501@gmail.com';                     //SMTP username
+        $mail->Password   = 'hung2001';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
@@ -76,7 +76,7 @@ function  send_email()
         $max = 999999;
         $passwordNew = rand($min, $max);
         $sql = "UPDATE user SET password=$passwordNew WHERE id_user= $userId";
-        executeQuery($sql);
+        $product_detail = executeQuery($sql);
 
 
         $mail->isHTML(true);
@@ -86,7 +86,11 @@ function  send_email()
 
         $mail->send();
         echo 'OK Message has been sent';
+        header('location: '.CLIENT_URL.'notificaEmail');
     } catch (Exception $e) {
         echo "LỖI Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
+}
+function notificaEmail(){
+    client_render('acc/note.php');
 }

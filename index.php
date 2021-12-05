@@ -223,6 +223,10 @@ switch ($url) {
         require_once "./business/client/home.php";
         email_form();
         break;
+    case 'client/notificaEmail': // ------------------------------------------------
+        require_once "./business/client/home.php";
+        notificaEmail();
+        break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
