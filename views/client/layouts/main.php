@@ -122,11 +122,8 @@
 											<li class="menu-item"><a href="blog-list.html">Blog List</a></li>
 										</ul>
 									</li>
-									<li class="menu-item menu-item-has-children dropdown"><a href="#">Contact</a>
-										<ul class="sub-menu">
-											<li class="menu-item"><a href="contact-us.html">Contact Us #1</a></li>
-											<li class="menu-item"><a href="contact-us.html">Contact Us #2</a></li>
-										</ul>
+									<li class="menu-item menu-item-has-children dropdown"><a href="<?= CLIENT_URL .'lien-he'?>">LIÊN HỆ</a>
+										
 									</li>
 								</ul>
 							</div>
