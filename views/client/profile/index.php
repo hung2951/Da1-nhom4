@@ -30,7 +30,7 @@
                     <!-- END SIDEBAR USER TITLE -->
                     <!-- SIDEBAR BUTTONS -->
                     <div class="profile-userbuttons">
-                        <button type="button" class="btn btn-danger btn-sm"><a style="color: #fff;" href="<?= CLIENT_URL . 'logout' ?>">Log Out</a></button>
+                        <button type="button" class="btn btn-danger btn-sm"><a style="color: #fff;" href="<?= CLIENT_URL . 'logout' ?>">Đăng xuất</a></button>
                     </div>
                     <!-- END SIDEBAR BUTTONS -->
                     <!-- SIDEBAR MENU -->
@@ -50,8 +50,8 @@
             <div class="col-md-9">
                 <div class="profile-content">
                     <div class="content-right-title">
-                        <p>My Profile</p>
-                        <span>Manage profile information for account security</span>
+                        <p>Hồ sơ của tôi</p>
+                        <span>Quản lý thông tin hồ sơ để bảo mật tài khoản</span>
                     </div>
                     <div class="content-right-input">
                         <form action="<?= CLIENT_URL . 'profile/luu' ?>" method="post" enctype="multipart/form-data">
@@ -59,7 +59,7 @@
                                 <div class="col-6 offset-3">
                                     <input type="text" name="id_user" value="<?= $u['id_user'] ?>" hidden>
                                     <div class="form-group">
-                                        <label for="">First and Last name</label>
+                                        <label for="">Họ và tên</label>
                                         <input type="text" name="full_name" id="" class="form-control" placeholder="First and Last name" value="<?= isset($u['full_name']) ? $u['full_name'] : "" ?>">
                                     </div>
                                     <div class="form-group">
@@ -67,15 +67,15 @@
                                         <input type="text" name="email" id="" class="form-control" placeholder="Email" value="<?= isset($u['email']) ? $u['email'] : "" ?>">
                                     </div>
                                     <div class="form-group">
-                                        <label for="">Phone Number</label>
+                                        <label for="">Số điện thoại</label>
                                         <input type="text" name="phone" id="" class="form-control" placeholder="Phone number" value="<?= isset($u['phone']) ? $u['phone'] : "" ?>">
                                     </div>
                                     <div class="form-group">
-                                        <label for="">Avatar</label>
+                                        <label for="">Hình ảnh</label>
                                         <input type="file" name="avatar" id="" class="form-control" placeholder="">
                                     </div>
                                     <div class="form-group">
-                                        <label for="">Address</label>
+                                        <label for="">Địa chỉ</label>
                                         <input type="text" name="address" id="" class="form-control" placeholder="Address" value="<?= isset($u['address']) ? $u['address'] : "" ?>">
                                     </div>
                                     <div class="form-group" hidden>
@@ -83,7 +83,7 @@
                                         <input type="radio" value="0" checked name="role"> Khách hàng
                                         <input type="radio" value="1" name="role"> Quản trị
                                     </div>
-                                    <button type="submit" name="btn-submit" id="btn-submit">Save</button>
+                                    <button type="submit" name="btn-submit" id="btn-submit">Lưu</button>
                                 </div>
                             </div>
                         </form>

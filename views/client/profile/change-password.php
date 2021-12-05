@@ -30,17 +30,17 @@
                     <!-- END SIDEBAR USER TITLE -->
                     <!-- SIDEBAR BUTTONS -->
                     <div class="profile-userbuttons">
-                        <button type="button" class="btn btn-danger btn-sm"><a style="color: #fff;" href="<?= CLIENT_URL . 'logout' ?>">Log Out</a></button>
+                        <button type="button" class="btn btn-danger btn-sm"><a style="color: #fff;" href="<?= CLIENT_URL . 'logout' ?>">Đăng xuất</a></button>
                     </div>
                     <!-- END SIDEBAR BUTTONS -->
                     <!-- SIDEBAR MENU -->
                     <div class="profile-usermenu">
                         <ul class="nav">
-                            <li >
+                            <li>
                                 <a href="<?= CLIENT_URL . 'profile?id=' . $u['id_user'] ?>"><i class="glyphicon glyphicon-user"></i>Hồ sơ </a>
                             </li>
                             <li class="active">
-                                <a href="<?= CLIENT_URL .'doi-mat-khau'?>"><i class="fas fa-key"></i></i>Đổi mật khẩu </a>
+                                <a href="<?= CLIENT_URL . 'doi-mat-khau' ?>"><i class="fas fa-key"></i></i>Đổi mật khẩu </a>
                             </li>
                         </ul>
                     </div>
@@ -50,11 +50,11 @@
             <div class="col-md-9">
                 <div class="profile-content">
                     <div class="content-right-title">
-                        <p>My Profile</p>
-                        <span>Manage profile information for account security</span>
+                        <p>Hồ sơ của tôi</p>
+                        <span>Quản lý thông tin hồ sơ để bảo mật tài khoản</span>
                     </div>
                     <div class="content-right-input">
-                        <form action="<?= CLIENT_URL . 'profile/luu-mat-khau' ?>" method="post" enctype="multipart/form-data">
+                        <form action="<?= CLIENT_URL . 'luu-mat-khau' ?>" method="post" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-6 offset-3">
                                     <input type="text" name="id_user" value="<?= $u['id_user'] ?>" hidden>
@@ -71,7 +71,7 @@
                                         <label for="">Nhập lại mật khẩu</label>
                                         <input type="password" name="re-password-new" id="" class="form-control" placeholder="Nhập lại mật khẩu mới">
                                     </div>
-                                    
+                                    <p style="color: red;"><?= isset($check) ? $check : ""?></p>
                                     <button type="submit" name="btn-submit" id="btn-submit">Đổi mật khẩu</button>
                                 </div>
                             </div>

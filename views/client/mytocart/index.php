@@ -7,22 +7,23 @@
                 <table class="table ps-cart__table">
                     <thead>
                         <tr>
-                            <th>ID product</th>
-                            <th>Image</th>
-                            <th>Price</th>
-                            <th>Size</th>
-                            <th>Quantity</th>
-                            <th>Total Price</th>
-                            <th>Delete</th>
+                            <th>STT</th>
+                            <th>Sản phẩm</th>
+                            <th>Đơn giá</th>
+                            <th>Kích thước</th>
+                            <th>Số lượng</th>
+                            <th>Tổng tiền sản phẩm</th>
+                            <th>Xóa</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
 
-                        <?php $totalMoney = 0; ?>
+                        <?php $totalMoney = 0; $count=0;?>
                         <?php foreach ($_SESSION['cart'] as $cart) : ?>
+                            <?php $count ++?>
                             <tr>
-                                <td><?= $cart['id'] ?></td>
+                                <td><?= $count ?></td>
                                 <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="<?= PUBLIC_ASSETS  . $cart['product_image'] ?>" alt="" style="width:150px"><?= $cart['product_name'] ?></a></td>
                                 <td><?= number_format($cart['price']) ?></td>
                                 <td><?= $cart['size'] ?></td>
@@ -60,11 +61,11 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <a class="ps-btn ps-btn--gray" href="<?= BASE_URL ?>">Continue Shopping</a>
+                                <a class="ps-btn ps-btn--gray" href="<?= BASE_URL ?>">Tiếp tục mua hàng</a>
                             </div>
                         </div>
                         <div class="ps-cart__total">
-                            <input type="submit" value="Process to checkout" class="ps-btn">
+                            <input type="submit" value="Tiến hành thanh toán" class="ps-btn">
                         </div>
                     </div>
                 </form>

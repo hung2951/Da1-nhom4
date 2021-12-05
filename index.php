@@ -105,7 +105,10 @@ switch ($url) {
         require_once "./business/client/login.php";
         change_password();
         break;
-
+    case 'client/luu-mat-khau':
+        require_once "./business/client/login.php";
+        save_change_password();
+        break;
     case 'client/profile':
         require_once "./business/client/profile.php";
         select_user();
@@ -183,6 +186,30 @@ switch ($url) {
     case 'cp-admin/thong-ke/bieu-do':
         require_once "./business/admin/statistic.php";
         chart();
+        break;
+    case 'cp-admin/ma-giam-gia':
+        require_once "./business/admin/promoCode.php";
+        list_code();
+        break;
+    case 'cp-admin/ma-giam-gia/tao-moi':
+        require_once "./business/admin/promoCode.php";
+        add_code();
+        break;
+    case 'cp-admin/ma-giam-gia/luu-tao-moi':
+        require_once "./business/admin/promoCode.php";
+        save_add_code();
+        break;
+    case 'cp-admin/ma-giam-gia/xoa':
+        require_once "./business/admin/promoCode.php";
+        delete_promo_code();
+        break;
+    case 'cp-admin/ma-giam-gia/sua':
+        require_once "./business/admin/promoCode.php";
+        update_promo_code();
+        break;
+    case 'cp-admin/ma-giam-gia/luu-sua':
+        require_once "./business/admin/promoCode.php";
+        save_update_promo_code();
         break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";

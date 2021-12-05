@@ -85,7 +85,7 @@
                                 <?= $product_detail['product_name'] ?>
                             </h2>
                             <hr>
-                            <h3 class="mt-3">Size <small>Please select one</small></h3>
+                            <h3 class="mt-3">Kích thước <small>Vui lòng chọn 1 kích thước</small></h3>
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                 <label class="btn btn-default text-center">
                                     <input type="radio" name="color_option" id="color_option_b1" autocomplete="off" value="36">
@@ -133,12 +133,12 @@
                             <div class="mt-4">
                                 <button type="submit" class="btn btn-primary btn-lg btn-flat">
                                     <i class="fas fa-cart-plus fa-lg mr-2"></i>
-                                    Add to Cart
+                                    Thêm vào giỏ hàng
                                 </button>
-                                <div class="btn btn-default btn-lg btn-flat">
+                                <!-- <div class="btn btn-default btn-lg btn-flat">
                                     <i class="fas fa-heart fa-lg mr-2"></i>
                                     Add to Wishlist
-                                </div>
+                                </div> -->
                             </div>
 
                             <div class="mt-4 product-share">
@@ -163,8 +163,8 @@
         <div class="row mt-4">
             <nav class="w-100">
                 <div class="nav nav-tabs" id="product-tab" role="tablist">
-                    <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab" href="#product-desc" role="tab" aria-controls="product-desc" aria-selected="true">Description</a>
-                    <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab" href="#product-comments" role="tab" aria-controls="product-comments" aria-selected="false">Comments</a>
+                    <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab" href="#product-desc" role="tab" aria-controls="product-desc" aria-selected="true">Mô tả sản phẩm</a>
+                    <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab" href="#product-comments" role="tab" aria-controls="product-comments" aria-selected="false">Bình luận</a>
                 </div>
             </nav>
 
@@ -192,7 +192,7 @@
                         <hr>
                     <?php else : ?>
                         <div class="alert">Bạn cần phải đăng nhập để bình luận
-                            <a style="color:Blue" href="<?= CLIENT_URL . 'dang-nhap' ?>">. ĐĂNG NHẬP</a>
+                            <a style="color:Blue; text-decoration: none;" href="<?= CLIENT_URL . 'dang-nhap' ?>">. Đăng nhập tại đây</a>
                         </div>
                     <?php endif; ?>
                     <hr>
@@ -226,10 +226,10 @@
                 <div class="ps-section__header mb-50">
                     <div class="row">
                         <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 ">
-                            <h3 class="ps-section__title" data-mask="Related item">- YOU MIGHT ALSO LIKE</h3>
+                            <h3 class="ps-section__title" data-mask="Related item">- Sản phẩm liên quan</h3>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
-                            <div class="ps-owl-actions"><a class="ps-prev" href="#"><i class="ps-icon-arrow-right"></i>Prev</a><a class="ps-next" href="#">Next<i class="ps-icon-arrow-left"></i></a></div>
+                            <div class="ps-owl-actions"><a class="ps-prev" href="#"><i class="ps-icon-arrow-right"></i>Trước</a><a class="ps-next" href="#">Sau<i class="ps-icon-arrow-left"></i></a></div>
                         </div>
                     </div>
                 </div>
