@@ -111,16 +111,8 @@
 										</ul>
 									</li>
 									<li class="menu-item"><a href="<?= CLIENT_URL.'shoes'?>">GIÀY</a></li>
-									<li class="menu-item menu-item-has-children dropdown"><a href="#">TIN TỨC</a>
-										<ul class="sub-menu">
-											<li class="menu-item menu-item-has-children dropdown"><a href="blog-grid.html">Blog-grid</a>
-												<ul class="sub-menu">
-													<li class="menu-item"><a href="blog-grid.html">Blog Grid 1</a></li>
-													<li class="menu-item"><a href="blog-grid-2.html">Blog Grid 2</a></li>
-												</ul>
-											</li>
-											<li class="menu-item"><a href="blog-list.html">Blog List</a></li>
-										</ul>
+									<li class="menu-item menu-item-has-children dropdown"><a href="<?= CLIENT_URL.'news'?>">TIN TỨC</a>
+		
 									</li>
 									<li class="menu-item menu-item-has-children dropdown"><a href="<?= CLIENT_URL .'lien-he'?>">LIÊN HỆ</a>
 										
