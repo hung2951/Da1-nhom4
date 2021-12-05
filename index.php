@@ -235,6 +235,14 @@ switch ($url) {
         require_once "./business/client/contact.php";
         save_add_contact();
         break;
+    case 'client/news':
+        require_once "./business/client/news.php";
+        news();
+        break;
+    case 'client/news_detail':
+        require_once "./business/client/news.php";
+        news_detail();
+        break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;

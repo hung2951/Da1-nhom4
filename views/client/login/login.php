@@ -23,7 +23,7 @@
                 <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Nhớ mật khẩu
             </label>
             <button class="btn btn-lg btn-primary btn-block" type="submit" name="btn-submit">Đăng nhập</button>
-            <p style="text-align: center; margin-top: 20px; "><a href="">Quên mật khẩu</a></p>
+            <p style="text-align: center; margin-top: 20px; "><a href="<?= CLIENT_URL.'xac-nhan-email'?>">Quên mật khẩu</a></p>
             <p style="text-align: center; margin-top: 30px; ">Bạn chưa có tài khoản?<a href="<?= CLIENT_URL.'dang-ky'?>">Đăng ký</a></p>
         </form>
     </div>
