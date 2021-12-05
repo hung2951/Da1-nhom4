@@ -7,7 +7,7 @@
                 <input type="text" name="name" id="" class="form-control" placeholder="">
             </div>
             <div class="form-group">
-                <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="brand" id="">
+                <select style="width: 100%;" name="brand" id="">
                     <option>Thương hiệu</option>
                     <?php foreach ($brands as $brand) : ?>
                         <option value="<?= $brand['id_brand'] ?>"><?= $brand['brand_name'] ?></option>

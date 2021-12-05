@@ -22,22 +22,22 @@
                             <div class="form-group form-group--inline">
                                 <label>Họ và tên<span>*</span>
                                 </label>
-                                <input class="form-control" type="text" name="name">
+                                <input class="form-control" type="text" name="name" value="<?= isset($_SESSION['khach_hang'])?$_SESSION['khach_hang']['full_name']:""?>">
                             </div>
                             <div class="form-group form-group--inline">
                                 <label>Số điện thoại<span>*</span>
                                 </label>
-                                <input class="form-control" type="text" name="phone">
+                                <input class="form-control" type="text" name="phone" value="<?= isset($_SESSION['khach_hang'])?$_SESSION['khach_hang']['phone']:""?>">
                             </div>
                             <div class="form-group form-group--inline">
                                 <label>Email<span>*</span>
                                 </label>
-                                <input class="form-control" type="email" name="email">
+                                <input class="form-control" type="email" name="email" value="<?= isset($_SESSION['khach_hang'])?$_SESSION['khach_hang']['email']:""?>">
                             </div>
                             <div class="form-group form-group--inline">
                                 <label>Địa chị<span>*</span>
                                 </label>
-                                <input class="form-control" type="text" name="address">
+                                <input class="form-control" type="text" name="address" value="<?= isset($_SESSION['khach_hang'])?$_SESSION['khach_hang']['address']:""?>">
                             </div>
                             <div>
                                 <input type="date" name="date" value="<?= date('Y-d-m') ?>" hidden>

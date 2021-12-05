@@ -15,7 +15,6 @@
 	<meta name="keywords" content="Default Description">
 	<meta name="description" content="Default keyword">
 	<title>Shoe - Homepage</title>
-	<link href="<?= CLIENT_ASSETS ?>css/main.css" rel="stylesheet" />
 	<!-- Fonts-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:300,400,700%7CMontserrat:300,400,500,600,700,800,900" rel="stylesheet" />
