@@ -48,5 +48,6 @@ function save_update_user()
 }
 function logout(){
     session_destroy();
+    unset($_SESSION['cart']);
     header('location: '.CLIENT_URL.'dang-nhap');
 }
