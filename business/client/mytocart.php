@@ -46,7 +46,11 @@ function addCart()
         }
         $_SESSION['cart'] = $cart;
     }
-    client_render('mytocart/index.php', []);
+    $sql_code = "select * from promo_code";
+    $codes = executeQuery($sql_code);
+    client_render('mytocart/index.php', [
+        'codes' => $codes,
+    ]);
 }
 
 function delete_cart()
@@ -67,8 +71,20 @@ function delete_cart()
 
 function checkout()
 {
-
-    client_render('mytocart/checkout.php',);
+    if (isset($_POST['code'])) {
+        if ($_POST['code'] == "") {
+            client_render('mytocart/checkout.php');
+        } else {
+            $id_code = $_POST['code'];
+            $sql = "select * from promo_code where id_code = $id_code";
+            $code = executeQuery($sql, false);
+            client_render('mytocart/checkout.php', [
+                'code' => $code,
+            ]);
+        }
+    } else {
+        client_render('mytocart/checkout.php');
+    }
 }
 function pay_cart()
 {
@@ -77,17 +93,17 @@ function pay_cart()
     $phone = $_POST['phone'];
     $email = $_POST['email'];
     $address = $_POST['address'];
-
+    $totalMoney = $_POST['totalPrice'];
     $sql = "insert into orders(order_date,custom_name,custom_phone,custom_email,custom_address) values ('$date','$name','$phone','$email','$address')";
     $invoiceId = insertDataAndGetId($sql);
-    $totalMoney = 0;
+    // $totalMoney = 0;
     // chạy vòng lặp qua các phần tử của giỏ hàng, sau đó insert dữ liệu vào bảng order_detail
     foreach ($_SESSION['cart'] as $item) {
         $productId = $item['id'];
         $price = $item['price'];
         $quantity = $item['quantity'];
         $size = $item['size'];
-        $totalMoney += $price * $quantity;
+        // $totalMoney += $price * $quantity;
         $insertInvoiceDetailQuery = "insert into order_detail 
                                         (id_orders, id_product, quantity, unit_price, size)
                                     values 

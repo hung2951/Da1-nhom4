@@ -12,7 +12,7 @@
 <body>
     <div class="ps-checkout pt-80 pb-80">
         <div class="ps-container">
-            <form class="ps-checkout__form" action="<?= CLIENT_URL . 'pay-cart'?>" method="POST">
+            <form class="ps-checkout__form" action="<?= CLIENT_URL . 'pay-cart' ?>" method="POST">
                 <div class="row">
 
                     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 ">
@@ -77,11 +77,23 @@
                                             <tr>
                                             <?php endforeach ?>
                                     </tbody>
-                                    <tr>
-                                        <td>Total money</td>
-                                        <td><?= number_format($totalPrice) ?></td>
-
-                                    </tr>
+                                    <?php if (!empty($code)) : ?>
+                                        <tr>
+                                            <td>Mã giảm giá</td>
+                                            <td>-<?= number_format(($code['code'] / 100) * $totalPrice) ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total money</td>
+                                            <td><?= number_format($totalPrice - (($code['code'] / 100) * $totalPrice)) ?></td>
+                                            <td hidden><input type="text" name="totalPrice" value="<?= $totalPrice - (($code['code'] / 100) * $totalPrice) ?>"></td>
+                                        </tr>
+                                    <?php else : ?>
+                                        <tr>
+                                            <td>Total money</td>
+                                            <td><?= number_format($totalPrice) ?></td>
+                                            <td hidden><input type="text" name="totalPrice" value="<?= $totalPrice ?>"></td>
+                                        </tr>
+                                    <?php endif ?>
                                 </table>
 
                             </div>
