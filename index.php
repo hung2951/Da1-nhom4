@@ -122,6 +122,14 @@ switch ($url) {
         require_once "./business/client/product-listing.php";
         product_listing();
         break;
+    case 'client/lien-he':
+        require_once "./business/client/contact.php";
+        contact_add_form();
+        break;
+    case 'client/lien-he/luu-tao-moi':
+        require_once "./business/client/contact.php";
+        save_add_contact();
+        break;
         // quản lý thương hiệu
     case 'cp-admin/thuong-hieu':
         require_once "./business/admin/brand.php";
@@ -184,14 +192,7 @@ switch ($url) {
         require_once "./business/admin/statistic.php";
         chart();
         break;
-    case 'client/lien-he':
-        require_once "./business/client/contact.php";
-        contact_add_form();
-        break;
-    case 'client/lien-he/luu-tao-moi':
-        require_once "./business/client/contact.php";
-        save_add_contact();
-        break;
+    
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
