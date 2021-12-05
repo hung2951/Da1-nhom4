@@ -94,6 +94,7 @@ function product_save_edit()
     $sql = "select * from product where id_product = $id";
     $oldData = executeQuery($sql, false);
     // nhận dữ liệu từ form gửi lên
+    $brand = $_POST['brand'];
     $name = $_POST['name'];
     $price = $_POST['price'];
     $discount = $_POST['discount'];
@@ -117,6 +118,7 @@ function product_save_edit()
     // tạo ra câu sql insert tài khoản mới
     $sql = "update product
             set
+                id_brand = '$brand',
                 product_name = '$name', 
                 product_image = '$product_image', 
                 price = '$price',

@@ -1,4 +1,4 @@
-<h2 style="text-align: center; margin-top: 20px;">Tên thương hiệu</h2>
+<h2 style="text-align: center; margin-top: 20px;">Thêm thương hiệu</h2>
 <form action="<?= ADMIN_URL . 'thuong-hieu/luu-tao-moi' ?>" method="post">
     <div class="row">
         <div class="col-6 offset-3">

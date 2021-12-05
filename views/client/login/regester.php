@@ -13,13 +13,13 @@
     <!-- partial:index.partial.html -->
     <div class="wrapper">
         <form class="form-signin" action="<?= CLIENT_URL . 'dang-ky/luu' ?>" method="POST">
-            <h2 class="form-signin-heading">Regester</h2>
-            <input type="text" class="form-control" name="full_name" placeholder="First and last name">
-            <input type="text" class="form-control" name="email" placeholder="Email address">
-            <input type="password" class="form-control" name="password" placeholder="Enter password"/>
-            <input type="password" class="form-control" name="re-password" placeholder="Enter re-password">
-            <button class="btn btn-lg btn-primary btn-block" type="submit" name="btn-submit">Regester</button>
-            <p style="text-align: center; margin-top: 50px; ">Do you have an account?<a href="<?= CLIENT_URL . 'dang-nhap' ?>">Login now</a></p>
+            <h2 class="form-signin-heading">Đăng ký</h2>
+            <input type="text" class="form-control" name="full_name" placeholder="Họ và tên">
+            <input type="text" class="form-control" name="email" placeholder="Email">
+            <input type="password" class="form-control" name="password" placeholder="Nhập mật khẩu"/>
+            <input type="password" class="form-control" name="re-password" placeholder="Nhập lại mật khẩu">
+            <button class="btn btn-lg btn-primary btn-block" type="submit" name="btn-submit">Đăng ký</button>
+            <p style="text-align: center; margin-top: 30px; ">Bạn đã có tài khoản?<a href="<?= CLIENT_URL.'dang-nhap'?>">Đăng nhập</a></p>
         </form>
     </div>
     <!-- partial -->

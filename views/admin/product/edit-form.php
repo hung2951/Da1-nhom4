@@ -7,8 +7,8 @@
                 <input type="text" name="name" value="<?= $products['product_name'] ?>" class="form-control" placeholder="">
             </div>
             <div class="form-group">
-                <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="brand" id="">
-                    <option selected>Thương hiệu</option>
+                <select  style="width: 100%;" name="brand" id="">
+                    <option>Thương hiệu</option>
                     <?php foreach ($brand as $brand) : ?>
                         <option <?= $products['id_brand'] == $brand['id_brand'] ? "selected" : "" ?> value="<?= $brand['id_brand'] ?>"><?= $brand['brand_name'] ?></option>
                     <?php endforeach ?>
@@ -23,26 +23,26 @@
                 <input type="text" name="price" value="<?= $products['price'] ?>" class="form-control" placeholder="">
             </div>
             <div class="form-group">
+                <label for="">Số lượng</label>
+                <input type="number" name="quantity" value="<?= $products['product_quantity'] ?>" class="form-control" placeholder="">
+            </div>
+            <div class="form-group">
                 <label for="">Giảm giá</label>
                 <input type="number" name="discount" value="<?= $products['discount'] ?>" class="form-control" placeholder="">
             </div>
             <div class="form-group">
                 <label for="">Chi tiết</label>
-                <input type="text" name="details" value="<?= $products['details'] ?>" class="form-control" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="">Số lượng</label>
-                <input type="number" name="quantity" value="<?= $products['product_quantity'] ?>" class="form-control" placeholder="">
+                <textarea name="details" id="" cols="30" class="form-control"><?= $products['details']?></textarea>
             </div>
             <div class="form-group">
                 <label for="">Trạng thái</label>
-                <input type="radio" name="status" value="0" <?= $products['status']==0?"checked":""?>> Hết hàng
-                <input type="radio" name="status" value="1" <?= $products['status']==1?"checked":""?>> Còn hàng
+                <input type="radio" name="status" value="0" <?= $products['status'] == 0 ? "checked" : "" ?>> Hết hàng
+                <input type="radio" name="status" value="1" <?= $products['status'] == 1 ? "checked" : "" ?>> Còn hàng
             </div>
             <div class="form-group">
                 <label for="">Loại hàng</label>
-                <input type="radio" name="new_product" value="0" <?= $products['new_product']==0?"checked":""?>> Hàng cũ
-                <input type="radio" name="new_product" value="1" <?= $products['new_product']==1?"checked":""?>> Hàng mới
+                <input type="radio" name="new_product" value="0" <?= $products['new_product'] == 0 ? "checked" : "" ?>> Hàng cũ
+                <input type="radio" name="new_product" value="1" <?= $products['new_product'] == 1 ? "checked" : "" ?>> Hàng mới
             </div>
             <div class="form-group" hidden>
                 <label for="">Lượt xem</label>

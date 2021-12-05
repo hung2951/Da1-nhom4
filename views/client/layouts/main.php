@@ -32,6 +32,8 @@
 	<link href="<?= CLIENT_ASSETS ?>plugins/revolution/css/layers.css" rel="stylesheet" />
 	<link href="<?= CLIENT_ASSETS ?>plugins/revolution/css/navigation.css" rel="stylesheet" /><!-- Custom-->
 	<link href="<?= CLIENT_ASSETS ?>css/style.css" rel="stylesheet" />
+	
+
 
 	<!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
 	<!--WARNING: Respond.js doesn't work if you view the page via file://-->
@@ -62,9 +64,9 @@
 										<?php endif ?>
 
 									<?php } else { ?>
-										<div class="header__actions"><a href="<?= CLIENT_URL . 'dang-nhap' ?>">Login &amp; Regiser</a>
+										<div class="header__actions"><a href="<?= CLIENT_URL . 'dang-nhap' ?>">Đăng nhập &amp; Đăng ký</a>
 										<?php } ?>
-										<div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">USD</a>
+										<!-- <div class="btn-group ps-dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#">USD</a>
 
 											<ul class="dropdown-menu">
 												<li><a href="#"><img alt="" src="<?= CLIENT_ASSETS ?>images/flag/usa.svg" /> USD</a></li>
@@ -80,7 +82,7 @@
 												<li><a href="#">Japanese</a></li>
 												<li><a href="#">Chinese</a></li>
 											</ul>
-										</div>
+										</div> -->
 										</div>
 										</div>
 									</div>
@@ -95,7 +97,7 @@
 
 							<div class="navigation__column center">
 								<ul class="main-menu menu">
-									<li class="menu-item menu-item-has-children dropdown"><a href="<?= BASE_URL ?>">HOME</a>
+									<li class="menu-item menu-item-has-children dropdown"><a href="<?= BASE_URL ?>">TRANG CHỦ</a>
 									</li>
 									<li class="menu-item menu-item-has-children dropdown"><a href="javascript: void(0)">SNEAKER</a>
 										<ul class="sub-menu">
@@ -108,8 +110,8 @@
 											<?php endif ?>
 										</ul>
 									</li>
-									<li class="menu-item"><a href="<?= CLIENT_URL.'shoes'?>">Shoes</a></li>
-									<li class="menu-item menu-item-has-children dropdown"><a href="#">News</a>
+									<li class="menu-item"><a href="<?= CLIENT_URL.'shoes'?>">GIÀY</a></li>
+									<li class="menu-item menu-item-has-children dropdown"><a href="#">TIN TỨC</a>
 										<ul class="sub-menu">
 											<li class="menu-item menu-item-has-children dropdown"><a href="blog-grid.html">Blog-grid</a>
 												<ul class="sub-menu">
@@ -120,18 +122,15 @@
 											<li class="menu-item"><a href="blog-list.html">Blog List</a></li>
 										</ul>
 									</li>
-									<li class="menu-item menu-item-has-children dropdown"><a href="#">Contact</a>
-										<ul class="sub-menu">
-											<li class="menu-item"><a href="contact-us.html">Contact Us #1</a></li>
-											<li class="menu-item"><a href="contact-us.html">Contact Us #2</a></li>
-										</ul>
+									<li class="menu-item menu-item-has-children dropdown"><a href="<?= CLIENT_URL .'lien-he'?>">LIÊN HỆ</a>
+										
 									</li>
 								</ul>
 							</div>
 
 							<div class="navigation__column right">
 								<form action="<?= CLIENT_URL ?>search" class="ps-search--header" method="get">
-									<input class="form-control" placeholder="Search product..." type="text" name="query" />
+									<input class="form-control" placeholder="Tìm kiếm sản phẩm..." type="text" name="query" />
 									<button type="submit"><i class="fas fa-search"></i></button>
 								</form>
 								<?php if (isset($_SESSION['cart'])) : ?>

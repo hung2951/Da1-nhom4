@@ -1,5 +1,8 @@
 <?php
 session_start();
+require_once './vender/PHPMailer/src/Exception.php';
+require_once './vender/PHPMailer/src/PHPMailer.php';
+require_once './vender/PHPMailer/src/SMTP.php';
 
 require_once './commons/app_config.php';
 require_once './commons/helpers.php';
@@ -10,6 +13,7 @@ switch ($url) {
     case '/':
         require_once './business/client/home.php';
         product_home();
+        break;
     case 'client/search':
         require_once './business/client/search.php';
         search();
@@ -105,7 +109,10 @@ switch ($url) {
         require_once "./business/client/login.php";
         change_password();
         break;
-
+    case 'client/luu-mat-khau':
+        require_once "./business/client/login.php";
+        save_change_password();
+        break;
     case 'client/profile':
         require_once "./business/client/profile.php";
         select_user();
@@ -175,6 +182,58 @@ switch ($url) {
     case 'cp-admin/san-pham/search':
         require_once "./business/admin/product.php";
         search_product_admin();
+        break;
+    case 'cp-admin/thong-ke':
+        require_once "./business/admin/statistic.php";
+        statistic();
+        break;
+    case 'cp-admin/thong-ke/bieu-do':
+        require_once "./business/admin/statistic.php";
+        chart();
+        break;
+    case 'cp-admin/ma-giam-gia':
+        require_once "./business/admin/promoCode.php";
+        list_code();
+        break;
+    case 'cp-admin/ma-giam-gia/tao-moi':
+        require_once "./business/admin/promoCode.php";
+        add_code();
+        break;
+    case 'cp-admin/ma-giam-gia/luu-tao-moi':
+        require_once "./business/admin/promoCode.php";
+        save_add_code();
+        break;
+    case 'cp-admin/ma-giam-gia/xoa':
+        require_once "./business/admin/promoCode.php";
+        delete_promo_code();
+        break;
+    case 'cp-admin/ma-giam-gia/sua':
+        require_once "./business/admin/promoCode.php";
+        update_promo_code();
+        break;
+    case 'cp-admin/ma-giam-gia/luu-sua':
+        require_once "./business/admin/promoCode.php";
+        save_update_promo_code();
+        break;
+    case 'client/quen-mat-khau': // ------------------------------------------------
+        require_once "./business/client/home.php";
+        send_email();
+        break;
+    case 'client/xac-nhan-email': // ------------------------------------------------
+        require_once "./business/client/home.php";
+        email_form();
+        break;
+    case 'client/notificaEmail': // ------------------------------------------------
+        require_once "./business/client/home.php";
+        notificaEmail();
+        break;
+    case 'client/lien-he':
+        require_once "./business/client/contact.php";
+        contact_add_form();
+        break;
+    case 'client/lien-he/luu-tao-moi':
+        require_once "./business/client/contact.php";
+        save_add_contact();
         break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";

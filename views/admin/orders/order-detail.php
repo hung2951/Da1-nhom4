@@ -42,7 +42,7 @@
         <?php foreach ($order_detail as $od): ?>
         <div class="orders-info">
             <div class="img">
-                <p> <img src="<?= PUBLIC_ASSETS . '/uploads/avatars/' . $od['product_image'] ?>" width="100"></p>
+                <p> <img src="<?= PUBLIC_ASSETS . $od['product_image'] ?>" width="100"></p>
             </div>
             <div class="info">
                 <p id="info-title"><?= $od['product_name'] ?></p>

@@ -12,32 +12,32 @@
 <body>
     <div class="ps-checkout pt-80 pb-80">
         <div class="ps-container">
-            <form class="ps-checkout__form" action="<?= CLIENT_URL . 'pay-cart'?>" method="POST">
+            <form class="ps-checkout__form" action="<?= CLIENT_URL . 'pay-cart' ?>" method="POST">
                 <div class="row">
 
                     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 ">
 
                         <div class="ps-checkout__billing">
-                            <h3>Billing Detail</h3>
+                            <h3>Thông tin nhận hàng</h3>
                             <div class="form-group form-group--inline">
-                                <label>Name<span>*</span>
+                                <label>Họ và tên<span>*</span>
                                 </label>
-                                <input class="form-control" type="text" name="name">
+                                <input class="form-control" type="text" name="name" value="<?= isset($_SESSION['khach_hang'])?$_SESSION['khach_hang']['full_name']:""?>">
                             </div>
                             <div class="form-group form-group--inline">
-                                <label>Phone<span>*</span>
+                                <label>Số điện thoại<span>*</span>
                                 </label>
-                                <input class="form-control" type="text" name="phone">
+                                <input class="form-control" type="text" name="phone" value="<?= isset($_SESSION['khach_hang'])?$_SESSION['khach_hang']['phone']:""?>">
                             </div>
                             <div class="form-group form-group--inline">
                                 <label>Email<span>*</span>
                                 </label>
-                                <input class="form-control" type="email" name="email">
+                                <input class="form-control" type="email" name="email" value="<?= isset($_SESSION['khach_hang'])?$_SESSION['khach_hang']['email']:""?>">
                             </div>
                             <div class="form-group form-group--inline">
-                                <label>Address<span>*</span>
+                                <label>Địa chị<span>*</span>
                                 </label>
-                                <input class="form-control" type="text" name="address">
+                                <input class="form-control" type="text" name="address" value="<?= isset($_SESSION['khach_hang'])?$_SESSION['khach_hang']['address']:""?>">
                             </div>
                             <div>
                                 <input type="date" name="date" value="<?= date('Y-d-m') ?>" hidden>
@@ -52,15 +52,15 @@
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
                         <div class="ps-checkout__order">
                             <header>
-                                <h3>Your Order</h3>
+                                <h3>Đơn hàng của bạn</h3>
                             </header>
                             <div class="content">
                                 <table class="table ps-checkout__products">
                                     <thead>
                                         <tr>
-                                            <th class="text-uppercase">Product Name</th>
-                                            <th class="text-uppercase">Quantity</th>
-                                            <th class="text-uppercase">Money</th>
+                                            <th class="text-uppercase">Tên sản phẩm</th>
+                                            <th class="text-uppercase">Số lượng</th>
+                                            <th class="text-uppercase">Tổng tiền sản phẩm</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -77,11 +77,23 @@
                                             <tr>
                                             <?php endforeach ?>
                                     </tbody>
-                                    <tr>
-                                        <td>Total money</td>
-                                        <td><?= number_format($totalPrice) ?></td>
-
-                                    </tr>
+                                    <?php if (!empty($code)) : ?>
+                                        <tr>
+                                            <td>Mã giảm giá</td>
+                                            <td>- <?= number_format(($code['code'] / 100) * $totalPrice) ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tổng tiền</td>
+                                            <td><?= number_format($totalPrice - (($code['code'] / 100) * $totalPrice)) ?></td>
+                                            <td hidden><input type="text" name="totalPrice" value="<?= $totalPrice - (($code['code'] / 100) * $totalPrice) ?>"></td>
+                                        </tr>
+                                    <?php else : ?>
+                                        <tr>
+                                            <td>Tổng tiền</td>
+                                            <td><?= number_format($totalPrice) ?></td>
+                                            <td hidden><input type="text" name="totalPrice" value="<?= $totalPrice ?>"></td>
+                                        </tr>
+                                    <?php endif ?>
                                 </table>
 
                             </div>
@@ -89,14 +101,16 @@
                         </div>
                         <footer>
                             <div class="form-group paypal">
-                                <button type="submit" class="ps-btn ps-btn--fullwidth">Place Order<i class="ps-icon-next"></i></button>
+                                <button type="submit" class="ps-btn ps-btn--fullwidth">Đặt hàng<i class="ps-icon-next"></i></button>
                             </div>
                         </footer>
                         <!-- --------------------------end--------------------------------- -->
+                        <?php if (!isset($_SESSION['khach_hang'])) :?>
                         <div class="ps-shipping">
-                            <h3>FREE SHIPPING</h3>
-                            <p>YOUR ORDER QUALIFIES FOR FREE SHIPPING.<br> <a href="#"> Singup </a> for free shipping on every order, every time.</p>
+                            <h3>Mã giảm giá</h3>
+                            <p>Đăng nhập để nhận mã giảm giá ngay tại đây.<br> <a href="<?= CLIENT_URL.'dang-nhap'?>"> Đăng nhập </a></p>
                         </div>
+                        <?php endif?>
                     </div>
 
                 </div>

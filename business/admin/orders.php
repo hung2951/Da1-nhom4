@@ -10,7 +10,7 @@ function save_update_status()
 }
 function select_order()
 {
-    $sql = "select * from orders";
+    $sql = "select * from orders  order by status asc";
     $orders = executeQuery($sql);
     admin_render('orders/index.php', [
         'dsHoadon' => $orders,
