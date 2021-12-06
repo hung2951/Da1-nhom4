@@ -32,7 +32,7 @@
 	<link href="<?= CLIENT_ASSETS ?>plugins/revolution/css/layers.css" rel="stylesheet" />
 	<link href="<?= CLIENT_ASSETS ?>plugins/revolution/css/navigation.css" rel="stylesheet" /><!-- Custom-->
 	<link href="<?= CLIENT_ASSETS ?>css/style.css" rel="stylesheet" />
-	
+
 
 
 	<!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
@@ -57,7 +57,7 @@
 						<div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
 							<?php if (isset($_SESSION['khach_hang'])) { ?>
 								<?php if ($_SESSION['khach_hang']['role'] == 1) : ?>
-									<div class="header__actions"><a href="<?= ADMIN_URL.'tai-khoan'?>">Trang quản trị</a></div>
+									<div class="header__actions"><a href="<?= ADMIN_URL . 'tai-khoan' ?>">Trang quản trị</a></div>
 									<div class="header__actions"><a href="<?= CLIENT_URL . 'profile' ?>"><?= $_SESSION['khach_hang']['full_name'] ?></a>
 									<?php else : ?>
 										<div class="header__actions"><a href="<?= CLIENT_URL . 'profile' ?>"><?= $_SESSION['khach_hang']['full_name'] ?></a>
@@ -110,12 +110,12 @@
 											<?php endif ?>
 										</ul>
 									</li>
-									<li class="menu-item"><a href="<?= CLIENT_URL.'shoes'?>">GIÀY</a></li>
-									<li class="menu-item menu-item-has-children dropdown"><a href="<?= CLIENT_URL.'news'?>">TIN TỨC</a>
-		
+									<li class="menu-item"><a href="<?= CLIENT_URL . 'shoes' ?>">GIÀY</a></li>
+									<li class="menu-item menu-item-has-children dropdown"><a href="<?= CLIENT_URL . 'news' ?>">TIN TỨC</a>
+
 									</li>
-									<li class="menu-item menu-item-has-children dropdown"><a href="<?= CLIENT_URL .'lien-he'?>">LIÊN HỆ</a>
-										
+									<li class="menu-item menu-item-has-children dropdown"><a href="<?= CLIENT_URL . 'lien-he' ?>">LIÊN HỆ</a>
+
 									</li>
 								</ul>
 							</div>

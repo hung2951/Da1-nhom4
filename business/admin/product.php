@@ -4,9 +4,15 @@ function list_product()
     $sql = "select * from product";
     $product = executeQuery($sql);
 
-    admin_render('product/index.php', [
-        'listProduct' => $product,
-    ]);
+    admin_render(
+        'product/index.php',
+        [
+            'listProduct' => $product,
+        ],
+        [
+            'customize/js/account/list-product.js'
+        ]
+    );
 }
 
 function product_remove()
