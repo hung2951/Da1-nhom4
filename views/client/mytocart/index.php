@@ -19,9 +19,10 @@
                     </thead>
                     <tbody>
 
-                        <?php $totalMoney = 0; $count=0;?>
+                        <?php $totalMoney = 0;
+                        $count = 0; ?>
                         <?php foreach ($_SESSION['cart'] as $cart) : ?>
-                            <?php $count ++?>
+                            <?php $count++ ?>
                             <tr>
                                 <td><?= $count ?></td>
                                 <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="<?= PUBLIC_ASSETS  . $cart['product_image'] ?>" alt="" style="width:150px"><?= $cart['product_name'] ?></a></td>
@@ -44,19 +45,13 @@
                     <div class="ps-cart__actions">
                         <div class="ps-cart__promotion">
                             <div class="form-group">
-                                <div class="ps-form--icon"><i class="fa fa-angle-right"></i>
-                                    <!-- <input class="form-control" type="text" placeholder="Promo Code"> -->
+                                <div class="ps-form--icon">
                                     <?php if (isset($_SESSION['khach_hang'])) : ?>
-                                        <select name="code" id="" class="form-control">
-                                            <option value="">Mã giảm giá</option>
-                                            <?php foreach ($codes as $code) : ?>
-                                                <option value="<?= $code['id_code'] ?>"><?= $code['code_name'] ?></option>
-                                            <?php endforeach ?>
-                                        </select>
-                                        <?php else:?>
-                                            <select class="form-control">
-                                                <option value="">Đăng nhập để nhận mã giảm giá</option>
-                                            </select>
+                                        <input type="text" name="code_name" class="form-control" placeholder="Nhập mã giảm giá">
+                                        <span style="color: red;padding-left: 10px;"><?= isset($check) ? $check : "" ?></span>
+                                    <?php else : ?>
+                                        <input type="text" name="code_name" class="form-control" placeholder="Nhập mã giảm giá" readonly>
+                                        <p style="color: black;padding-left: 10px;">Đăng nhập để nhập mã giảm giá</p>
                                     <?php endif ?>
                                 </div>
                             </div>

@@ -82,7 +82,7 @@
                                             <td>Mã giảm giá</td>
                                             <td>- <?= number_format(($code['code'] / 100) * $totalPrice) ?></td>
                                         </tr>
-                                        <tr>
+                                        <tr> 
                                             <td>Tổng tiền</td>
                                             <td><?= number_format($totalPrice - (($code['code'] / 100) * $totalPrice)) ?></td>
                                             <td hidden><input type="text" name="totalPrice" value="<?= $totalPrice - (($code['code'] / 100) * $totalPrice) ?>"></td>

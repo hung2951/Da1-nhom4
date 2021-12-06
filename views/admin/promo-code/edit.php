@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-6 offset-3">
             <div class="form-group">
-                <label for="">Tên mã giảm giá</label>
+                <label for="">Mã giảm giá</label>
                 <input type="text" name="name" id="" class="form-control" placeholder="Nhập tên mã giảm giá" value="<?=$code['code_name']?>">
             </div>
             <div class="form-group">

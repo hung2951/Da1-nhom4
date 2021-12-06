@@ -15,9 +15,23 @@ function save_add_code()
 {
     $name = $_POST['name'];
     $code = $_POST['code'];
-    $sql = "insert into promo_code(code_name,code) values('$name','$code')";
-    executeQuery($sql);
-    header('location: ' . ADMIN_URL . 'ma-giam-gia');
+    $sql = "select * from promo_code";
+    $check = executeQuery($sql);
+    // var_dump($check);
+    foreach ($check as $item) {
+        if ($item['code_name'] == $name) {
+            $err = " Mã giảm giá tồn tại";
+        }
+    }
+    if (isset($err)) {
+        admin_render('promo-code/add-code.php',[
+            'err' => $err,
+        ]);
+    } else {
+        $sql = "insert into promo_code(code_name,code) values('$name','$code')";
+        executeQuery($sql);
+        header('location: ' . ADMIN_URL . 'ma-giam-gia');
+    }
 }
 function delete_promo_code()
 {
