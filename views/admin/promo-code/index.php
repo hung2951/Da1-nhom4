@@ -3,7 +3,7 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>Tên mã giảm giá</th>
+            <th>Mã giảm giá</th>
             <th>Phần trăm giảm</th>
             <th>
                 <a href="<?= ADMIN_URL . 'ma-giam-gia/tao-moi' ?>" class="btn btn-sm btn-success">Tạo mới</a>

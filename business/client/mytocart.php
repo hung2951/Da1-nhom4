@@ -46,11 +46,7 @@ function addCart()
         }
         $_SESSION['cart'] = $cart;
     }
-    $sql_code = "select * from promo_code";
-    $codes = executeQuery($sql_code);
-    client_render('mytocart/index.php', [
-        'codes' => $codes,
-    ]);
+    client_render('mytocart/index.php');
 }
 
 function delete_cart()
@@ -71,16 +67,24 @@ function delete_cart()
 
 function checkout()
 {
-    if (isset($_POST['code'])) {
-        if ($_POST['code'] == "") {
+
+    $check = "Mã giảm giá không hợp lệ";
+    if (isset($_POST['code_name'])) {
+        if ($_POST['code_name'] == "") {
             client_render('mytocart/checkout.php');
         } else {
-            $id_code = $_POST['code'];
-            $sql = "select * from promo_code where id_code = $id_code";
+            $code_name = $_POST['code_name'];
+            $sql = "select * from promo_code where code_name = '$code_name'";
             $code = executeQuery($sql, false);
-            client_render('mytocart/checkout.php', [
-                'code' => $code,
-            ]);
+            if (isset($code)) {
+                client_render('mytocart/checkout.php', [
+                    'code' => $code,
+                ]);
+            } else {
+                client_render('mytocart/index.php', [
+                    'check' => $check,
+                ]);
+            }
         }
     } else {
         client_render('mytocart/checkout.php');

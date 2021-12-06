@@ -9,7 +9,8 @@ function account_index()
     ]);
 }
 
-function account_remove(){
+function account_remove()
+{
     // lấy id từ đường dẫn
     $id = $_GET['id'];
     // thực thi câu lệnh xóa dựa vào id
@@ -20,7 +21,6 @@ function account_remove(){
 
 function account_add_form()
 {
-
     admin_render('account/add-form.php');
 }
 function account_save_add()
@@ -32,26 +32,40 @@ function account_save_add()
     $password = $_POST['password'];
     $phone = $_POST['phone'];
     $role = $_POST['role'];
-    // mã hóa mật khẩu
-    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-    // lưu ảnh vào thư mục public/uploads
-    $file = $_FILES['image'];
-    $avatar = "";
-    // Lưu ảnh
-    if ($file['size'] > 0) {
-        $filename = uniqid() . '-' . $file['name'];
-        move_uploaded_file($file['tmp_name'], './public/uploads/avatars/' . $filename);
-        $avatar = "uploads/avatars/" . $filename;
+    // check tồn tại email
+    $sql = "select * from user";
+    $check = executeQuery($sql);
+    foreach ($check as $item) {
+        if ($item['email'] == $email) {
+            $err = " Email đã có người sử dụng";
+        }
     }
+    if (isset($err)) {
+        admin_render('account/add-form.php', [
+            'err' => $err,
+        ]);
+    } else {
+        // mã hóa mật khẩu
+        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+        // lưu ảnh vào thư mục public/uploads
+        $file = $_FILES['image'];
+        $avatar = "";
+        // Lưu ảnh
+        if ($file['size'] > 0) {
+            $filename = uniqid() . '-' . $file['name'];
+            move_uploaded_file($file['tmp_name'], './public/uploads/avatars/' . $filename);
+            $avatar = "uploads/avatars/" . $filename;
+        }
 
-    // tạo ra câu sql insert tài khoản mới
-    $sql = "insert into user
+        // tạo ra câu sql insert tài khoản mới
+        $sql = "insert into user
                 (full_name, email,phone, password, avatar,role) 
             values 
                 ('$name', '$email', '$phone','$passwordHash', '$avatar','$role')";
-    // Thực thi câu sql với db
-    executeQuery($sql);
-    header("location: " . ADMIN_URL . 'tai-khoan');
+        // Thực thi câu sql với db
+        executeQuery($sql);
+        header("location: " . ADMIN_URL . 'tai-khoan');
+    }
 }
 
 function account_edit_form()
