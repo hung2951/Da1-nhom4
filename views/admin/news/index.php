@@ -4,8 +4,8 @@
         <th>ID</th>
         <th>Tên Tin Tức</th>
         <th>Ảnh</th>
-        <th>details</th>
-        <th>especially</th>
+        <th>Details</th>
+        <th>Especially</th>
         <th>Ngày Đăng</th>
         <th>
             <a href="<?= ADMIN_URL . 'tin-tuc/tao-moi' ?>" class="btn btn-sm btn-success">Tạo mới</a>

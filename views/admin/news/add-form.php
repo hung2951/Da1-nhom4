@@ -17,7 +17,7 @@
             <div class="form-group">
                 <label for="">especially</label>
                 <textarea name="especially_news" id="" cols="30" class="form-control"></textarea>
-            </div>>
+            </div>
             <div class="form-group" hidden>
                 <label for="">Ngày Đăng</label>
                 <input type="date" name="date_news" value="<?= date('Y-d-m') ?>" class="form-control" placeholder="">

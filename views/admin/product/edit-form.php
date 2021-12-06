@@ -59,7 +59,6 @@
             <br>
             <div class="d-flex justify-content-center">
                 <a href="<?= ADMIN_URL . 'san-pham' ?>" class="btn btn-sm btn-danger">Hủy</a>
-                &nbsp;
                 <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
             </div>
         </div>

@@ -15,9 +15,13 @@ function product_home()
                     where 1 order by view desc limit 0,8";
     $list_sp = executeQuery($sql);
 
+    $sql = "select * from news order by date_news desc limit 0,3";
+    $show_news = executeQuery($sql);
+
     client_render('home/index.php', [
         'list_spdacbiet' => $list_spdacbiet,
         'list_sp' => $list_sp,
+        'show_news'=> $show_news
     ]);
 }
 

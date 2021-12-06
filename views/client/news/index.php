@@ -7,7 +7,7 @@
                         <div class="ps-post mb-30">
                             <div class="ps-post__thumbnail">
                                 <a class="ps-post__overlay" href="<?= CLIENT_URL . 'news_detail?id_news=' . $news['id_news'] ?>"></a>
-                                <img src="<?= PUBLIC_ASSETS . '/uploads/blog/' . $news['image_news'] ?>" alt="">
+                                <img src="<?= PUBLIC_ASSETS  . $news['image_news'] ?>" alt="">
                             </div>
                             <div class="ps-post__content"><a class="ps-post__title" href="<?= CLIENT_URL . 'news_detail?id_news=' . $news['id_news'] ?>"><?= $news['name_news'] ?></a>
                                 <p class="ps-post__meta"><span class="ml-5"><?= $news['date_news'] ?></span></p>
