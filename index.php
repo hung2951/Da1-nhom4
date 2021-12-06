@@ -159,7 +159,7 @@ switch ($url) {
             require_once "./business/admin/news.php";
             list_news();
             break;
-        case 'cp-admin/tin-tuc-/tao-moi':
+        case 'cp-admin/tin-tuc/tao-moi':
             require_once "./business/admin/news.php";
             news_add_form();
              break;

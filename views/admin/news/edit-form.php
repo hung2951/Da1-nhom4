@@ -4,23 +4,23 @@
         <div class="col-6 offset-3">
             <div class="form-group">
                 <label for="">Tên Tin Tức</label>
-                <input type="text" name="name" value="<?= $news['name_news'] ?>" class="form-control" placeholder="">
+                <input type="text" name="name_news" value="<?= $news['name_news'] ?>" class="form-control" placeholder="">
             </div>
             <div class="form-group">
                 <label for="">Ảnh</label>
-                <input type="file" name="image" value="<?= $news['image_news'] ?>" class="form-control" placeholder="">
+                <input type="file" name="image_news" value="<?= $news['image_news'] ?>" class="form-control" placeholder="">
             </div>
             <div class="form-group">
                 <label for="">details</label>
-                <textarea name="details" id="" cols="30" class="form-control"><?= $news['details_news']?></textarea>
+                <textarea name="details_news" id="" cols="30" class="form-control"><?= $news['details_news']?></textarea>
             </div>
             <div class="form-group">
                 <label for="">especially</label>
-                <textarea name="details" id="" cols="30" class="form-control"><?= $news['especially_news']?></textarea>
+                <textarea name="especially_news" id="" cols="30" class="form-control"><?= $news['especially_news']?></textarea>
             </div>
             <div class="form-group" hidden>
                 <label for="">Ngày Đăng</label>
-                <input type="date" name="date_add" value="<?= $news['date_news'] ?>" class="form-control" placeholder="">
+                <input type="date" name="date_news" value="<?= $news['date_news'] ?>" class="form-control" placeholder="">
             </div>
             <br>
             <div class="d-flex justify-content-center">

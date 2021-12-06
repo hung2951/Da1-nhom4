@@ -7,7 +7,6 @@
         <th>ID</th>
         <th>Tên Tin Tức</th>
         <th>Ảnh</th>
-        <th>Giá</th>
         <th>details</th>
         <th>especially</th>
         <th>Ngày Đăng</th>
