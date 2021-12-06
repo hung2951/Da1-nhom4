@@ -215,6 +215,18 @@ switch ($url) {
         require_once "./business/admin/promoCode.php";
         save_update_promo_code();
         break;
+    case 'cp-admin/binh-luan':
+        require_once "./business/admin/comment.php";
+        thong_ke_binh_luan();
+        break;
+    case 'cp-admin/binh-luan/chi-tiet':
+        require_once "./business/admin/comment.php";
+        select_cmt_by_product();
+        break;
+    case 'cp-admin/binh-luan/chi-tiet/xoa':
+        require_once "./business/admin/comment.php";
+        comment_delete();
+        break;
     case 'client/quen-mat-khau': // ------------------------------------------------
         require_once "./business/client/home.php";
         send_email();
