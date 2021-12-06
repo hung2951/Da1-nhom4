@@ -71,10 +71,6 @@ switch ($url) {
         require_once "./business/admin/orders.php";
         order_details();
         break;
-    case 'cp-admin/binh-luan':
-        require_once "./business/admin/comment.php";
-        comment_index();
-        break;
     case 'cp-admin/chi-tiet-binh-luan':
         require_once "./business/admin/comment.php";
         comment_detail();
