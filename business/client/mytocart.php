@@ -55,13 +55,9 @@ function delete_cart()
     $cart = $_SESSION['cart'];
     // lấy về id sản phẩm trong giỏi hàng
     $id = $_GET['id'];
-    if ($id == 0) {
-        unset($_SESSION['cart']); // xóa giỏ hàng
-        client_render('mytocart/index.php', []);
-    } else {
-        unset($_SESSION['cart'][$id]); // xóa sp trong giỏi hàng
-        client_render('mytocart/index.php', []);
-    }
+
+    unset($_SESSION['cart'][$id]); // xóa sp trong giỏi hàng
+    client_render('mytocart/index.php', []);
 }
 
 

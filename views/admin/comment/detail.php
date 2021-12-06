@@ -14,8 +14,10 @@
                 <td><?= $c['content'] ?></td>
                 <td><?= $c['date'] ?></td>
                 <td><?= $c['full_name'] ?></td>
-                <td><a href="<?= ADMIN_URL.'binh-luan/chi-tiet/xoa?id='.$c['id_comment']?>">Xóa</a></td>
-            </tr>
+                <td><a href="javascript:;" 
+                        data-url="<?= ADMIN_URL . 'binh-luan/chi-tiet/xoa?id=' .$c['id_comment'] ?>" 
+                        class="btn btn-sm btn-danger btn_remove_cmt">Xóa</a></td>
+                </tr>
         <?php endforeach ?>
     </tbody>
 </table>

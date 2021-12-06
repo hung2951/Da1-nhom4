@@ -138,6 +138,23 @@
             </li>
           </ul>
         </li>
+        <li class="nav-item">
+          <a href="" class="nav-link">
+            <p>Tin tức<i class="fas fa-angle-left right"></i></p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="<?= ADMIN_URL . 'tin-tuc/tao-moi' ?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
+                <p>Tạo mới</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?= ADMIN_URL . 'tin-tuc' ?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
+                <p>Danh sách</p>
+              </a>
+            </li>
+          </ul>
+        </li>
       </ul>
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
         <li class="nav-item">

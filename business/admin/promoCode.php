@@ -5,7 +5,10 @@ function list_code()
     $codes = executeQuery($sql);
     admin_render('promo-code/index.php', [
         'codes' => $codes,
-    ]);
+    ],[
+        'customize/js/promo-code/code.js'
+    ]
+);
 }
 function add_code()
 {

@@ -18,7 +18,10 @@
                 <td><?= $code['code'] ?></td>
                 <td>
                     <a href="<?= ADMIN_URL . 'ma-giam-gia/sua?id=' . $code['id_code'] ?>" class="btn btn-sm btn-info">Sửa</a>
-                    <a href="<?= ADMIN_URL . 'ma-giam-gia/xoa?id=' . $code['id_code'] ?>" class="btn btn-sm btn-danger">Xóa</a>
+                    <a href="javascript:;" 
+                        data-url="<?= ADMIN_URL .'ma-giam-gia/xoa?id=' . $code['id_code'] ?>" 
+                        data-name="<?= $code['code_name'] ?>" 
+                        class="btn btn-sm btn-danger btn_remove_voucher">Xóa</a>
                 </td>
             </tr>
         <?php endforeach ?>

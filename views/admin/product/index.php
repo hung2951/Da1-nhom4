@@ -28,7 +28,10 @@
                 <td><?= $p['date_add'] ?></td>
                 <td>
                     <a href="<?= ADMIN_URL . 'san-pham/sua?id=' . $p['id_product'] ?>" class="btn btn-sm btn-info">Sửa</a>
-                    <a href="<?= ADMIN_URL . 'san-pham/xoa?id=' . $p['id_product'] ?>" class="btn btn-sm btn-danger">Xóa</a>
+                    <a href="javascript:;" 
+                        data-url="<?= ADMIN_URL . 'san-pham/xoa?id=' .$p['id_product'] ?>" 
+                        data-name="<?= $p['product_name'] ?>" 
+                        class="btn btn-sm btn-danger btn_remove_product">Xóa</a>
                 </td>
             </tr>
         <?php endforeach ?>

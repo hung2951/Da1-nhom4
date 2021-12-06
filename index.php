@@ -255,6 +255,31 @@ switch ($url) {
         require_once "./business/client/news.php";
         news_detail();
         break;
+    case 'cp-admin/tin-tuc':
+        require_once "./business/admin/news.php";
+        list_news();
+        break;
+    case 'cp-admin/tin-tuc/tao-moi':
+        require_once "./business/admin/news.php";
+        news_add_form();
+        break;
+    case 'cp-admin/tin-tuc/luu-tao-moi':
+        require_once "./business/admin/news.php";
+        news_save_add();
+        break;
+    case 'cp-admin/tin-tuc/sua':
+        require_once "./business/admin/news.php";
+        news_edit_form();
+        break;
+    case 'cp-admin/tin-tuc/luu-sua':
+        require_once "./business/admin/news.php";
+        news_save_edit();
+        break;
+    case 'cp-admin/tin-tuc/xoa':
+        require_once "./business/admin/news.php";
+        news_remove();
+        break;
+
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
