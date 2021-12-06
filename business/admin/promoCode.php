@@ -17,7 +17,7 @@ function save_add_code()
     $code = $_POST['code'];
     $sql = "select * from promo_code";
     $check = executeQuery($sql);
-    // var_dump($check);
+
     foreach ($check as $item) {
         if ($item['code_name'] == $name) {
             $err = " Mã giảm giá tồn tại";

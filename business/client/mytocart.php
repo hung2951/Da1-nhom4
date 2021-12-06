@@ -68,7 +68,7 @@ function delete_cart()
 function checkout()
 {
 
-    $check = "Mã code không hợp lệ";
+    $check = "Mã giảm giá không hợp lệ";
     if (isset($_POST['code_name'])) {
         if ($_POST['code_name'] == "") {
             client_render('mytocart/checkout.php');
