@@ -75,7 +75,8 @@ function  send_email()
         $min = 100000;
         $max = 999999;
         $passwordNew = rand($min, $max);
-        $sql = "UPDATE user SET password=$passwordNew WHERE id_user= $userId";
+        $passwordHash = password_hash($passwordNew, PASSWORD_DEFAULT);
+        $sql = "UPDATE user SET password='$passwordHash' WHERE id_user= $userId";
         $product_detail = executeQuery($sql);
 
 

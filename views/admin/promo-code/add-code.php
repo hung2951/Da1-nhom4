@@ -3,8 +3,9 @@
     <div class="row">
         <div class="col-6 offset-3">
             <div class="form-group">
-                <label for="">Tên mã giảm giá</label>
+                <label for="">Mã giảm giá</label>
                 <input type="text" name="name" id="" class="form-control" placeholder="Nhập tên mã giảm giá">
+                <p style="color: red;"><?= isset($err)?$err:""?></p>
             </div>
             <div class="form-group">
                 <label for="">Phần trăm giảm giá</label>

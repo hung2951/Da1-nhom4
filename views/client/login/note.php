@@ -29,8 +29,8 @@
 
 <body>
     <div class="continue">
-        <h1>Regester Success <i class="far fa-check-circle"></i></h1>
-        <p><a href="<?= CLIENT_URL.'dang-nhap' ?>">Login now &raquo;</a></p>
+        <h1>Đăng ký thành công <i class="far fa-check-circle"></i></h1>
+        <p><a href="<?= CLIENT_URL.'dang-nhap' ?>">Đăng nhập &raquo;</a></p>
     </div>
 </body>
 

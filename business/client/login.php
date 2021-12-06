@@ -40,11 +40,24 @@ function save_regester()
     $full_name = $_POST['full_name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    // mã hóa mật khẩu
-    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-    $sql = "insert into user(full_name,email,password) values('$full_name','$email','$passwordHash')";
-    executeQuery($sql);
-    client_render('login/note.php');
+    $sql = "select * from user";
+    $check = executeQuery($sql);
+    foreach ($check as $item) {
+        if ($item['email'] == $email) {
+            $err = " Email đã có người sử dụng";
+        }
+    }
+    if (isset($err)) {
+        client_render('login/regester.php', [
+            'err' => $err,
+        ]);
+    } else {
+        // mã hóa mật khẩu
+        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+        $sql = "insert into user(full_name,email,password) values('$full_name','$email','$passwordHash')";
+        executeQuery($sql);
+        client_render('login/note.php');
+    }
 }
 // đổi mật khẩu
 function change_password()
@@ -73,7 +86,7 @@ function save_change_password()
         if ($passwordNew == $repasswordNew) {
             $passwordHash = password_hash($passwordNew, PASSWORD_DEFAULT);
             $sql = "update user set password = '$passwordHash' where id_user = $id";
-            executeQuery($sql); 
+            executeQuery($sql);
             unset($_SESSION['khach_hang']);
             client_render('profile/note.php');
             die;
@@ -81,14 +94,14 @@ function save_change_password()
             $check = "Mật khẩu không trùng khớp";
             client_render('profile/change-password.php', [
                 'check' => $check,
-                'u'=>$oldData,
+                'u' => $oldData,
             ]);
         }
     } else {
         $check = "Mật khẩu không đúng";
         client_render('profile/change-password.php', [
             'check' => $check,
-            'u'=>$oldData,
+            'u' => $oldData,
         ]);
     }
 }
