@@ -268,6 +268,11 @@ switch ($url) {
         require_once "./business/client/news.php";
         news_detail();
         break;
+    case 'client/gioi-thieu':
+        // require_once "./business/client/news.php";
+        client_render('About/index.php');
+       
+         break;
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
