@@ -11,6 +11,7 @@
                 <label for="">Email</label>
                 <input type="text" name="email" id="" class="form-control" placeholder="">
             </div>
+            <p style="color: red;"><?= isset($err)?$err:""?></p>
             <div class="form-group">
                 <label for="">Số điện thoại</label>
                 <input type="number" name="phone" id="" class="form-control" placeholder="">

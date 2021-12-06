@@ -16,6 +16,7 @@
             <h2 class="form-signin-heading">Đăng ký</h2>
             <input type="text" class="form-control" name="full_name" placeholder="Họ và tên">
             <input type="text" class="form-control" name="email" placeholder="Email">
+            <p style="color: red;"><?= isset($err)?$err:""?></p>
             <input type="password" class="form-control" name="password" placeholder="Nhập mật khẩu"/>
             <input type="password" class="form-control" name="re-password" placeholder="Nhập lại mật khẩu">
             <button class="btn btn-lg btn-primary btn-block" type="submit" name="btn-submit">Đăng ký</button>
