@@ -29,8 +29,8 @@
 
 <body>
     <div class="continue">
-        <h1>Successful Exchange<i class="far fa-check-circle"></i></h1>
-        <p>Mời Bạn Check Email Để Cập Nhật Lại Mật Khẩu</p>
+        <h1>Thay đổi mật khẩu thành công<i class="far fa-check-circle"></i></h1>
+        <p>Mời Bạn Kiểm Tra Email Để Cập Nhật Lại Mật Khẩu Mới</p>
     </div>
 </body>
 
