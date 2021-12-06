@@ -24,7 +24,11 @@
                 <td><?= $u['phone'] ?></td>
                 <td>
                     <a href="<?= ADMIN_URL . 'tai-khoan/sua?id=' . $u['id_user'] ?>" class="btn btn-sm btn-info">Sửa</a>
-                    <a onclick="return confirm('Bạn có muốn xóa không?')" href="<?= ADMIN_URL . 'tai-khoan/xoa?id=' . $u['id_user'] ?>" class="btn btn-sm btn-danger btn_remove_account">Xóa</a>
+                    <a href="javascript:;" 
+                        data-url="<?= ADMIN_URL . 'tai-khoan/xoa?id=' . $u['id_user'] ?>" 
+                        data-name="<?= $u['full_name'] ?>" 
+                        class="btn btn-sm btn-danger btn_remove_account">Xóa</a>
+                    <!-- <a onclick="return confirm('Bạn có muốn xóa không?')" href="<?= ADMIN_URL . 'tai-khoan/xoa?id=' . $u['id_user'] ?>" class="btn btn-sm btn-danger btn_remove_account">Xóa</a> -->
                 </td>
             </tr>
         <?php endforeach ?>

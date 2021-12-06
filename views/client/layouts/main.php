@@ -32,7 +32,7 @@
 	<link href="<?= CLIENT_ASSETS ?>plugins/revolution/css/layers.css" rel="stylesheet" />
 	<link href="<?= CLIENT_ASSETS ?>plugins/revolution/css/navigation.css" rel="stylesheet" /><!-- Custom-->
 	<link href="<?= CLIENT_ASSETS ?>css/style.css" rel="stylesheet" />
-	
+
 
 
 	<!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
@@ -57,7 +57,7 @@
 						<div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
 							<?php if (isset($_SESSION['khach_hang'])) { ?>
 								<?php if ($_SESSION['khach_hang']['role'] == 1) : ?>
-									<div class="header__actions"><a href="<?= ADMIN_URL.'tai-khoan'?>">Trang quản trị</a></div>
+									<div class="header__actions"><a href="<?= ADMIN_URL . 'tai-khoan' ?>">Trang quản trị</a></div>
 									<div class="header__actions"><a href="<?= CLIENT_URL . 'profile' ?>"><?= $_SESSION['khach_hang']['full_name'] ?></a>
 									<?php else : ?>
 										<div class="header__actions"><a href="<?= CLIENT_URL . 'profile' ?>"><?= $_SESSION['khach_hang']['full_name'] ?></a>
@@ -92,7 +92,7 @@
 					<nav class="navigation">
 						<div class="container-fluid">
 							<div class="navigation__column left">
-								<div class="header__logo"><a class="ps-logo" href="index.html"><img alt="" src="<?= CLIENT_ASSETS ?>images/logo.png" /></a></div>
+								<div class="header__logo"><a class="ps-logo" href="<?= BASE_URL ?>"><img alt="" src="<?= CLIENT_ASSETS ?>images/logo.png" /></a></div>
 							</div>
 
 							<div class="navigation__column center">
@@ -110,12 +110,12 @@
 											<?php endif ?>
 										</ul>
 									</li>
-									<li class="menu-item"><a href="<?= CLIENT_URL.'shoes'?>">GIÀY</a></li>
-									<li class="menu-item menu-item-has-children dropdown"><a href="<?= CLIENT_URL.'news'?>">TIN TỨC</a>
-		
+									<li class="menu-item"><a href="<?= CLIENT_URL . 'shoes' ?>">GIÀY</a></li>
+									<li class="menu-item menu-item-has-children dropdown"><a href="<?= CLIENT_URL . 'news' ?>">TIN TỨC</a>
+
 									</li>
-									<li class="menu-item menu-item-has-children dropdown"><a href="<?= CLIENT_URL .'lien-he'?>">LIÊN HỆ</a>
-										
+									<li class="menu-item menu-item-has-children dropdown"><a href="<?= CLIENT_URL . 'lien-he' ?>">LIÊN HỆ</a>
+
 									</li>
 								</ul>
 							</div>
@@ -344,6 +344,11 @@
 	<script type="text/javascript" src="<?= CLIENT_ASSETS ?>plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
 	<!-- Custom scripts-->
 	<script type="text/javascript" src="<?= CLIENT_ASSETS ?>js/main.js"></script>
+	<?php if (count($jsFiles) > 0) : ?>
+		<?php foreach ($jsFiles as $jsFile) : ?>
+			<script src="<?= PUBLIC_ASSETS . $jsFile ?>" type="text/javascript"></script>
+		<?php endforeach ?>
+	<?php endif ?>
 </body>
 
 <!-- Mirrored from nouthemes.net/html/trueshoes/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Nov 2021 02:11:18 GMT -->
