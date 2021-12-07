@@ -5,7 +5,10 @@ function list_code()
     $codes = executeQuery($sql);
     admin_render('promo-code/index.php', [
         'codes' => $codes,
-    ]);
+    ],[
+        'customize/js/promo-code/code.js'
+    ]
+);
 }
 function add_code()
 {
@@ -15,6 +18,7 @@ function save_add_code()
 {
     $name = $_POST['name'];
     $code = $_POST['code'];
+    $number_use = $_POST['number_use'];
     $sql = "select * from promo_code";
     $check = executeQuery($sql);
 
@@ -28,7 +32,7 @@ function save_add_code()
             'err' => $err,
         ]);
     } else {
-        $sql = "insert into promo_code(code_name,code) values('$name','$code')";
+        $sql = "insert into promo_code(code_name,code,number_use) values('$name','$code','$number_use')";
         executeQuery($sql);
         header('location: ' . ADMIN_URL . 'ma-giam-gia');
     }
@@ -54,7 +58,8 @@ function save_update_promo_code()
     $id = $_GET['id'];
     $name = $_POST['name'];
     $code = $_POST['code'];
-    $sql = "update promo_code set code_name = '$name', code = '$code' where id_code = $id";
+    $number_use = $_POST['number_use'];
+    $sql = "update promo_code set code_name = '$name', code = '$code',number_use = ' $number_use' where id_code = $id";
     executeQuery($sql);
     header('location: ' . ADMIN_URL . 'ma-giam-gia');
 }

@@ -9,9 +9,7 @@ function list_product()
         [
             'listProduct' => $product,
         ],
-        [
-            'customize/js/account/list-product.js'
-        ]
+        ['customize/js/product/product.js']
     );
 }
 

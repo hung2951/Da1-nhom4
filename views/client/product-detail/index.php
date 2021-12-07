@@ -108,7 +108,7 @@
                                     <span class="text-xl">40</span>
                                 </label>
                                 <label class="btn btn-default text-center">
-                                    <input type="radio" name="size" id="color_option_b4" autocomplete="off" value="41">
+                                    <input type="radio" name="size" id="color_option_b4" autocomplete="off" value="41" checked>
                                     <span class="text-xl">41</span>
                                 </label>
                                 <label class="btn btn-default text-center">

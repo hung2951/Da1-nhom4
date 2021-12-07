@@ -14,10 +14,13 @@ function product_home()
     $sql = "select * from product p join brand b on p.id_brand = b.id_brand
                     where 1 order by view desc limit 0,8";
     $list_sp = executeQuery($sql);
+    $sql = "select * from news order by date_news desc limit 0,3";
+    $show_news = executeQuery($sql);
 
     client_render('home/index.php', [
         'list_spdacbiet' => $list_spdacbiet,
         'list_sp' => $list_sp,
+        'show_news' => $show_news,
     ]);
 }
 
@@ -58,7 +61,7 @@ function  send_email()
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'hungtv290501@gmail.com';                     //SMTP username
+        $mail->Username   = 'hungphu201@gmail.com';                     //SMTP username
         $mail->Password   = 'hung2001';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`

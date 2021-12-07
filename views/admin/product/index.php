@@ -32,7 +32,6 @@
                         data-url="<?= ADMIN_URL . 'san-pham/xoa?id=' .$p['id_product'] ?>" 
                         data-name="<?= $p['product_name'] ?>" 
                         class="btn btn-sm btn-danger btn_remove_product">Xóa</a>
-                    <!-- <a href="<?= ADMIN_URL . 'san-pham/xoa?id=' . $p['id_product'] ?>" class="btn btn-sm btn-danger">Xóa</a> -->
                 </td>
             </tr>
         <?php endforeach ?>
