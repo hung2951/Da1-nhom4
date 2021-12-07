@@ -11,6 +11,10 @@
                 <label for="">Phần trăm giảm giá</label>
                 <input type="number" name="code" id="" class="form-control" placeholder="Nhập phần trăm giảm giá">
             </div>
+            <div class="form-group">
+                <label for="">Số lượt dùng</label>
+                <input type="number" name="number_use" id="" class="form-control" placeholder="Nhập số lượt dùng">
+            </div>
             <br>
             <div class="d-flex justify-content-center">
                 <a href="<?= ADMIN_URL . 'ma-giam-gia' ?>" class="btn btn-sm btn-danger">Hủy</a>

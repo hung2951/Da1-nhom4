@@ -65,6 +65,7 @@ function checkout()
 {
 
     $check = "Mã giảm giá không hợp lệ";
+    $err = "Mã giảm giá đã hết lượt sử dụng";
     if (isset($_POST['code_name'])) {
         if ($_POST['code_name'] == "") {
             client_render('mytocart/checkout.php');
@@ -73,9 +74,15 @@ function checkout()
             $sql = "select * from promo_code where code_name = '$code_name'";
             $code = executeQuery($sql, false);
             if (isset($code)) {
-                client_render('mytocart/checkout.php', [
-                    'code' => $code,
-                ]);
+                if ($code['number_use'] == 0) {
+                    client_render('mytocart/index.php', [
+                        'check' => $err,
+                    ]);
+                } else {
+                    client_render('mytocart/checkout.php', [
+                        'code' => $code,
+                    ]);
+                }
             } else {
                 client_render('mytocart/index.php', [
                     'check' => $check,
@@ -88,6 +95,8 @@ function checkout()
 }
 function pay_cart()
 {
+    $id_code = $_POST['id_code'];
+
     $date = $_POST['date'];
     $name = $_POST['name'];
     $phone = $_POST['phone'];
@@ -115,7 +124,8 @@ function pay_cart()
                                     set money = $totalMoney
                                 where id_orders = $invoiceId";
     executeQuery($updateTotalPriceToInvoice, false);
-
+    $updateNumberUse = "update promo_code set number_use = number_use - 1 where id_code='$id_code'";
+    executeQuery($updateNumberUse);
     unset($_SESSION['cart']);
     client_render('mytocart/note.php');
     die;

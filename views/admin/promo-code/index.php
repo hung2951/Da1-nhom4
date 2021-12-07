@@ -5,6 +5,7 @@
             <th>ID</th>
             <th>Mã giảm giá</th>
             <th>Phần trăm giảm</th>
+            <th>Số lượt sử dụng</th>
             <th>
                 <a href="<?= ADMIN_URL . 'ma-giam-gia/tao-moi' ?>" class="btn btn-sm btn-success">Tạo mới</a>
             </th>
@@ -16,6 +17,7 @@
                 <td><?= $code['id_code'] ?></td>
                 <td><?= $code['code_name'] ?></td>
                 <td><?= $code['code'] ?></td>
+                <td><?= $code['number_use'] ?></td>
                 <td>
                     <a href="<?= ADMIN_URL . 'ma-giam-gia/sua?id=' . $code['id_code'] ?>" class="btn btn-sm btn-info">Sửa</a>
                     <a href="javascript:;" 
