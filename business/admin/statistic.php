@@ -31,10 +31,9 @@ function chart()
 }
 function chart_orders()
 {
-    $sql = "SELECT distinct id_orders, status,"
-        . " COUNT(status) so_luong"
-        . " FROM orders "
-        . " GROUP BY id_orders, status";
+    $sql = "select status, count(status) so_luong
+                    from orders group by status 
+                    having(count(status) >= 1)";
     $chart = executeQuery($sql);
     admin_render('statistic/chart-orders.php', [
         'chart' => $chart,

@@ -95,14 +95,13 @@ function checkout()
 }
 function pay_cart()
 {
-    $id_code = $_POST['id_code'];
-
     $date = $_POST['date'];
     $name = $_POST['name'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];
     $address = $_POST['address'];
     $totalMoney = $_POST['totalPrice'];
+    $quantity = $_POST['quantity'];
     $sql = "insert into orders(order_date,custom_name,custom_phone,custom_email,custom_address) values ('$date','$name','$phone','$email','$address')";
     $invoiceId = insertDataAndGetId($sql);
     // $totalMoney = 0;
@@ -110,7 +109,6 @@ function pay_cart()
     foreach ($_SESSION['cart'] as $item) {
         $productId = $item['id'];
         $price = $item['price'];
-        $quantity = $item['quantity'];
         $size = $item['size'];
         // $totalMoney += $price * $quantity;
         $insertInvoiceDetailQuery = "insert into order_detail 
@@ -124,8 +122,12 @@ function pay_cart()
                                     set money = $totalMoney
                                 where id_orders = $invoiceId";
     executeQuery($updateTotalPriceToInvoice, false);
-    $updateNumberUse = "update promo_code set number_use = number_use - 1 where id_code='$id_code'";
-    executeQuery($updateNumberUse);
+    if (!empty($_POST['id_code'])) {
+        $id_code = $_POST['id_code'];
+        $updateNumberUse = "update promo_code set number_use = number_use - 1 where id_code='$id_code'";
+        executeQuery($updateNumberUse);
+    }
+
     unset($_SESSION['cart']);
     client_render('mytocart/note.php');
     die;

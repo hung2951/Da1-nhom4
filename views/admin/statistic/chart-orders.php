@@ -27,13 +27,31 @@
                     <?php
                     $i = 1;
                     $sum = count($chart);
-                    foreach ($chart as $item) {
+                    ?>
+                    <?php foreach ($chart as $item) : ?>
+                        <?php
                         if ($i == $sum) $comma = "";
                         else $comma = ",";
-                        echo "['" . $item['status'] . "', " . $item['so_luong'] . "]" . $comma;
-
-                    }
-                    ?>
+                        ?>
+                        ['<?php 
+                        if ($item['status']==0) {
+                            echo "Chờ xác nhận đơn hàng";
+                        }elseif($item['status']==1) {
+                            echo "Khách hủy đơn hàng";
+                        }
+                        elseif($item['status']==2) {
+                            echo "Đang giao hàng";
+                        }
+                        elseif($item['status']==3) {
+                            echo "Giao hàng thành công";
+                        }
+                        elseif($item['status']==4) {
+                            echo "Giao hàng thất bại";
+                        }
+                        
+                        ?>
+                        ', <?=$item['so_luong']?> ] <?=$comma?>
+                    <?php endforeach ?>
 
                 ]);
 

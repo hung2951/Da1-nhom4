@@ -283,7 +283,6 @@ switch ($url) {
         require_once "./business/admin/news.php";
         news_remove();
         break;
-
     default:
         echo "Đường dẫn bạn đang truy cập chưa được định nghĩa";
         break;
