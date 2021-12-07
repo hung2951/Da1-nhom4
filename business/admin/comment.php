@@ -11,23 +11,28 @@ function thong_ke_binh_luan()
         . " HAVING so_luong > 0";
     $cmt = executeQuery($sql);
     admin_render('comment/index.php', [
-        'cmt' =>$cmt,
+        'cmt' => $cmt,
     ]);
 }
-function select_cmt_by_product(){
+function select_cmt_by_product()
+{
     $id = $_GET['id'];
     $sql = "select * from comment c join product p on p.id_product = c.id_product
                                     join user u on u.id_user = c.id_user                                   
                                     where c.id_product = '$id'";
     $cmt = executeQuery($sql);
-    admin_render('comment/detail.php',[
-        'cmt' => $cmt,
-    ]);
+    admin_render(
+        'comment/detail.php',
+        [
+            'cmt' => $cmt,
+        ],
+        ['customize/js/comment/cmt.js']
+    );
 }
 function comment_delete()
 {
     $id = $_GET['id'];
     $sql = "DELETE FROM comment WHERE id_comment='$id'";
     executeQuery($sql);
-    header('location: '.ADMIN_URL.'binh-luan');
+    header('location: ' . ADMIN_URL . 'binh-luan');
 }

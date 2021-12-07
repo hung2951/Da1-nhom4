@@ -49,7 +49,7 @@
 			<div class="masonry-wrapper" data-col-md="4" data-col-sm="2" data-col-xs="1" data-gap="30" data-radio="100%">
 				<div class="ps-masonry">
 					<div class="grid-sizer"></div>
-					
+
 					<?php foreach ($list_spdacbiet as $list_db) : ?>
 						<div class="grid-item kids">
 							<div class="grid-item__content-wrapper">
@@ -203,57 +203,22 @@
 
 		<div class="ps-section__content">
 			<div class="row">
-				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
-					<div class="ps-post">
-						<div class="ps-post__thumbnail"><img alt="" src="<?= CLIENT_ASSETS ?>images/blog/1.jpg" /></div>
-
-						<div class="ps-post__content"><a class="ps-post__title" href="blog-detail.html">An
-								Inside Look at the Breaking2 Kit</a>
-
-							<p class="ps-post__meta"><span>By:<a class="mr-5" href="blog.html">Alena
-										Studio</a></span> -<span class="ml-5">Jun 10, 2017</span></p>
-
-							<p>Leverage agile frameworks to provide a robust synopsis for high level overviews.
-								Iterative approaches to corporate strategy foster collaborative thinking to
-								further&hellip;</p>
-							<a class="ps-morelink" href="blog-detail.html">Read more</a>
+				<?php foreach ($show_news as $news) : ?>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+						<div class="ps-post mb-30">
+							<div class="ps-post__thumbnail">
+								<a class="ps-post__overlay" href="<?= CLIENT_URL . 'news_detail?id_news=' . $news['id_news'] ?>"></a>
+								<img src="<?= PUBLIC_ASSETS  . $news['image_news'] ?>" alt="">
+							</div>
+							<div class="ps-post__content"><a class="ps-post__title" href="<?= CLIENT_URL . 'news_detail?id_news=' . $news['id_news'] ?>"><?= $news['name_news'] ?></a>
+								<p class="ps-post__meta"><span class="ml-5"><?= $news['date_news'] ?></span></p>
+								<p><?= $news['especially_news'] ?> </p>
+								<a class="ps-morelink" href="<?= CLIENT_URL . 'news_detail?id_news=' . $news['id_news'] ?>">Read more<i class="fa fa-long-arrow-right"></i></a>
+							</div>
 						</div>
 					</div>
-				</div>
+				<?php endforeach ?>
 
-				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
-					<div class="ps-post">
-						<div class="ps-post__thumbnail"><img alt="" src="<?= CLIENT_ASSETS ?>images/blog/2.jpg" /></div>
-
-						<div class="ps-post__content"><a class="ps-post__title" href="blog-detail.html">Unpacking the Breaking2 Race Strategy</a>
-
-							<p class="ps-post__meta"><span>By:<a class="mr-5" href="blog.html">Alena
-										Studio</a></span> -<span class="ml-5">Jun 10, 2017</span></p>
-
-							<p>Leverage agile frameworks to provide a robust synopsis for high level overviews.
-								Iterative approaches to corporate strategy foster collaborative thinking to
-								further&hellip;</p>
-							<a class="ps-morelink" href="blog-detail.html">Read more</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
-					<div class="ps-post">
-						<div class="ps-post__thumbnail"><img alt="" src="<?= CLIENT_ASSETS ?>images/blog/3.jpg" /></div>
-
-						<div class="ps-post__content"><a class="ps-post__title" href="blog-detail.html">Nike&rsquo;s Latest Football Cleat Breaks the Mold</a>
-
-							<p class="ps-post__meta"><span>By:<a class="mr-5" href="blog.html">Alena
-										Studio</a></span> -<span class="ml-5">Jun 10, 2017</span></p>
-
-							<p>Leverage agile frameworks to provide a robust synopsis for high level overviews.
-								Iterative approaches to corporate strategy foster collaborative thinking to
-								further&hellip;</p>
-							<a class="ps-morelink" href="blog-detail.html">Read more</a>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>

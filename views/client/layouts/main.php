@@ -126,48 +126,65 @@
 									<button type="submit"><i class="fas fa-search"></i></button>
 								</form>
 								<?php if (isset($_SESSION['cart'])) : ?>
-									<div class="ps-cart"><a class="ps-cart__toggle" href="<?= CLIENT_URL . 'gio-hang' ?>"><i class="fas fa-cart-plus"></i></i></a>
+									<?php if (!empty($_SESSION['cart'])) : ?>
+										<div class="ps-cart"><a class="ps-cart__toggle" href="<?= CLIENT_URL . 'gio-hang' ?>"><i class="fas fa-cart-plus"></i></i></a>
+
+											<div class="ps-cart__listing">
+												<div class="ps-cart__content">
+
+													<?php
+													$totalPrice = 0;
+													$count = 0;
+													?>
+													<?php foreach ($_SESSION['cart'] as $cart) : ?>
+														<div class="ps-cart-item">
+															<div class="ps-cart-item__thumbnail"><img alt="" src="<?= PUBLIC_ASSETS  . $cart['product_image'] ?>" />
+															</div>
+
+															<div class="ps-cart-item__content"><a class="ps-cart-item__title"><?= $cart['product_name'] ?></a>
+
+																<p><span>Quantity:<i><?= $cart['quantity'] ?></i></span><span>Total:<i><?= number_format($cart['price'] * $cart['quantity']) ?></i></span></p>
+															</div>
+														</div>
+														<?php $totalPrice += $cart['price'] * $cart['quantity'];
+														$count++; ?>
+
+													<?php endforeach ?>
+													<div class="ps-cart__total">
+														<p>Number of items:<span><?= $count ?></span></p>
+
+														<p>Total money:<span><?= number_format($totalPrice) ?></span></p>
+														<div class="ps-cart__footer"><a class="ps-btn" href="<?= CLIENT_URL . 'gio-hang/checkout' ?>">Check out</a></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									<?php else : ?>
+										<div class="ps-cart"><a class="ps-cart__toggle"><i class="fas fa-cart-plus"></i></i></a>
+
+											<div class="ps-cart__listing">
+												<div class="ps-cart__content">
+													<div class="ps-cart-item__content"><a class="ps-cart-item__title">Bạn chưa có sản phẩm nào trong giỏ hàng</a></div>
+
+												</div>
+
+												<div class="menu-toggle"></div>
+											</div>
+										</div>
+									<?php endif ?>
+								<?php else : ?>
+									<div class="ps-cart"><a class="ps-cart__toggle"><i class="fas fa-cart-plus"></i></i></a>
 
 										<div class="ps-cart__listing">
 											<div class="ps-cart__content">
+												<div class="ps-cart-item__content"><a class="ps-cart-item__title">Bạn chưa có sản phẩm nào trong giỏ hàng</a></div>
 
-												<?php
-												$totalPrice = 0;
-												$count = 0;
-												?>
-												<?php foreach ($_SESSION['cart'] as $cart) : ?>
-													<div class="ps-cart-item">
-														<div class="ps-cart-item__thumbnail"><img alt="" src="<?= PUBLIC_ASSETS  . $cart['product_image'] ?>" />
-														</div>
+											</div>
 
-														<div class="ps-cart-item__content"><a class="ps-cart-item__title"><?= $cart['product_name'] ?></a>
-
-															<p><span>Quantity:<i><?= $cart['quantity'] ?></i></span><span>Total:<i><?= number_format($cart['price'] * $cart['quantity']) ?></i></span></p>
-														</div>
-													</div>
-													<?php $totalPrice += $cart['price'] * $cart['quantity'];
-													$count++; ?>
-
-												<?php endforeach ?>
-												<div class="ps-cart__total">
-													<p>Number of items:<span><?= $count ?></span></p>
-
-													<p>Total money:<span><?= number_format($totalPrice) ?></span></p>
-													<div class="ps-cart__footer"><a class="ps-btn" href="<?= CLIENT_URL . 'gio-hang/checkout' ?>">Check out</a></div>
-												</div>
-											<?php else : ?>
-												<div class="ps-cart"><a class="ps-cart__toggle"><i class="fas fa-cart-plus"></i></i></a>
-
-													<div class="ps-cart__listing">
-														<div class="ps-cart__content">
-															<div class="ps-cart-item__content"><a class="ps-cart-item__title">Bạn chưa có sản phẩm nào trong giỏ hàng</a>
-															<?php endif ?>
-															</div>
-														</div>
-
-														<div class="menu-toggle"></div>
-													</div>
-												</div>
+											<div class="menu-toggle"></div>
+										</div>
+									</div>
+								<?php endif ?>
 					</nav>
 		</header>
 

@@ -22,22 +22,22 @@
                             <div class="form-group form-group--inline">
                                 <label>Họ và tên<span>*</span>
                                 </label>
-                                <input class="form-control" type="text" name="name" value="<?= isset($_SESSION['khach_hang'])?$_SESSION['khach_hang']['full_name']:""?>">
+                                <input class="form-control" type="text" name="name" value="<?= isset($_SESSION['khach_hang']) ? $_SESSION['khach_hang']['full_name'] : "" ?>">
                             </div>
                             <div class="form-group form-group--inline">
                                 <label>Số điện thoại<span>*</span>
                                 </label>
-                                <input class="form-control" type="text" name="phone" value="<?= isset($_SESSION['khach_hang'])?$_SESSION['khach_hang']['phone']:""?>">
+                                <input class="form-control" type="text" name="phone" value="<?= isset($_SESSION['khach_hang']) ? $_SESSION['khach_hang']['phone'] : "" ?>">
                             </div>
                             <div class="form-group form-group--inline">
                                 <label>Email<span>*</span>
                                 </label>
-                                <input class="form-control" type="email" name="email" value="<?= isset($_SESSION['khach_hang'])?$_SESSION['khach_hang']['email']:""?>">
+                                <input class="form-control" type="email" name="email" value="<?= isset($_SESSION['khach_hang']) ? $_SESSION['khach_hang']['email'] : "" ?>">
                             </div>
                             <div class="form-group form-group--inline">
                                 <label>Địa chị<span>*</span>
                                 </label>
-                                <input class="form-control" type="text" name="address" value="<?= isset($_SESSION['khach_hang'])?$_SESSION['khach_hang']['address']:""?>">
+                                <input class="form-control" type="text" name="address" value="<?= isset($_SESSION['khach_hang']) ? $_SESSION['khach_hang']['address'] : "" ?>">
                             </div>
                             <div>
                                 <input type="date" name="date" value="<?= date('Y-d-m') ?>" hidden>
@@ -79,19 +79,28 @@
                                     </tbody>
                                     <?php if (!empty($code)) : ?>
                                         <tr>
+                                            <td>Phí giao hàng</td>
+                                            <td>- 25.000đ</td>
+                                        </tr>
+                                        <tr>
                                             <td>Mã giảm giá</td>
                                             <td>- <?= number_format(($code['code'] / 100) * $totalPrice) ?></td>
                                         </tr>
-                                        <tr> 
-                                            <td>Tổng tiền</td>
-                                            <td><?= number_format($totalPrice - (($code['code'] / 100) * $totalPrice)) ?></td>
-                                            <td hidden><input type="text" name="totalPrice" value="<?= $totalPrice - (($code['code'] / 100) * $totalPrice) ?>"></td>
-                                        </tr>
-                                    <?php else : ?>
                                         <tr>
                                             <td>Tổng tiền</td>
-                                            <td><?= number_format($totalPrice) ?></td>
-                                            <td hidden><input type="text" name="totalPrice" value="<?= $totalPrice ?>"></td>
+                                            <td><?= number_format($totalPrice - (($code['code'] / 100) * $totalPrice)- 25000) ?></td>
+                                            <td hidden><input type="text" name="totalPrice" value="<?= $totalPrice - (($code['code'] / 100) * $totalPrice) - 25000 ?>"></td>
+                                        </tr>
+                                        <td><input type="text" name="id_code" value="<?= $code['id_code'] ?>" hidden></td>
+                                    <?php else : ?>
+                                        <tr>
+                                            <td>Phí giao hàng</td>
+                                            <td>- 25.000đ</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tổng tiền</td>
+                                            <td><?= number_format($totalPrice - 25000) ?></td>
+                                            <td hidden><input type="text" name="totalPrice" value="<?= $totalPrice - 25000 ?>"></td>
                                         </tr>
                                     <?php endif ?>
                                 </table>
@@ -105,12 +114,12 @@
                             </div>
                         </footer>
                         <!-- --------------------------end--------------------------------- -->
-                        <?php if (!isset($_SESSION['khach_hang'])) :?>
-                        <div class="ps-shipping">
-                            <h3>Mã giảm giá</h3>
-                            <p>Đăng nhập để nhận mã giảm giá ngay tại đây.<br> <a href="<?= CLIENT_URL.'dang-nhap'?>"> Đăng nhập </a></p>
-                        </div>
-                        <?php endif?>
+                        <?php if (!isset($_SESSION['khach_hang'])) : ?>
+                            <div class="ps-shipping">
+                                <h3>Mã giảm giá</h3>
+                                <p>Đăng nhập để nhận mã giảm giá ngay tại đây.<br> <a href="<?= CLIENT_URL . 'dang-nhap' ?>"> Đăng nhập </a></p>
+                            </div>
+                        <?php endif ?>
                     </div>
 
                 </div>

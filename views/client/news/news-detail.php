@@ -6,7 +6,7 @@
 
                     <div class="ps-post__header">
                         <h3 class="ps-post__title"><?= $news_detail['name_news'] ?></h3>
-                        <div style="text-align:center" class="ps-post__thumbnail"><img src="<?= PUBLIC_ASSETS . '/uploads/news/' . $news_detail['image_news'] ?>" alt=""></div>
+                        <div style="text-align:center" class="ps-post__thumbnail"><img src="<?= PUBLIC_ASSETS . $news_detail['image_news'] ?>" alt=""></div>
                         <p><?= $news_detail['especially_news'] ?></p>
                         <p class="ps-post__meta"> <?= $news_detail['date_news'] ?> </p>
                     </div>
