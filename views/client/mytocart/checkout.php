@@ -80,7 +80,7 @@
                                     <?php if (!empty($code)) : ?>
                                         <tr>
                                             <td>Phí giao hàng</td>
-                                            <td>- 25.000đ</td>
+                                            <td>+ 25.000đ</td>
                                         </tr>
                                         <tr>
                                             <td>Mã giảm giá</td>
@@ -88,19 +88,19 @@
                                         </tr>
                                         <tr>
                                             <td>Tổng tiền</td>
-                                            <td><?= number_format($totalPrice - (($code['code'] / 100) * $totalPrice)- 25000) ?></td>
-                                            <td hidden><input type="text" name="totalPrice" value="<?= $totalPrice - (($code['code'] / 100) * $totalPrice) - 25000 ?>"></td>
+                                            <td><?= number_format($totalPrice - (($code['code'] / 100) * $totalPrice)+ 25000) ?></td>
+                                            <td hidden><input type="text" name="totalPrice" value="<?= $totalPrice - (($code['code'] / 100) * $totalPrice) + 25000 ?>"></td>
                                         </tr>
                                         <td><input type="text" name="id_code" value="<?= $code['id_code'] ?>" hidden></td>
                                     <?php else : ?>
                                         <tr>
                                             <td>Phí giao hàng</td>
-                                            <td>- 25.000đ</td>
+                                            <td>+ 25.000đ</td>
                                         </tr>
                                         <tr>
                                             <td>Tổng tiền</td>
-                                            <td><?= number_format($totalPrice - 25000) ?></td>
-                                            <td hidden><input type="text" name="totalPrice" value="<?= $totalPrice - 25000 ?>"></td>
+                                            <td><?= number_format($totalPrice + 25000) ?></td>
+                                            <td hidden><input type="text" name="totalPrice" value="<?= $totalPrice + 25000 ?>"></td>
                                         </tr>
                                     <?php endif ?>
                                 </table>
