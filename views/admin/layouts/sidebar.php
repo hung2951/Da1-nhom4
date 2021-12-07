@@ -133,7 +133,12 @@
             </li>
             <li class="nav-item">
               <a href="<?= ADMIN_URL . 'thong-ke/bieu-do' ?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
-                <p>Biểu đồ</p>
+                <p>Biểu đồ sản phẩm</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?= ADMIN_URL . 'thong-ke/bieu-do/hoa-don' ?>" class="nav-link"><i class="far fa-circle nav-icon"></i>
+                <p>Biểu đồ hóa đơn</p>
               </a>
             </li>
           </ul>

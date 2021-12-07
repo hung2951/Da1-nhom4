@@ -22,7 +22,7 @@
             // Draw the chart and set the chart values
             function drawChart() {
                 var data = google.visualization.arrayToDataTable([
-                    ['Thương hiệu', 'Thống kê sản phẩm'],
+                    ['Hóa đơn', 'Thống kê hóa đơn'],
 
                     <?php
                     $i = 1;
@@ -30,8 +30,8 @@
                     foreach ($chart as $item) {
                         if ($i == $sum) $comma = "";
                         else $comma = ",";
-                        echo "['" . $item['brand_name'] . "', " . $item['so_luong'] . "]" . $comma;
-                        $i += 1;
+                        echo "['" . $item['status'] . "', " . $item['so_luong'] . "]" . $comma;
+
                     }
                     ?>
 
@@ -39,7 +39,7 @@
 
                 // Optional; add a title and set the width and height of the chart
                 var options = {
-                    'title': 'Biểu đồ thống kê sản phẩm',
+                    'title': 'Biểu đồ thống kê hóa đơn',
                     'width': 1200,
                     'height': 500
                 };
