@@ -1,4 +1,4 @@
-<h2>Danh sách sản phẩm</h2>
+<h2>Danh sách thương hiệu</h2>
 <table class="table table-stripped">
     <thead>
         <th>ID</th>
